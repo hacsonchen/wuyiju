@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GetRegSms.aspx.cs" Inherits="Wuyiju.Web.users.GetRegSms" %>

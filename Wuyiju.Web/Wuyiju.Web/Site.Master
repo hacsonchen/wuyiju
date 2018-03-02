@@ -1,0 +1,627 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Wuyiju.Web.Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title><%=Page.Title %> </title>
+
+    <meta name="keywords" content="<%#Page.MetaKeywords %>" />
+    <meta name="description" content="<%=Page.MetaDescription %>" />
+
+    <link type="text/css" rel="stylesheet" href="/Public/Home/Shops/Css/base.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="Public/Home/Shops/Css/if-others.css" media="all" />
+    <script type="text/javascript" src="/Public/Home/Shops/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/Public/Home/Shops/Js/common.js"></script>
+
+    <asp:ContentPlaceHolder ID="HeadHolder" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id="headerbg">
+        <div id="header">
+            <div class="huanying new-huanying">
+                <div class="huanying_l">
+                    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                        <tbody>
+                            <tr>
+
+                                <% if (LoggedState.IsLogged)
+                                    {%>
+                                <td align="left">
+                                    <a href="/Users/"><%=LoggedState.DisplayName %></a>
+                                    <i class="icon if-others">&#xe600;</i>
+                                    <i class="icon if-others">&#xe601;</i>&nbsp;您好，欢迎关注选猫网
+						<a style="color: #848484;" href="/Users/Logout.aspx" title="登出">登出</a>
+                                </td>
+                                <%}
+                                    else { %>
+                                <td align="left">
+                                    <i class="icon if-others">&#xe600;</i>
+                                    <i class="icon if-others">&#xe601;</i>&nbsp;您好，欢迎关注选猫网&nbsp;&nbsp;
+                                    大客户通道&nbsp;&nbsp;
+                      <a href="/Users/login.aspx" title="登录" class="denglu" rel="nofollow">[请登录]</a>
+                                    ，新用户？
+                      <a href="/Users/register.aspx" title="免费注册" class="zhuce" rel="nofollow">免费注册</a>
+                                </td>
+                                <%} %>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <input type="hidden" id="ioutflag" value="" />
+                <div class="huanying_r">
+                    <ul class="dropdown">
+                        <li style="background: url('/Public/Home/Shops/Images/tel_ico.png') 0px center no-repeat; padding-left: 25px; line-height: 30px; font: 16px 'Microsoft Yahei'; color: #afafaf; padding-right: 10px;"><%=Application["hot_line"] %>
+                        </li>
+                        <li>
+                            <a class="release" href="/Users/ShopsTransferType.aspx" name="totop"
+                                rel="nofollow">出售网店
+                            </a>
+                        </li>
+                        <li>
+                            <a class="ask" href="/NotFound.aspx" rel="nofollow">我想求购
+                            </a>
+                        </li>
+                        <li class="list_box" style="margin-right: 5px;">
+                            <a id="iwupao" href="/Users/" onmouseover="xialashow()"
+                                onmouseout="hrefout()" rel="nofollow" target="_self">我的选猫
+                            </a>
+                            <dl id="imy5pao" class="nav_in_downlist" style="display: none" onmouseover="xialashow()"
+                                onmouseout="xialahide()">
+                                <dd>
+                                    <a href="/Users/Recharge.aspx" rel="nofollow">我要充值
+                                    </a>
+                                </dd>
+                                <dd>
+                                    <a href="/Users/Takecash.aspx" rel="nofollow">我要提现
+                                    </a>
+                                </dd>
+                                <dd>
+                                    <a href="/Users/TakecashRecords.aspx" rel="nofollow">账户管理
+                                    </a>
+                                </dd>
+                                <dd>
+                                    <a href="/Users/EditInfo.aspx" rel="nofollow">完善资料
+                                    </a>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <a class="suggest" href="/Users/SuggestSubmit.aspx" rel="nofollow">我要建议
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear">
+    </div>
+    <div id="WuPao" style="position: relative;z-index:3">
+        <%--<div id="kefu-box">
+            <a href="javascript:;" onclick="ShowAskWin('http://wpa.qq.com/msgrd?v=3&uin=<%=Application["qqkefu1"] %>&site=qq&menu=yes')"></a>
+        </div>--%>
+        <div class="main-logo" style="float: left">
+            <h1>
+                <a href="/" class="lgtel2">
+                    <img src="/Public/Home/Shops/Images/logo.png" border="0" alt="淘宝店铺转让" />
+                </a>
+            </h1>
+
+        </div>
+        <div class="subtitle lgArea">
+            <img src="/Public/Home/Shops/Images/sub-title.png" border="0" alt="淘宝店铺转让" />
+        </div>
+        <%--<div class="WP-qq">
+            <p class="QQ">
+                <a href="javascript:void(0)" onclick="javascript:window.open('#', '_blank', 'height=544, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');">在线客服
+                </a>
+            </p>
+            <p class="KF">
+                <a href="#">客服中心
+                </a>
+            </p>
+        </div>--%>
+        <form name="formfind" id="iformfind" method="get" action="/Tmall.aspx?go=0&new=<%=Request.QueryString["new"] %>">
+            <div class="Hunt" style="z-index:3">
+                <input class="in-box" type="text" name="q" id="ishopName" value="填写关键词或网店编号"
+                    onfocus="MouseClk()" onblur="MouseOut()" />
+                <input class="hunt-but-01" type="button" id="isobtn" value="搜索网店" onclick="srhformSbt()" />
+                <div class="search-keywords">
+                    <a href="/Tmall.aspx?q=<%="全新店".UrlEncode() %>">全新店</a>
+                    <a href="/Tmall.aspx?q=<%="男装".UrlEncode() %>">男装</a>
+                    <a href="/Tmall.aspx?q=<%="玩具".UrlEncode() %>">玩具</a>
+                    <a href="/Tmall.aspx?q=<%="收纳".UrlEncode() %>">收纳</a>
+                    <a href="/Tmall.aspx?q=<%="洗护".UrlEncode() %>">洗护</a>
+                    <a href="/Tmall.aspx?q=<%="个人护理".UrlEncode() %>">个人护理</a>
+                    <a href="/Tmall.aspx?q=<%="运动户外".UrlEncode() %>">运动户外</a>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <div class="clear">
+    </div>
+    <div class="WP-nav">
+        <div class="N-WP" style="position: relative; z-index: 2">
+            <ul>
+                <li>
+                    <h2>
+                        <i class="icon if-others">&#xe603;</i>
+                        全部商品分类
+                    </h2>
+                </li>
+                <li class="ml42">
+                    <a href="/">首 页
+                    </a>
+                </li>
+                <li>
+                    <a href="/Tmall.aspx">天猫商城</a>
+                </li>
+                <li>
+                    <a href="/Tmall.aspx?go=0&new=1">2016全新天猫店</a>
+                </li>
+                <li>
+                    <a href="/Tmall.aspx?go=0&new=2">名字公开店铺</a>
+                </li>
+                <li>
+                    <a href="/question/">在线问答</a>
+                </li>
+                <li>
+                    <a href="/Interview.aspx">售后采访
+                        <img src="/Public/Home/Shops/Images/new.gif" /></a>
+                </li>
+            </ul>
+            <span class="QG-shichang">
+                <a href="/Compared.aspx">比一比</a>
+                <a href="/Ask.aspx">问一问</a>
+                <a href="/See.aspx">看一看</a>
+                <%--<a href="javascript:postWant();">
+                    <img id="postEnter" src="/Public/Home/Shops/Images/1506/fabuqiugou.gif" border="0" />
+                </a>--%>
+            </span>
+            <div id="postDemand" class="PostYourWant" style="display: none;">
+                <div class="hd">
+                    <h2>填写购店需求，动员服务顾问帮您找店
+                    </h2>
+                    <a href="javascript:postWant();" class="close"></a>
+                </div>
+                <div class="bd clearfix">
+                    <div id="ixqsdiv" class="part-l">
+                        <p class="formItem">
+                            <label for="name">
+                                姓名：
+                            </label>
+                            <input type="text" class="txtStyle-pyw" id="xqname" value="例如：何先生" onfocus="XqMouseClk('1','1')"
+                                onblur="XqMouseClk('1','2')" />
+                        </p>
+                        <p class="formItem">
+                            <label for="mobile">
+                                手机：
+                            </label>
+                            <input type="text" class="txtStyle-pyw" id="xqmobile" value="例如：15688878886"
+                                onfocus="XqMouseClk('2','1')" onblur="XqMouseClk('2','2')" />
+                        </p>
+                        <p class="formItem">
+                            <label for="qq">
+                                Q Q：
+                            </label>
+                            <input type="text" class="txtStyle-pyw" id="xqqq" value="例如：826935668"
+                                onfocus="XqMouseClk('3','1')" onblur="XqMouseClk('3','2')" />
+                        </p>
+                        <p class="formItem" style="margin-bottom: 30px;">
+                            <label for="yourWant" style="vertical-align: top; margin-top: 7px;">
+                                需求：
+                            </label>
+                            <textarea id="yourWant" class="txtStyle-pyw" style="height: 60px; padding: 6px; resize: none;"
+                                onfocus="XqMouseClk('4','1')" onblur="XqMouseClk('4','2')">
+                    例如：求购一个江浙沪地区女装类天猫店
+                  </textarea>
+                        </p>
+                        <p class="formItem">
+                            <label>
+                            </label>
+                            <input type="button" class="btn-pyw" value="立即发布购店需求" onclick="SendXuqiu().html" />
+                        </p>
+                    </div>
+                    <div id="ixqediv" class="part-l submitted" style="display: none;">
+                        <h2>
+                            <img src="/Public/Home/Shops/Images/1506/xinxitijiaochenggong.png" />
+                            信息提交成功！
+                        </h2>
+                        <div class="mbtxt">
+                            300余名服务顾问已收到您的需求
+                  <br />
+                            我们会立即寻找符合您要求的网店
+                  <br />
+                            一旦找到将立即联系您，感谢您的支持！
+                        </div>
+                        <input type="button" class="closeBtn-pyw" value="关闭本页" onclick="postWant();" />
+                    </div>
+                    <div class="part-r">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear">
+    </div>
+    <div id="xuqiu" class="alertLayer4" style="display: none; z-index: 9999px; width: 680px; height: 430px; top: 294px; left: 390px;">
+        <div class="hd ">
+            <h2>填写购店需求，动员服务顾问帮您找店</h2>
+            <a href="javascript:void(0);" class="close"></a>
+        </div>
+        <div class="bd clearfix">
+            <div id="ixqsdiv" class="part-l">
+                <p class="formItem">
+                    <label for="name">姓名：</label><input type="text" class="txtStyle-pyw" id="xqname" value="例如：何先生" onfocus="XqMouseClk('1','1')" onblur="XqMouseClk('1','2')">
+                </p>
+                <p class="formItem">
+                    <label for="mobile">手机：</label><input type="text" class="txtStyle-pyw" id="xqmobile" value="例如：15688878886" onfocus="XqMouseClk('2','1')" onblur="XqMouseClk('2','2')">
+                </p>
+                <p class="formItem">
+                    <label for="qq">Q  Q：</label><input type="text" class="txtStyle-pyw" id="xqqq" value="例如：826935668" onfocus="XqMouseClk('3','1')" onblur="XqMouseClk('3','2')">
+                </p>
+                <p class="formItem" style="margin-bottom: 30px;">
+                    <label for="yourWant" style="vertical-align: top; margin-top: 7px;">需求：</label><textarea id="yourWant" class="txtStyle-pyw" style="height: 60px; padding: 6px; resize: none;" onfocus="XqMouseClk('4','1')" onblur="XqMouseClk('4','2')">例如：求购一个江浙沪地区女装类天猫店</textarea>
+                </p>
+                <p class="formItem">
+                    <label></label>
+                    <input type="button" class="btn-pyw" value="立即发布购店需求" onclick="SendXuqiu()">
+                </p>
+            </div>
+            <div id="ixqediv" class="part-l submitted" style="display: none;">
+                <h2>
+                    <img src="/Public/Home/Shops/Images/1506/xinxitijiaochenggong.png">信息提交成功！</h2>
+                <div class="mbtxt">
+                    300余名服务顾问已收到您的需求<br>
+                    我们会立即寻找符合您要求的网店<br>
+                    一旦找到将立即联系您，感谢您的支持！
+                </div>
+                <input type="button" class="closeBtn-pyw" value="关闭本页" onclick="postWant();">
+            </div>
+            <div class="part-r"></div>
+        </div>
+
+    </div>
+    <!--Main-->
+    <asp:ContentPlaceHolder ID="BodyHolder" runat="server"></asp:ContentPlaceHolder>
+    <!--//Main-->
+    <!-- 底部 -->
+    <div class="Footer New-Footer">
+        <div class="New-JieShao">
+            <div class="Attention">
+                <div class="XinShou firstRow">
+                    <h3><a href="/">首页</a></h3>
+                </div>
+                <div class="XinShou firstRow">
+                    <h3><a href="/Article/List.aspx?cat=7">帮肋中心</a></h3>
+                    <%--<ul>
+                        <asp:Loop LoopType="Article" CatId="43" Limit="5" runat="server" ID="XinShou">
+                            <ItemTemplate>
+                                <li>
+                                    <a class="Awidth1" href="<%# string.Format("detail.aspx?id={0}",Eval("Id")) %>">
+                                        <b></b>
+                                        <%# Eval("Title") %>
+                                    </a>
+                                </li>
+                            </ItemTemplate>
+                        </asp:Loop>
+
+                    </ul>--%>
+                </div>
+                <div class="XinShou">
+                    <h3><a href="/Article/List.aspx?cat=61">购买出售流程</a></h3>
+                    <%--<ul>
+                        <asp:Loop LoopType="Article" CatId="43" Limit="5" runat="server" ID="Loop1">
+                            <ItemTemplate>
+                                <li>
+                                    <a class="Awidth1" href="<%# string.Format("detail.aspx?id={0}",Eval("Id")) %>">
+                                        <b></b>
+                                        <%# Eval("Title") %>
+                                    </a>
+                                </li>
+                            </ItemTemplate>
+                        </asp:Loop>
+                    </ul>--%>
+                </div>
+
+                <%-- <div class="XinShou">
+                    <h3>定全保障</h3>
+                    <ul>
+                        <asp:Loop LoopType="Article" CatId="43" Limit="5" runat="server" ID="Loop2">
+                            <ItemTemplate>
+                                <li>
+                                    <a class="Awidth1" href="<%# string.Format("detail.aspx?id={0}",Eval("Id")) %>">
+                                        <b></b>
+                                        <%# Eval("Title") %>
+                                    </a>
+                                </li>
+                            </ItemTemplate>
+                        </asp:Loop>
+                    </ul>
+                </div>--%>
+
+                <div class="XinShou">
+                    <h3><a href="/Detail.aspx?id=29">合同法律咨询</a></h3>
+                    <%--<ul>
+                        <asp:Loop LoopType="Article" CatId="43" Limit="5" runat="server" ID="Loop3">
+                            <ItemTemplate>
+                                <li>
+                                    <a class="Awidth1" href="<%# string.Format("detail.aspx?id={0}",Eval("Id")) %>">
+                                        <b></b>
+                                        <%# Eval("Title") %>
+                                    </a>
+                                </li>
+                            </ItemTemplate>
+                        </asp:Loop>
+                    </ul>--%>
+                </div>
+                <div class="XinShou">
+                    <h3><a href="/Detail.aspx?id=31">关于我们</a></h3>
+                    <%--<ul>
+                        <asp:Loop LoopType="Article" CatId="44" Limit="5" runat="server" ID="Zoujunjudian">
+                            <ItemTemplate>
+                                <li>
+                                    <a class="Awidth1" href="<%# string.Format("detail.aspx?id={0}",Eval("Id")) %>">
+                                        <b></b>
+                                        <%# Eval("Title") %>
+                                    </a>
+                                </li>
+                            </ItemTemplate>
+                        </asp:Loop>
+                    </ul>--%>
+                </div>
+                <div class="QrCode">
+                    <img src="/Public/Home/Shops/Images/footer-qrcode.jpg" width="150" />
+                </div>
+
+                <div class="Contact">
+                    <h3 style="width: 120px">全国咨询热线</h3>
+                    <p class="tel">400-0430-731</p>
+                    <p>
+                        <a href="#"><i class="icon if-others">&#xe602;</i></a>
+                        <a href="#"><i class="icon if-others">&#xe604;</i></a>
+                        <a href="#"><i class="icon if-others">&#xe605;</i></a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="New-YeJiao">
+            <div class="YJ-new">
+                <div class="about-us">
+                    <asp:Loop LoopType="Title" CatId="8" Limit="20" runat="server" ID="AboutUS">
+                        <ItemTemplate>
+                            <a href="/Detail.aspx?id=<%# Eval("Id") %>" title="<%# Eval("Name") %>"><%# Eval("Name") %></a> |
+                        </ItemTemplate>
+                    </asp:Loop>
+
+                    <a href="#totop">返回顶部</a>
+                </div>
+            </div>
+        </div>
+        <div class="New-BQ">
+            <div class="BanQuan">
+                <div style="padding-top: 10px; line-height: 24px;">
+                    <%=Application["copyright"] %>
+                    <a rel="nofollow" href="http://www.miibeian.gov.cn/"><%=Application["beian"] %></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear">
+    </div>
+    <%--    <script type="text/javascript">
+        $(window).scroll(function () {
+
+            h = $(window).height();
+
+            t = $(document).scrollTop();
+
+            if (t > h) {
+
+                $('#yub1').show();
+
+            } else {
+
+                $('#yub1').hide();
+
+            }
+
+        });
+
+        $(document).ready(function (e) {
+
+            $('#yub1').click(function () {
+
+                $("html,body").animate({
+                    scrollTop: 0
+                },
+                300);
+
+            });
+
+        });
+    </script>--%>
+    <%--    <div class="fhdb">
+        <ul>
+            <li class="yub1">
+                <a href="javascript:void(0);" onclick="javascript:window.open('#', '_blank', 'height=544,width=644,toolbar=no,scrollbars=no,menubar=no,status=no');">客服
+              <br>
+                    QQ
+                </a>
+            </li>
+            <li class="yub2">
+                <a href="javascript:void(0);" onclick="showTel()">免费
+              <br>
+                    电话
+                </a>
+            </li>
+            <li class="yub3">
+                <a href="javascript:void(0);" onclick="ShopShowBi()">店铺
+              <br>
+                    对比
+                </a>
+            </li>
+            <li class="yub4">
+                <a href="javascript:void(0);" onclick="Player.event.show.call($(_#XK_Controller_Show').target);">观看
+              <br>
+                    视频
+                </a>
+            </li>
+            <li class="yub5" id="yub1" style="display: none;">
+                <a href="javascript:void(0);">返回
+              <br>
+                    顶部
+                </a>
+            </li>
+        </ul>
+    </div>--%>
+
+
+
+    <div id="panel_cart_list" style="display: none; position: fixed; left: 50%; top: 50px; z-index: 999; width: 820px; height: 525px; margin: 0 0 0 -410px; padding: 2px; background-color: #fff; border: 3px solid #cccccc;">
+        <style>
+            .title-1 {
+                background: #89B625;
+                padding: 6px 0;
+                _padding: 8px 0;
+                line-height: 25px;
+                _line-height: 30px;
+                height: 25px;
+            }
+
+            .tbl-6 th {
+                background: #F6FAF9;
+                height: 32px;
+                line-height: 32px;
+                color: #6A9802;
+                font-weight: normal;
+            }
+
+                .tbl-6 th .QuanXuan {
+                    vertical-align: -2px;
+                    margin-right: 5px;
+                    *margin-right: 0px;
+                }
+
+            .tbl-6 {
+                border: 1px solid #E9E3D6;
+                border-collapse: collapse;
+                margin-bottom: 10px;
+            }
+
+                .tbl-6 td {
+                    padding: 10px 0;
+                    color: #444;
+                    border-bottom: 1px solid #E9E3D6;
+                    border-top: 1px solid #E9E3D6;
+                }
+
+                    .tbl-6 td a, .tbl-6 td a:visited {
+                        color: #648EC8;
+                    }
+
+                    .tbl-6 td .price-wd {
+                        font-size: 14px;
+                    }
+
+                    .tbl-6 td a:hover {
+                        color: #F60;
+                    }
+
+                    .tbl-6 td .BiaoTi, .tbl-6 td .BiaoTi:visited {
+                        color: #444;
+                        text-decoration: none;
+                        margin-bottom: 15px;
+                        margin-top: 25px;
+                        display: inline-block;
+                    }
+
+                    .tbl-6 td .CaoZuo-btn, .tbl-6 td .CaoZuo-btn:visited {
+                        color: #666;
+                    }
+
+                    .tbl-6 td .ww-box span {
+                        margin-left: 10px;
+                        color: #7C7C7C;
+                    }
+
+            .gray1-btn-2 {
+                background: url(/Public/Home/Shops/Images/goumai.jpg) no-repeat;
+                width: 49px;
+                height: 24px;
+                line-height: 24px;
+                border: none;
+            }
+        </style>
+        <div class="KanDianDan">
+            <div class="title-1 clearfix">
+                <a id="btn_cart_list_close" class="exit fr" href="javascript:void(0)"
+                    style="background: url(/Public/Home/Shops/Images/guan.jpg) no-repeat; width: 29px; height: 29px; display: block; cursor: pointer; text-indent: -99999px; margin-right: 10px; _margin-right: 5px;"></a>
+                <h2 class="tl" style="font-size: 18px; font-weight: bold; color: #fff; padding-left: 15px;">我的看店单
+              <input type="button" class="gray1-btn-2 mt5" value="清空" onclick="DelSesRec(0).html">
+                </h2>
+            </div>
+            <form id="iformss" name="formss" action="" method="post">
+                <input type="hidden" name="pageid" id="ipageid" value="">
+                <div class="ZhengWen" style="width: 800px; padding: 10px 10px 0px 10px;">
+                    <table id="table_cart_list" class="tbl tbl-6" width="100%" cellpadding="0"
+                        cellspacing="0" style="border-bottom: 0;">
+                        <colgroup>
+                            <col width="30">
+                            <col width="290">
+                            <col width="120">
+                            <col width="95">
+                            <col width="85">
+                            <col width="105">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th></th>
+                                <th align="left">网店标题
+                                </th>
+                                <th>出售价格（元）
+                                </th>
+                                <th>
+                                    <!--卖家信用-->
+                                </th>
+                                <th>所在地区
+                                </th>
+                                <th>操作
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </form>
+        </div>
+    </div>
+   
+    <!-- /底部-->
+    <script type="text/javascript" src="/Public/Home/Shops/Js/scroll_show.js"></script>
+    	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?1000fcd7a83594eb4f143d12134427b3";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260340281'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1260340281%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+
+<a href="http://webscan.360.cn/index/checkwebsite/url/www.tmallzr.com"><img border="0" src="http://img.webscan.360.cn/status/pai/hash/8244321d5116c7429457c6b29fb2f376/?size=74x27"/></a>
+
+<script>
+(function(){
+   var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?bed83e4fdc9f0f8f606127cb519696af":"https://jspassport.ssl.qhimg.com/11.0.1.js?bed83e4fdc9f0f8f606127cb519696af";
+   document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+</body>
+</html>

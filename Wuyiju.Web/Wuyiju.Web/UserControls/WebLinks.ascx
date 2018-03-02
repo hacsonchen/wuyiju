@@ -1,0 +1,1 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebLinks.ascx.cs" Inherits="Wuyiju.Web.UserControls.WebLinks" %>

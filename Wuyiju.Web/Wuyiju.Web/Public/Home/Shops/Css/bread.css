@@ -1,0 +1,92 @@
+﻿ .crumbs-nav-item {
+            float: left;
+            margin-right: 8px;
+        }
+
+        .menu-drop {
+            display: inline-block;
+            height: 24px;
+            cursor: pointer;
+            margin-top: 3px;
+            float: left;
+            margin-right: 5px;
+        }
+
+            .menu-drop .menu-drop-arrow {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                vertical-align: top;
+                background: url(http://misc.360buyimg.com/product/list/1.0.4/css/i/search.ele.png) no-repeat 4px 7px;
+                -webkit-transition: background-position .15s ease-in-out;
+                -moz-transition: background-position .15s ease-in-out;
+                transition: background-position .15s ease-in-out;
+            }
+
+            .menu-drop .trigger {
+                display: inline-block;
+                height: 22px;
+                padding: 0 4px 0 8px;
+                border: 1px solid #ddd;
+                line-height: 22px;
+                vertical-align: top;
+                background: #fff;
+            }
+
+        .z-menu-drop-open {
+            position: relative;
+            z-index: 5;
+        }
+
+        .menu-drop:hover {
+            text-decoration: none;
+        }
+
+        .menu-drop-main {
+            display: none;
+            width: 350px;
+            padding: 10px 0 10px 8px;
+            position: absolute;
+            left: 0;
+            top: 23px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+        }
+
+        .menu-drop-list li {
+            float: left;
+            width: 65px;
+            height: 24px;
+            overflow: hidden;
+            line-height: 24px;
+            margin-right: 5px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .z-menu-drop-open:hover .menu-drop-main {
+            border-color: #e4393c;
+        }
+
+        .z-menu-drop-open:hover .trigger {
+            border-bottom-color: #fff !important;
+        }
+
+        .menu-drop:hover .trigger {
+            border-color: #e4393c;
+        }
+
+        .z-menu-drop-open .trigger {
+            border-bottom-color: #fff;
+            position: relative;
+            z-index: 6;
+        }
+
+        .z-menu-drop-open .menu-drop-main {
+            display: block;
+        }
+
+        .crumbs-arrow {
+            font-family: simsun;
+            font-style: normal;
+        }

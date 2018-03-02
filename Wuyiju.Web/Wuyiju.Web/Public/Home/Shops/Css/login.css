@@ -1,0 +1,116 @@
+ body {
+    background-color:#f6f6f6;
+    padding:0;
+    margin:0;
+}
+div.login-header {
+    width:500px;
+    margin:70px auto 0 auto;
+    padding-bottom: 30px;
+}
+div.login-header p {
+  font-size: 14px;
+  text-align: center;
+  color: #545454;
+}
+div.login-logo h1 {
+    width:500px;
+    margin:0 auto;
+    height: 50px;
+    text-indent: 500px;
+    white-space: nowrap;
+    overflow: hidden;
+    background: url(../Images/logo240.png) no-repeat center center;
+}
+
+div.login-title h2{
+  width:500px;
+    margin:0 auto;
+    height: 50px;
+    text-indent: 500px;
+    white-space: nowrap;
+    overflow: hidden;
+    background: url(../Images/login-title.png) no-repeat center center;
+
+}
+
+div.login-footer {
+  background: url(../Images/login-footer.png) no-repeat center bottom;
+  width: 1024px;
+  height: 300px;
+  margin:0 auto;
+  padding-top: 20px;
+
+}
+
+div.login-footer p {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Microsoft Yahei';
+}
+div.login-footer p.about-us a {
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: 'Microsoft Yahei';
+  margin:0 15px; 
+  font-weight: 500;
+}
+div.login-body {
+text-align: center; 
+ }
+
+div.login-body div.control {
+  margin:0 auto;
+  width: 315px;
+  padding-bottom: 20px;
+
+}
+
+div.login-body div.control input{
+  height: 18px;
+  border:1px solid #ccc;
+  color: #a3a3a3;
+  padding: 10px;
+  width: 293px;
+  background-color: #fff;
+  outline: none;
+}
+
+div.login-body div.control .btn-submit {
+  width: 315px;
+  background-color: #e22322;
+  color: #fff;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Microsoft Yahei';
+  font-weight: 500;
+
+}
+
+div.login-body div.control .btn-register,div.login-body div.control .btn-forget {
+  width: 140px;
+  background-color: #e8e8e8;
+  color: #272727;
+  text-decoration: none;
+  height: 40px;
+  border: none;
+  display: block;
+  line-height: 40px;
+  float: left;
+  font-size: 14px;
+  font-family: 'Microsoft Yahei';
+
+}
+
+.clear { 
+  clear: both; 
+}
+
+div.login-body div.control .btn-forget  {
+  float: right;
+}
+
+

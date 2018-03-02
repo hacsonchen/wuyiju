@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddSesList.aspx.cs" Inherits="Wuyiju.Web.Malls.AddSesList" %>

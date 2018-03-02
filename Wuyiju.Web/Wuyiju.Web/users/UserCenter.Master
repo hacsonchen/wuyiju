@@ -1,0 +1,158 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UserCenter.master.cs" Inherits="Wuyiju.Web.users.UserCenter" MasterPageFile="~/Site.Master" %>
+
+<asp:Content runat="server" ContentPlaceHolderID="HeadHolder">
+    <link type="text/css" rel="stylesheet" href="/Public/Home/Shops/Css/user.css" media="all" />
+    <link type="text/css" rel="stylesheet" href="/Public/Home/Shops/Css/user2.css" media="all" />
+
+    <script type="text/javascript" src="/Public/Home/Jq/dateselect.js"></script>
+    <script type="text/javascript">
+
+        $().ready(function () {
+            showMenuDownList();
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="HeadHolder" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content runat="server" ContentPlaceHolderID="BodyHolder">
+    <div class="main">
+        <div class="guide">当前位置：<a href="/">首页</a> &gt; <a href="/Users/">会员中心</a></div>
+        <div class="main-in">
+            <div class="navLeft">
+            <div class="company-intro">
+                <h2>公司简介</h2>
+                <p>
+                     <%=Application["slogan"] %>
+                </p>
+            </div>
+            <dl id="itag1" class="list-down">
+                <dt><b></b>我是卖家</dt>
+                <dd><a id="it1_1" href="/Users/ShopsTransferType.aspx"><i></i>我要出售网店</a></dd>
+                <dd><a id="it1_2" href="/Users/SellList.aspx"><i></i>我出售的网店</a></dd>
+                <!--<dd><a id="it1_9" href="/Users/qiugoujoin.html" ><i></i>我参与的求购</a></dd>
+       	<dd><a id="it1_10" href="/Users/qiugoucollection.html" ><i></i>我收藏的求购</a></dd>-->
+            </dl>
+            <dl id="itag7" class="list-down">
+                <dt><b></b>我是买家</dt>
+                <dd><a id="it7_1" href="/Users/BoughtList.aspx"><i></i>我购买的网店</a></dd>
+                <dd><a id="it7_2" href="/Users/Favorites.aspx"><i></i>我收藏的网店</a></dd>
+                <!--
+		<dd><a id="it7_3" href="/Users/qiugou_submit.html" ><i></i>我要求购网店</a></dd>
+       	<dd><a id="it7_4" href="/Users/qiugoulist.html" ><i></i>我的求购信息</a></dd>
+		-->
+            </dl>
+            <dl id="itag2" class="list-down">
+                <dt><b></b>资金管理</dt>
+                <dd><a id="it2_1" href="/Users/Recharge.aspx"><i></i>我要充值</a></dd>
+                <dd><a id="it2_2" href="/Users/RechargeRecords.aspx"><i></i>充值记录</a></dd>
+                <dd><a id="it2_3" href="/Users/Takecash.aspx"><i></i>我要提现</a></dd>
+                <dd><a id="it2_4" href="/Users/TakecashRecords.aspx"><i></i>提现记录</a></dd>
+                <dd><a id="it2_7" href="/Users/FundsDetails.aspx"><i></i>收支明细</a></dd>
+                <dd><a id="it2_8" href="/Users/FreezeDetails.aspx"><i></i>冻结明细</a></dd>
+            </dl>
+            
+
+            <dl id="itag3" class="list-down">
+                <dt><b></b>信息管理</dt>
+                <dd><a id="it3_1" href="/Users/EditInfo.aspx" class=""><i></i>修改个人资料</a></dd>
+                <dd><a id="it3_2" href="/Users/ChangePassword.aspx"><i></i>修改登录密码</a></dd>
+                <dd><a id="it3_3" href="/Users/PaymentPassword.aspx"><i></i>设置支付密码</a></dd>
+                <dd><a id="it3_4" href="/Users/ProtectPassword.aspx"><i></i>修改密码保护</a></dd>
+                <dd><a id="it3_7" href="/Users/AuthMobile.aspx"><i></i>手机认证</a></dd>
+                <dd><a id="it3_8" href="/Users/AuthEmail.aspx"><i></i>邮箱认证</a></dd>
+            </dl>
+            <dl id="itag4">
+                <dt><b></b>咨询建议</dt>
+                <dd><a id="it4_1" href="/Users/QuestionSubmit.aspx"><i></i>我要提问</a></dd>
+                <dd><a id="it4_2" href="/Question/MyList.aspx"><i></i>我的提问</a></dd>
+                <dd><a id="it4_3" href="/Users/SuggestSubmit.aspx"><i></i>我要建议</a></dd>
+                <dd><a id="it4_4" href="/Users/wdjianyi.html"><i></i>我的建议</a></dd>
+            </dl>
+            <div class="question-online">
+                <h3>在线问答</h3>
+                <ul>
+                    
+                            <li><a href="/Question/Answer.aspx?id=6">在抢购成功后能不能支持快捷支付？？</a></li>
+                        
+                            <li><a href="/Question/Answer.aspx?id=7">为什么要开通快捷支付，开通有什么好处？</a></li>
+                        
+                            <li><a href="/Question/Answer.aspx?id=8">在抢购成功后能不能支持快捷支付？？</a></li>
+                        
+                            <li><a href="/Question/Answer.aspx?id=9">为什么要开通快捷支付，开通有什么好处？</a></li>
+                        
+                </ul>
+            </div>
+        </div>
+           <%-- <div class="nav-l">
+                <dl id="itag1" class="list-down">
+                    <dt><b></b>我是卖家</dt>
+                    <dd><a id="it1_1" href="/Users/ShopsTransferType.aspx"><i></i>我要出售网店</a></dd>
+                    <dd><a id="it1_2" href="/Users/SellList.aspx"><i></i>我出售的网店</a></dd>
+                    <!--<dd><a id="it1_9" href="/Users/qiugoujoin.html" ><i></i>我参与的求购</a></dd>
+       	<dd><a id="it1_10" href="/Users/qiugoucollection.html" ><i></i>我收藏的求购</a></dd>-->
+                </dl>
+                <dl id="itag7" class="list-down">
+                    <dt><b></b>我是买家</dt>
+                    <dd><a id="it7_1" href="/Users/BoughtList.aspx"><i></i>我购买的网店</a></dd>
+                    <dd><a id="it7_2" href="/Users/Favorites.aspx"><i></i>我收藏的网店</a></dd>
+                    <!--
+		<dd><a id="it7_3" href="/Users/qiugou_submit.html" ><i></i>我要求购网店</a></dd>
+       	<dd><a id="it7_4" href="/Users/qiugoulist.html" ><i></i>我的求购信息</a></dd>
+		-->
+                </dl>
+                <dl id="itag2" class="list-down">
+                    <dt><b></b>资金管理</dt>
+                    <dd><a id="it2_1" href="/Users/Recharge.aspx"><i></i>我要充值</a></dd>
+                    <dd><a id="it2_2" href="/Users/RechargeRecords.aspx"><i></i>充值记录</a></dd>
+                    <dd><a id="it2_3" href="/Users/Takecash.aspx"><i></i>我要提现</a></dd>
+                    <dd><a id="it2_4" href="/Users/TakecashRecords.aspx"><i></i>提现记录</a></dd>
+                    <dd><a id="it2_7" href="/Users/FundsDetails.aspx"><i></i>收支明细</a></dd>
+                    <dd><a id="it2_8" href="/Users/FreezeDetails.aspx"><i></i>冻结明细</a></dd>
+                </dl>
+                <%--<dl id="itag8" class="list-down">
+                    <dt><b></b>电商学院</dt>
+                    <dd><a id="it8_1" href="/school/index.html" ><i></i>学院介绍</a></dd>
+                    <dd><a id="it8_2" href="/Users/school.html"><i></i>报名信息</a></dd>
+                </dl>--
+
+                <dl id="itag3" class="list-down">
+                    <dt><b></b>信息管理</dt>
+                    <dd><a id="it3_1" href="/Users/EditInfo.aspx" class="over"><i></i>修改个人资料</a></dd>
+                    <dd><a id="it3_2" href="/Users/ChangePassword.aspx"><i></i>修改登录密码</a></dd>
+                    <dd><a id="it3_3" href="/Users/PaymentPassword.aspx"><i></i>设置支付密码</a></dd>
+                    <dd><a id="it3_4" href="/Users/ProtectPassword.aspx"><i></i>修改密码保护</a></dd>
+                    <dd><a id="it3_7" href="/Users/AuthMobile.aspx"><i></i>手机认证</a></dd>
+                    <dd><a id="it3_8" href="/Users/AuthEmail.aspx"><i></i>邮箱认证</a></dd>
+                </dl>
+                <dl id="itag4">
+                    <dt><b></b>咨询建议</dt>
+                    <dd><a id="it4_1" href="/Users/QuestionSubmit.aspx"><i></i>我要提问</a></dd>
+                    <dd><a id="it4_2" href="/Question/MyList.aspx" ><i></i>我的提问</a></dd>
+                    <dd><a id="it4_3" href="/Users/SuggestSubmit.aspx"><i></i>我要建议</a></dd>
+                </dl>
+            </div>--%>
+
+            <script type="text/javascript">
+                var oflag = "";
+                $(document).ready(function () {
+                    $("div.nav-l dl dd a").click(function () {
+                        oflag = "ahref";
+                    });
+
+                    $("div.nav-l dl").click(function () {
+                        var issel = $(this).hasClass("list-down");
+                        if (issel == true && oflag != "ahref") {
+                            $(this).removeClass("list-down");
+                        } else {
+                            $(this).addClass("list-down");
+                        }
+                    });
+                });
+
+            </script>
+
+            <asp:ContentPlaceHolder ID="BodyHolder" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </div>
+
+</asp:Content>

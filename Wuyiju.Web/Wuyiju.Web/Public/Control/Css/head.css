@@ -1,0 +1,14 @@
+ul,li,body{padding:0;margin:0;list-style:none;}
+img{border:0;}
+a{text-decoration:none;}
+body{background:url(../Img/hh01.jpg) repeat-x;font:12px '宋体',arial,sans-serif;color:#FFF;text-align:center;}
+.logo{float:left;margin:10px 0 0 19px; font-size:30px; font-weight:bold;}
+.nav{float:right;margin:12px 10px 0 0;display:inline;}
+.nav li{float:left;}
+.nav li a{font-size: 14px;float:left;width:75px;height:48px;line-height:40px;color:#FFF;}
+.nav li a.current{color:#3A93CF;background:url(../Img/hh02.jpg) no-repeat;}
+.version{float:left;margin:12px 0 0 7px;font-size:10px;}
+.act{float:left;margin:28px 0 0 20px;line-height:28px;display:inline;}
+.act li{float:left;padding:0 13px 0 0;}
+.act li a{float:left;color:#A3D6F9;}
+.act li a:hover{color:#FFF;}

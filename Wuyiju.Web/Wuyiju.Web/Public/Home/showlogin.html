@@ -1,0 +1,32 @@
+<form method="post" name="showLogin" id="showLogin">
+<style type="text/css">
+.showLogin,.showLogin li {list-style:none;padding:0;margin:0;}
+.showLogin {width:280px; margin:0 auto; display:block;}
+.showLogin li {height:30px; line-height:30px; font-size:14px; color:#F38F03; padding:2px 0;}
+.showLogin li.slle {float:left; width:50px;}
+.showLogin li.slri {float:left; width:200px;}
+.showLogin li.clear {height:0; line-height:0;}
+.showLogin li input {width:200px; height:22px; background:#FFF; padding:0; border:1px solid #CCC; margin:0;}
+.showLogin li input.loginSubmit {width:202px; height:24px; line-height:24px; background-color:#F38F03; color:#FFF; border:0; font-family:'微软雅黑'; font-size:14px; cursor:pointer;}
+</style>
+<ul class="showLogin">
+	<li class="slle">用户：</li>
+	<li class="slri"><input type="text" name="username" id="username" /></li>
+	<li class="clear"></li>
+</ul>
+<ul class="showLogin">
+	<li class="slle">密码：</li>
+	<li class="slri"><input type="password" name="password" id="password" /></li>
+	<li class="clear"></li>
+</ul>
+<ul class="showLogin">
+	<li class="slle">&nbsp;</li>
+	<li class="slri"><input type="submit" value="立即登录" id="showLoginSubmit" name="showLoginSubmit" class="loginSubmit" /></li>
+	<li class="clear"></li>
+</ul>
+<ul class="showLogin">
+	<li class="slle">&nbsp;</li>
+	<li class="slri"><a href="/user/register.html">还没帐号，立刻注册</a></li>
+	<li class="clear"></li>
+</ul>
+</form>

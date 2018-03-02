@@ -1,0 +1,384 @@
+html,body,h3{ 
+	margin:0; 
+	padding: 0 
+}
+
+body {
+    background-color:#fff;
+    font-size: 14px;
+    font-family: 'Microsoft Yahei';
+}
+
+.clear {
+	clear: both;
+}
+
+div.pk-wrap { 
+	width: 1200px; 
+	margin:0 auto;  
+}
+
+#biyibi {
+	height: 134px;
+}
+
+#biyibi h3.biyibi-title {
+	background: url(../Images/biyibi-title.png) no-repeat 0 0;
+	width: 245px;
+	height: 27px;
+	text-indent: 245px;
+	white-space: nowrap;
+	overflow: hidden;
+	margin-top: 50px;
+	float: left;
+}
+
+#biyibi div.search-box {
+	float: right;
+	width: 486px;
+	height: 100%;
+}
+
+#biyibi div.search-box div.search-form {
+	height: 34px;
+	width: 480px;
+	border: 1px solid #ddd;
+	padding: 2px;
+	margin-top: 40px;
+	float: right;
+
+}
+
+#biyibi div.search-box div.search-form input {
+	color: #b7b7b7;
+	height: 34px;
+	line-height: 34px;
+	border: none;
+	outline: none;
+	width: 398px;
+	padding-left: 10px;
+
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+#biyibi div.search-box div.search-form button {
+	width: 70px;
+	text-indent: 70px;
+	white-space: nowrap;
+	overflow: hidden;
+
+	background: url(../Images/biyibi-search.png) no-repeat center center;
+	float: right;
+	height: 34px;
+	outline: none;
+	border-left: 1px solid #ddd;
+
+
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+
+
+}
+#biyibi div.search-box div.search-tags {
+	padding-top: 8px;
+}
+
+#biyibi div.search-box div.search-tags a {
+	line-height: 30px;
+	float: left;
+}
+#biyibi div.search-box div.search-tags a.tags-left {
+	float: left;
+	border-right: 1px solid #ddd;
+	width: 49%;
+}
+#biyibi div.search-box div.search-tags a.tags-right {
+	text-align: right;
+	width: 50%;
+}
+#biyibi div.search-box div.search-tags a>i.biyibi-go {
+	vertical-align: middle;
+	background: url(../Images/biyibi-go.png) no-repeat 0 0;
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+#quick-bi div.quick-title {
+	height: 59px;
+	border-bottom: 1px solid #e9e9e9;
+
+	vertical-align: middle;
+
+}
+
+#quick-bi div.quick-title h3 {
+	background: url(../Images/quick-title.png) no-repeat left center;
+	width: 73px;
+	height: 100%;
+	text-indent: 73px;
+	white-space: nowrap;
+	overflow: hidden;
+	float: left;
+
+	display:block;
+}
+
+#quick-bi {
+	height: 450px;
+}
+
+#quick-bi div.quick-title p {
+	color: #808080;
+	line-height: 59px;
+	float: left;
+	padding-left: 10px;
+	display:block;
+
+}
+
+#quick-bi div.quick-body div.quick-shop {
+	display: block;
+	float: left;
+	width: 33.3%;
+}
+
+#quick-bi div.quick-body div.quick-shop p,#quick-bi div.quick-body div.quick-shop h4 {
+	text-align: center;
+
+}
+#quick-bi div.quick-body div.quick-shop p.price {
+	color: #d80c18;
+	font-family: 'Microsoft Yahei';
+	font-size: 16px;
+	font-weight: 500;
+	padding-top: 23px;
+	padding-bottom: 10px;
+}
+
+#quick-bi div.quick-body div.quick-shop p.buynow>a {
+	background-color: #f8f8f8;
+	height: 27px;
+	line-height: 27px;
+	padding:0 23px;
+	border: 1px solid #dedede;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+#quick-bi div.quick-body div.quick-shop h4 {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+#quick-bi div.quick-body div.new-shop h4 {
+	background: url(../Images/quick-shop-title-new.png) no-repeat center center;
+	height: 18px;
+}
+
+#quick-bi div.quick-body div.used-shop h4 {
+	background: url(../Images/quick-shop-title-used.png) no-repeat center center;
+	height: 18px;
+}
+
+#quick-bi div.quick-body div.quick-shop div.shop-image {
+
+	width: 260px;
+	height: 150px;
+	border: 1px solid #040000;
+	margin-top: 43px;
+	margin-bottom: 50px;
+
+}
+
+#quick-bi div.quick-body div.new-shop {
+	margin-left: 96px;
+	width: 262px;
+
+}
+
+#quick-bi div.quick-body div.used-shop {
+	width: 262px;
+	margin-right: 96px;
+	float: right;
+}
+
+#quick-bi div.quick-body div.new-shop div.shop-image {
+	
+
+	background: url(../Images/quick-shop-new.jpg) no-repeat center center;
+
+}
+
+#quick-bi div.quick-body div.used-shop div.shop-image {
+	background: url(../Images/quick-shop-used.jpg) no-repeat center center;
+
+}
+
+#quick-bi div.quick-body div.pk-area {
+	display: block;
+	float: left;
+	width: 220px;
+	height: 250px;
+	margin-top: 95px;
+	padding-top: 110px;
+	text-align: center;
+
+	margin-left: 160px;
+	background: url(../Images/quick-pc.png) no-repeat center top;
+
+}
+
+#quick-bi div.quick-body div.pk-area a.btn-pk {
+	background-color: #d80c18;
+	height: 30px;
+	line-height: 30px;
+	width: 110px;
+	color: #fff;
+
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+#quick-bi div.quick-body div.pk-area a.btn-random {
+	margin-top: 13px;
+	height: 20px;
+
+	border: 1px solid #dfdfdf;
+	color: #9e9e9e;
+	padding: 0 20px 0 34px;
+	background:  #f8f8f8 url(../Images/icon-refresh.gif) no-repeat 4px 2px;
+	font-family: '宋体';
+	font-size: 12px;
+	line-height: 20px;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+#biyibi-vs {
+	background-color: #f3f3f3;
+	width: 100%;
+	height: 440px;
+}
+
+#biyibi-vs .vs-content {
+	height: 100%;
+	background: url(../Images/bg-biyibi-vs.jpg) no-repeat center top;
+	padding-top: 368px;
+}
+
+#biyibi-vs .vs-content a.btn-vs-buynow {
+	width: 213px;
+	height: 63px;
+	background: url(../Images/btn-vs-buynow.png) no-repeat 0 0;
+	display: block;
+	margin:0 auto;
+}
+
+#biyibi-choose {
+	background-color: #f7f7f7;
+	height: 480px;
+	width: 100%;
+}
+
+div.choose-title {
+	height: 50px;
+
+}
+
+div.choose-title h3 {
+	line-height: 50px;
+	font-size: 18px;
+	font-family: 'Microsoft Yahei';
+	font-weight: normal;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	color: #333;
+}
+
+div.choose-title p {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+
+	color: #888;
+}
+
+div.choose-body {
+	background-color: #fff;
+	min-height: 300px
+}
+
+#step1 {
+	padding-top: 50px;
+}
+
+#step1 h4{
+	width: 100%;
+	height: 26px;
+	background: url(../Images/choose-step1-title.png) no-repeat center center;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-align: center;
+	
+	margin-bottom: 30px;
+}
+
+#step1 ul {
+	margin:0 auto;
+	width: 440px;
+}
+
+#step1 ul li {
+	border: 2px solid #dfdfdf;
+	padding:4px 10px;
+	margin-top: 8px;
+}
+
+#step1 ul li input {
+	display: none;
+}
+
+#step1 ul li span {
+	border: 2px solid #dfdfdf;
+
+
+	width: 23px;
+	height: 23px;
+
+	display: table-cell;
+
+
+}
+
+#step1 ul li label {
+
+	margin: 0;
+	padding-left: 10px;
+	display: table-cell;
+
+	color: #a3a3a3;
+
+	cursor: pointer;
+
+
+	height: 27px;
+	line-height: 27px;
+}
+
+div.biyibi-footer-title {
+	background: url(../Images/biyibi-footer-title.png) no-repeat right center;
+
+	height: 85px;
+}

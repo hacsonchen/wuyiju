@@ -1,0 +1,167 @@
+@charset "utf-8"; /* CSS Document */
+
+.main{width:1190px; margin:0 auto; font-size:12px; }
+
+/*===================== 求购/网店 列表 =======================*/
+
+/*----------------- 看店单 -----------------*/
+.MyOrders{background:url(../images/kandiandan.png); width:43px; height:144px; position:absolute; right:-45px; top:30px; }
+.MyOrders a{display:block; width:43px; height:144px; text-decoration:none; }
+.MyOrders .num{color:#A86E0D; font-family:Tahoma; font-weight:bold; margin-left:19px; margin-top:5px; display:block; }
+
+/*----------------- 使用流程 -----------------*/
+.LiuCheng{width:1000px; margin:8px 0 15px; }
+
+
+/*----------------- 查询条件 ------------------*/
+#decorationSort{width:750px; overflow:hidden; font-family:"宋体"; float:left; margin-bottom:15px; }
+#sort_title{width:700px; height:35px; padding:0 25px; line-height:35px; background:#A2B9CE; color:#fff; font-size:13px; }
+#sort_title dl{width:auto; height:35px; float:left; }
+#sort_title dt, #sort_title dd, #sort_title h4{display:inline; float:left; height:35px; line-height:35px; font-size:14px; font-weight:bold; }
+#sort_title dd a{background:#FFFFFF; color:#000; display:inline; float:left; text-decoration:none; margin:6px 5px 2px 0; width:57px; padding-right:21px; height:21px; line-height:21px; text-align:center; position:relative; white-space:nowrap; font-size:13px; font-weight:normal; }
+
+#sort_title dd a .close-icon{background:url(../images/del.png) no-repeat;cursor:pointer; height:17px; position:absolute; right:2px; top:2px; width:17px; }
+#choices,#choices ul{width:80px; height:35px; line-height:35px; float:left; }
+#choices ul li{float:left; height:35px; margin-right:3px; font-size:14px; }
+#choices ul li input{width:15px; height:15px; border:0; background:url(../images/choice.png) no-repeat; margin:9px 0 8px 0; }
+#sort_area{width:748px; overflow:hidden; border:1px solid #E4E4E4; border-top:none; }
+#sort_area1{width:703px; overflow:hidden; padding-bottom: 1px; padding-left: 20px; padding-right: 20px; padding-top: 10px; background:url(../images/sortbg.png) repeat-y; }
+#sort_hide{width:760px; height:10px; *height:8px; overflow:hidden; }
+			   
+#sort_area .classify{width:703px; overflow:hidden; padding-bottom:15px; background:url(../images/dotted-bg.png) 0 100% repeat-x; }
+#sort_area .classify1{margin-bottom:15px; }
+#sort_area .classify h1{color: #666666; float: left; font-size: 12px; height: 20px; line-height: 20px; width: 65px; }
+#sort_area .noborder{background:none; }
+
+#sort_area .sort_name{float: left; overflow-x: hidden; overflow-y: hidden; width: 638px; }
+#sort_area .classify span{width:650px; float:left; width:106px; height:20px; line-height:20px; display:block; }
+#sort_area span.oneToTab a{font-size:12px; color:#666666; padding:3px; text-decoration:none; white-space:nowrap; }
+#sort_area span.oneToTab a:hover{color:#FFF; background:#f60; padding:3px; }
+
+#sort_area span.oneToTab  a.yiselect:link, #sort_area span.oneToTab  a.yiselect:visited, #sort_area span.oneToTab  a.yiselect:hover, #sort_area span.oneToTab  a.yiselect:active{color:#FFF; background:#f60; padding:3px; text-decoration:none; }
+
+#sort_area .sort_name2 li{float:left; display:inline; width:234px; }
+#sort_area .sort_name2 h1{width:auto; height:26px; line-height:26px; }
+#sort_area .sort_name2 .JiaGe{width:58px; height:23px; line-height:23px\9; }
+#sort_area .sort_name2 .ZhanBi{width:40px; height:23px; line-height:23px\9; }
+
+#sort_area .sort_name3 dt{width:110px; text-align:left; float:left; }
+#sort_area .sort_name3 dd{float:left; display:inline; margin-right:14px; }
+#sort_area .sort_name3 h1{width:auto; height:26px; line-height:26px; }
+#sort_area .sort_name3 .Keywords{width:425px; height:23px; line-height:23px\9; }
+#sort_area .sort_name3 .org-rtbtn{margin-right:1px; }
+
+/*----------------- 求购列表 ------------------*/
+.QiuGoulist-box{border-color:#E5CDA4; margin-bottom:18px; }
+.QiuGoulist-box .tbl1{color:#666; font-size:14px; border:1px solid #DEDEDE; border-bottom:none; }
+.QiuGoulist-box .tbl1 th{background:#3CACDF; color:#fff; font-weight:normal; border:1px solid #3CACDF; border-bottom:none; }
+.QiuGoulist-box .tbl1 a, .QiuGoulist-box .tbl1 a:visited{color:#4995B8; text-decoration:none; }
+.QiuGoulist-box .tbl1 a:hover{color:#f30; }
+.QiuGoulist-box em.money_org{font-style:normal; font-weight:bold; color:#FF5400; font-family:Tahoma; }
+
+.QiuGoulist-box .fenye{border:1px solid #DEDEDE; border-top:none; padding:24px 0; padding-left:230px; }
+.QiuGoulist-box .fenye ul{float:none; height:20px; margin:0 auto; }
+
+/*===================== 在线问答 =======================*/
+
+/*-------- 问答列表 ------------*/
+.main_content2{float:left; display:inline; width:970px; overflow:hidden; font-family:"宋体"; } 
+.current{font-family:"宋体"; font-size:13px; color:#1b84a4; margin:10px 20px}
+.current a{text-decoration:none; }
+.shopstyle{margin-bottom:15px; }
+ul.shopname{font-family:"宋体"; font-size:12px; height:30px; width:750px; }
+ul.shopname li{float:left; margin-right:1px; height:30px; width:90px; border:1px solid #BFD6E9; border-bottom:none; }
+ul.shopname li a{color:#000; display:block; height:30px; line-height:30px; text-align:center; text-decoration:none; width:90px; }
+ul.shopname li a.select, ul.shopname li a:hover{display:inline-block; height:30px; line-height:30px; text-align:center; width:90px; color:#ffffff; background-color:#359EF8; font-weight:bold; }
+
+div.shopstyle div{border:1px solid #359EF8; font-size:12px; width:960px; margin:1px 0 0 1px; }
+ul.question{list-style-type:none; margin:0 auto; overflow:hidden; width:745px; }
+ul.question  li{color:#494949; float:left; line-height:55px; width:145px; }
+ul.question  li .on a{color:#494949; }
+ul.question  li a{color:#494949; font-size:12px; text-decoration:none; }
+ul.question  li a:hover{color:#ff4400; font-size:12px; text-decoration:none;}
+
+ul.tabNavigation{font-family:"宋体"; font-size:12px; font-weight:bold; height:30px; width:780px; }
+ul.tabNavigation li{float:left; height:30px; width:120px; margin-right:1px; }
+ul.tabNavigation li a{border:1px solid #E9E0D2; color:#7c7c7c; display:block; height:29px; line-height:29px; text-align:center; text-decoration:none; width:120px; border-bottom:0px; }
+ul.tabNavigation li a.ti2, ul.tabNavigation li a:hover{background-color:#FFA50F; display:block; height:30px; line-height:30px; text-align:center; width:120px; color:#ffffff; border:none; }
+
+div.tab_box div#first{border-top:1px solid #FFA50F; }
+div.tab_box div#first table{color:#7c7c7c; }
+div.tab_box div#first th{background:#F9F6F3; height:36px; font-weight:normal; font-size:14px; }
+div.tab_box div#first th.bt1{padding-left:35px; }
+div.tab_box div#first td{background:url(../images/dotted-bg.png) repeat-x 0 100%; height:40px; line-height:40px; }
+
+div.tab_box div#first a{color:#7C7C7C; text-decoration:none; }
+
+
+
+/*-------- 右侧其它 ------------*/
+.on-line-right{width:205px; padding-left:5px; height:635px; border-left:1px solid #ECECEC; float:right; }
+.hello{font-size:12px; line-height:30px; }
+.hello .title img{margin-top:-198px; }
+.hello .con-homeR .hello-ss{color:#df8d04; }
+.hello .con-homeR ul.list-WNr{padding-left:4px; width:175px; }
+.hello .con-homeR ul.list-WNr li{padding-left:17px; margin-bottom:5px; }
+.hello .con-homeR .sum{padding-left:22px; }
+.hello .con-homeR .sum a, .hello .con-homeR .sum a:visited{color:#4083E1; }
+.hello .con-homeR .sum a:hover{color:#f30; }
+
+.twjy{margin-left:6px; }
+.twjy input.wytw{background:url(../Images/question/On-wytw.jpg); width:94px; height:37px; border:0; cursor:pointer; }
+.twjy input.wyjy{background:url(../Images/question/On-wyjy.jpg); width:94px; height:37px; border:0; cursor:pointer; }
+
+.WenTi{margin-top:27px; }
+.WenTi .title img{margin-top:-165px; }
+
+
+
+/*===================== 提问建议详情 =======================*/
+.List_ask{border:0 solid #CCCCCC; margin:0 auto; width:960px; }
+.List_ask h2{background:url(../images/question/zxnr_03.png) no-repeat scroll right top #AACDED; height:36px; width:960px; }
+.List_ask h2.jy{background:url(../images/zxnr_04.png) no-repeat scroll right top #AACDED;}
+.List_ask h3{background:url("../images/question/zxnr.png") no-repeat scroll right top #AACDED; height:36px; width:959px; }
+.cart_table{border-left:1px #D9E9ED solid; border-right:1px #D9E9ED solid; border-bottom:1px #D9E9ED solid; height:auto; overflow:hidden; padding:15px 20px; width:918px; background:#FFF; }
+ul.ask_asw{padding:0; margin:0; list-style:none; font-size:13px; }
+ul.ask_asw li{line-height:23px; }
+ul.ask_asw li.gre{color:#7c7c7c; }
+.seperate{width:100%; height:10px; overflow:hidden; }
+		   
+/******11-01**********/
+.wpuser{float:left; width:84px; overflow:hidden; }
+.wpuser img{padding:1px; background:#fff; border:1px #cccccc solid; }
+.wdq{float:right; padding-left:10px; width:760px; }
+.user_ser{height:18px; line-height:18px; width:84px; text-align:center;color:#5697aa;font-size:12px; }
+.aa_tits{font-size:14px; color:#5697aa;}
+
+/*===================== 每日精品店铺 =======================*/
+.MeiRiJingPin{width:1000px; margin:10px auto 15px auto;}
+.MeiRiJingPin .jp_dpshow{float:left; margin-left:8px;}
+.MeiRiJingPin .jp_dpshow .jp_dpshow_part1{padding:9px; padding-bottom:0px; border:1px solid #e4e4e4; border-bottom:0;}
+.MeiRiJingPin .jp_dpshow .jp_dpshow_part1 .jp_dpshow_img{width:220px; height:220px;}
+.MeiRiJingPin .jp_dpshow .jp_dpshow_part1 .jp_dpshow_js a{display:block; font-size:12px; text-decoration:none; width:220px; margin-top:5px; height:25px; line-height:25px; font-family:"宋体"; color:#2A9DCF;}
+.MeiRiJingPin .jp_dpshow .jp_dpshow_part1 .jp_dpshow_xy{height:20px; line-height:20px; text-align:left; width:220px;}
+.MeiRiJingPin .jp_dpshow .jp_dpshow_part1 .jp_dpshow_xy img{vertical-align:-3px;}
+
+.MeiRiJingPin .jp_dpshow .jp_dpshow_ly1{background:url(../images/MeiRiJingPinImg1.png); width:180px; height:70px; padding:14px 50px 6px 10px; font-size:13px; color:#fff; font-weight:bold; line-height:20px;}
+.MeiRiJingPin .jp_dpshow .jp_dpshow_ly1 span{display:block; font-weight:normal; line-height:15px; font-size:12px; color:#F7F6F6;}
+
+.MeiRiJingPin .JP_over .jp_dpshow_part1{border:2px solid #A71F36; border-bottom:0px; padding:8px; padding-bottom:0px;}
+.MeiRiJingPin .JP_over .jp_dpshow_ly1{background:url(../images/MeiRiJingPinImg2.png);}
+
+.queryCtr_tail {
+    color: #7C7C7C;
+    font-size: 12px;
+    height: 23px;
+    line-height:23px;
+    margin-top:7px;
+    text-align: center;
+    /*background:#f2f2f2;*/
+    font-weight:bold;
+}
+
+/*--- 推广修改 2014-05-05 ----*/
+.twjy input.tg_zx_btn{background:url(../images/tglm/tg_zxtw_btn.png); width:176px; height:62px; border:0; cursor:pointer;}
+.List_ask h3.tg_gfjd{background:url("../images/tglm/gfjd.png") no-repeat scroll right top #AACDED;}
+.tg .wpuser img{border:none;}
+.tg .WebNoteR-GG .con-homeR ul.list-WNr li{display:block; width:170px; padding-left:14px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; margin-bottom:8px;}

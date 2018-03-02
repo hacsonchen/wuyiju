@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SendSms.aspx.cs" Inherits="Wuyiju.Web.users.SendSms" %>

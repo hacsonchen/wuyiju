@@ -1,0 +1,1680 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FFE02C8A-D0A0-429F-A526-AB13A256F521}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Wuyiju.Web</RootNamespace>
+    <AssemblyName>Wuyiju.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNetPager">
+      <HintPath>..\..\..\libs\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper">
+      <HintPath>..\packages\Dapper.1.40\lib\net45\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DotExtensions, Version=0.1.0.18213, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\libs\DotExtensions\DotExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.0.1011, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.1.2.3\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.1.2.3\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.1.2.3\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.1.2.3\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.1.2.3\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=1.2.3.490, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.1.2.3\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\..\..\Wuyiju.Data\packages\Unity.4.0.0\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\..\..\Wuyiju.Data\packages\Unity.4.0.0\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention">
+      <HintPath>..\..\..\Wuyiju.Data\packages\Unity.4.0.0\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\libs\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Wuyiju.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Wuyiju.Data\libs\Wuyiju.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Wuyiju.DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Wuyiju.Data\libs\Wuyiju.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="Wuyiju.Domain, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Wuyiju.Data\libs\Wuyiju.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="Wuyiju.IDAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Wuyiju.Data\libs\Wuyiju.IDAL.dll</HintPath>
+    </Reference>
+    <Reference Include="Wuyiju.IService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Wuyiju.Data\libs\Wuyiju.IService.dll</HintPath>
+    </Reference>
+    <Reference Include="Wuyiju.Service, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Wuyiju.Data\libs\Wuyiju.Service.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Article\List.aspx" />
+    <Content Include="Article\Search.aspx" />
+    <Content Include="Ask.aspx" />
+    <Content Include="Compared.aspx" />
+    <Content Include="Detail.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Interview.aspx" />
+    <Content Include="Mall.aspx" />
+    <Content Include="Malls\AddFavorite.aspx" />
+    <Content Include="Malls\AddLikeShop.aspx" />
+    <Content Include="Malls\AddSesList.aspx" />
+    <Content Include="Malls\AjaxCart.aspx" />
+    <Content Include="Malls\KanDian.aspx" />
+    <Content Include="Malls\ValidQQ.aspx" />
+    <Content Include="NotFound.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Public\Control\Css\datepicker.css" />
+    <Content Include="Public\Control\Css\head.css" />
+    <Content Include="Public\Control\Css\index.css" />
+    <Content Include="Public\Control\Css\login.css" />
+    <Content Include="Public\Control\Css\node.css" />
+    <Content Include="Public\Control\Css\skin.css" />
+    <Content Include="Public\Control\Img\add.gif" />
+    <Content Include="Public\Control\Img\banner.jpg" />
+    <Content Include="Public\Control\Img\bg.png" />
+    <Content Include="Public\Control\Img\bg_state.jpg" />
+    <Content Include="Public\Control\Img\btn01.jpg" />
+    <Content Include="Public\Control\Img\btn02.jpg" />
+    <Content Include="Public\Control\Img\btn03.jpg" />
+    <Content Include="Public\Control\Img\btnlefthide.jpg" />
+    <Content Include="Public\Control\Img\btnleftshow.jpg" />
+    <Content Include="Public\Control\Img\color.png" />
+    <Content Include="Public\Control\Img\downarrow.png" />
+    <Content Include="Public\Control\Img\example.png" />
+    <Content Include="Public\Control\Img\ff01.jpg" />
+    <Content Include="Public\Control\Img\file_fla.gif" />
+    <Content Include="Public\Control\Img\file_video.gif" />
+    <Content Include="Public\Control\Img\hh01.jpg" />
+    <Content Include="Public\Control\Img\hh02.jpg" />
+    <Content Include="Public\Control\Img\ico01.gif" />
+    <Content Include="Public\Control\Img\index_14.jpg" />
+    <Content Include="Public\Control\Img\ll01.jpg" />
+    <Content Include="Public\Control\Img\ll02.jpg" />
+    <Content Include="Public\Control\Img\logo.jpg" />
+    <Content Include="Public\Control\Img\logo.png" />
+    <Content Include="Public\Control\Img\logo2.jpg" />
+    <Content Include="Public\Control\Img\msg.png" />
+    <Content Include="Public\Control\Img\msg_bg.png" />
+    <Content Include="Public\Control\Img\no.gif" />
+    <Content Include="Public\Control\Img\path.jpg" />
+    <Content Include="Public\Control\Img\skin.png" />
+    <Content Include="Public\Control\Img\status_0.gif" />
+    <Content Include="Public\Control\Img\status_1.gif" />
+    <Content Include="Public\Control\Img\tree_folder3.gif" />
+    <Content Include="Public\Control\Img\tree_folder4.gif" />
+    <Content Include="Public\Control\Img\tree_line1.gif" />
+    <Content Include="Public\Control\Img\tree_line2.gif" />
+    <Content Include="Public\Control\Img\tree_line3.gif" />
+    <Content Include="Public\Control\Img\tv-collapsable.gif" />
+    <Content Include="Public\Control\Img\tv-expandable.gif" />
+    <Content Include="Public\Control\Img\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Public\Control\Img\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Public\Control\Img\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Public\Control\Img\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Public\Control\Img\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Public\Control\Img\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Public\Control\Img\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Public\Control\Img\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Public\Control\Img\ui-icons_0073ea_256x240.png" />
+    <Content Include="Public\Control\Img\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Public\Control\Img\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Public\Control\Img\uparrow.png" />
+    <Content Include="Public\Control\Img\welcome.gif" />
+    <Content Include="Public\Control\Img\welcome_h1.gif" />
+    <Content Include="Public\Control\Img\yes.gif" />
+    <Content Include="Public\Control\Js\access.js" />
+    <Content Include="Public\Control\Js\common.js" />
+    <Content Include="Public\Control\Js\datepicker-zh_CN.js" />
+    <Content Include="Public\Control\Js\datepicker.js" />
+    <Content Include="Public\Control\Js\head.js" />
+    <Content Include="Public\Control\Js\iColorPicker.js" />
+    <Content Include="Public\Control\Js\index.js" />
+    <Content Include="Public\Control\Js\jquery-1.10.2.min.js" />
+    <Content Include="Public\Control\Js\jquery-1.8.3.min.js" />
+    <Content Include="Public\Control\Js\jquery.js" />
+    <Content Include="Public\Control\Js\left.js" />
+    <Content Include="Public\Control\Js\login.js" />
+    <Content Include="Public\Control\Js\product.spe.js" />
+    <Content Include="Public\Control\Js\region.js" />
+    <Content Include="Public\Control\Js\submit.js" />
+    <Content Include="Public\Home\artDialog\artDialog.config.js" />
+    <Content Include="Public\Home\artDialog\artDialog.iframe.js" />
+    <Content Include="Public\Home\artDialog\artDialog.js" />
+    <Content Include="Public\Home\artDialog\skins\default.css" />
+    <Content Include="Public\Home\artDialog\skins\icons\error.png" />
+    <Content Include="Public\Home\artDialog\skins\icons\face-sad.png" />
+    <Content Include="Public\Home\artDialog\skins\icons\face-smile.png" />
+    <Content Include="Public\Home\artDialog\skins\icons\loading.gif" />
+    <Content Include="Public\Home\artDialog\skins\icons\question.png" />
+    <Content Include="Public\Home\artDialog\skins\icons\succeed.png" />
+    <Content Include="Public\Home\artDialog\skins\icons\warning.png" />
+    <Content Include="Public\Home\artDialog\skins\idialog.css" />
+    <Content Include="Public\Home\artDialog\skins\idialog\idialog_s.png" />
+    <Content Include="Public\Home\artDialog\skins\idialog\idialog_s2.png" />
+    <Content Include="Public\Home\artDialog\skins\idialog\ie6\aui_close.hover.png" />
+    <Content Include="Public\Home\artDialog\skins\idialog\ie6\aui_close.png" />
+    <Content Include="Public\Home\artDialog\skins\idialog\ie6\aui_e.png" />
+    <Content Include="Public\Home\artDialog\skins\idialog\ie6\aui_n.png" />
+    <Content Include="Public\Home\artDialog\skins\idialog\ie6\aui_ne.png" />
+    <Content Include="Public\Home\artDialog\skins\idialog\ie6\aui_nw.png" />
+    <Content Include="Public\Home\artDialog\skins\idialog\ie6\aui_s.png" />
+    <Content Include="Public\Home\artDialog\skins\idialog\ie6\aui_se.png" />
+    <Content Include="Public\Home\artDialog\skins\idialog\ie6\aui_sw.png" />
+    <Content Include="Public\Home\artDialog\skins\idialog\ie6\aui_w.png" />
+    <Content Include="Public\Home\artDialog\skins\opera.css" />
+    <Content Include="Public\Home\artDialog\skins\opera\ie6\aui_close.hover.png" />
+    <Content Include="Public\Home\artDialog\skins\opera\ie6\aui_close.png" />
+    <Content Include="Public\Home\artDialog\skins\opera\ie6\aui_e.png" />
+    <Content Include="Public\Home\artDialog\skins\opera\ie6\aui_n.png" />
+    <Content Include="Public\Home\artDialog\skins\opera\ie6\aui_ne.png" />
+    <Content Include="Public\Home\artDialog\skins\opera\ie6\aui_nw.png" />
+    <Content Include="Public\Home\artDialog\skins\opera\ie6\aui_s.png" />
+    <Content Include="Public\Home\artDialog\skins\opera\ie6\aui_se.png" />
+    <Content Include="Public\Home\artDialog\skins\opera\ie6\aui_sw.png" />
+    <Content Include="Public\Home\artDialog\skins\opera\ie6\aui_w.png" />
+    <Content Include="Public\Home\artDialog\skins\opera\s1.png" />
+    <Content Include="Public\Home\artDialog\skins\opera\s2.png" />
+    <Content Include="Public\Home\Jq\dateselect.js" />
+    <Content Include="Public\Home\Jq\DD_belatedPNG_0.0.8a-min.js" />
+    <Content Include="Public\Home\Jq\jquery-1.6.4.min.js" />
+    <Content Include="Public\Home\Jq\jquery.form.min.js" />
+    <Content Include="Public\Home\Shops\cropper\builder.js" />
+    <Content Include="Public\Home\Shops\cropper\controls.js" />
+    <Content Include="Public\Home\Shops\cropper\cropper.css" />
+    <Content Include="Public\Home\Shops\cropper\cropper.js" />
+    <Content Include="Public\Home\Shops\cropper\dragdrop.js" />
+    <Content Include="Public\Home\Shops\cropper\effects.js" />
+    <Content Include="Public\Home\Shops\cropper\marqueeHoriz.gif" />
+    <Content Include="Public\Home\Shops\cropper\marqueeVert.gif" />
+    <Content Include="Public\Home\Shops\cropper\scriptaculous.js" />
+    <Content Include="Public\Home\Shops\cropper\slider.js" />
+    <Content Include="Public\Home\Shops\cropper\uncompressed.js" />
+    <Content Include="Public\Home\Shops\Css\base.css" />
+    <Content Include="Public\Home\Shops\Css\bread.css" />
+    <Content Include="Public\Home\Shops\Css\calendar.css" />
+    <Content Include="Public\Home\Shops\Css\cmstop-error.css" />
+    <Content Include="Public\Home\Shops\Css\compared.css" />
+    <Content Include="Public\Home\Shops\Css\focusStyle.css" />
+    <Content Include="Public\Home\Shops\Css\help.css" />
+    <Content Include="Public\Home\Shops\Css\iconfont.css" />
+    <Content Include="Public\Home\Shops\Css\iconfont.svg" />
+    <Content Include="Public\Home\Shops\Css\if-others.css" />
+    <Content Include="Public\Home\Shops\Css\if-others.svg" />
+    <Content Include="Public\Home\Shops\Css\index.css" />
+    <Content Include="Public\Home\Shops\Css\index2.css" />
+    <Content Include="Public\Home\Shops\Css\interview.css" />
+    <Content Include="Public\Home\Shops\Css\ion\ion.rangeSlider.css" />
+    <Content Include="Public\Home\Shops\Css\ion\ion.rangeSlider.skinFlat.css" />
+    <Content Include="Public\Home\Shops\Css\ion\ion.rangeSlider.skinNice.css" />
+    <Content Include="Public\Home\Shops\Css\ion\normalize.css" />
+    <Content Include="Public\Home\Shops\Css\liststyle.css" />
+    <Content Include="Public\Home\Shops\Css\login.css" />
+    <Content Include="Public\Home\Shops\Css\managecenter.css" />
+    <Content Include="Public\Home\Shops\Css\news.css" />
+    <Content Include="Public\Home\Shops\Css\notfound.css" />
+    <Content Include="Public\Home\Shops\Css\qiugouGet.css" />
+    <Content Include="Public\Home\Shops\Css\register.css" />
+    <Content Include="Public\Home\Shops\Css\school.css" />
+    <Content Include="Public\Home\Shops\Css\see.css" />
+    <Content Include="Public\Home\Shops\Css\shopsGet.css" />
+    <Content Include="Public\Home\Shops\Css\suggest.css" />
+    <Content Include="Public\Home\Shops\Css\title.css" />
+    <Content Include="Public\Home\Shops\Css\tmall.css" />
+    <Content Include="Public\Home\Shops\Css\user.css" />
+    <Content Include="Public\Home\Shops\Css\user2.css" />
+    <Content Include="Public\Home\Shops\Css\wenyiwen.css" />
+    <Content Include="Public\Home\Shops\Images\1506\1c00_03_2.png" />
+    <Content Include="Public\Home\Shops\Images\1506\1c_02.png" />
+    <Content Include="Public\Home\Shops\Images\1506\1c_03.jpg" />
+    <Content Include="Public\Home\Shops\Images\1506\1c_03.png" />
+    <Content Include="Public\Home\Shops\Images\1506\1c_04.png" />
+    <Content Include="Public\Home\Shops\Images\1506\1c_05.png" />
+    <Content Include="Public\Home\Shops\Images\1506\1c_09.jpg" />
+    <Content Include="Public\Home\Shops\Images\1506\1c_10.jpg" />
+    <Content Include="Public\Home\Shops\Images\1506\1c_13.jpg" />
+    <Content Include="Public\Home\Shops\Images\1506\1c_14.jpg" />
+    <Content Include="Public\Home\Shops\Images\1506\1c_15.jpg" />
+    <Content Include="Public\Home\Shops\Images\1506\1c_honour_01.png" />
+    <Content Include="Public\Home\Shops\Images\1506\1c_honour_02.png" />
+    <Content Include="Public\Home\Shops\Images\1506\1c_honour_03.png" />
+    <Content Include="Public\Home\Shops\Images\1506\1c_honour_04.png" />
+    <Content Include="Public\Home\Shops\Images\1506\1c_honour_05.png" />
+    <Content Include="Public\Home\Shops\Images\1506\1c_honour_06.png" />
+    <Content Include="Public\Home\Shops\Images\1506\bann_06.jpg" />
+    <Content Include="Public\Home\Shops\Images\1506\bann_08.jpg" />
+    <Content Include="Public\Home\Shops\Images\1506\bann_10.jpg" />
+    <Content Include="Public\Home\Shops\Images\1506\closedemand.png" />
+    <Content Include="Public\Home\Shops\Images\1506\daohang_03.png" />
+    <Content Include="Public\Home\Shops\Images\1506\daohang_xuan.png" />
+    <Content Include="Public\Home\Shops\Images\1506\fabuqiugou.gif" />
+    <Content Include="Public\Home\Shops\Images\1506\fabuqiugou.png" />
+    <Content Include="Public\Home\Shops\Images\1506\new.gif" />
+    <Content Include="Public\Home\Shops\Images\1506\postyourwant-r.png" />
+    <Content Include="Public\Home\Shops\Images\1506\tuijian-01.png" />
+    <Content Include="Public\Home\Shops\Images\1506\tuijian-02.png" />
+    <Content Include="Public\Home\Shops\Images\1506\tuijian-03.png" />
+    <Content Include="Public\Home\Shops\Images\1506\tuijian-04.png" />
+    <Content Include="Public\Home\Shops\Images\1506\xinxitijiaochenggong.png" />
+    <Content Include="Public\Home\Shops\Images\1506\xu222_03.jpg" />
+    <Content Include="Public\Home\Shops\Images\1506\xyxiajiao_03.jpg" />
+    <Content Include="Public\Home\Shops\Images\1506\xyyou_03.jpg" />
+    <Content Include="Public\Home\Shops\Images\1506\zhongbutu_03.png" />
+    <Content Include="Public\Home\Shops\Images\1506\zhongtu_03.jpg" />
+    <Content Include="Public\Home\Shops\Images\1506\zhongtu_07.jpg" />
+    <Content Include="Public\Home\Shops\Images\1506\zhongtu_11.jpg" />
+    <Content Include="Public\Home\Shops\Images\1506\zhongtu_14.jpg" />
+    <Content Include="Public\Home\Shops\Images\152348730_1.jpg" />
+    <Content Include="Public\Home\Shops\Images\1c_01.png" />
+    <Content Include="Public\Home\Shops\Images\1c_02.png" />
+    <Content Include="Public\Home\Shops\Images\account-label.jpg" />
+    <Content Include="Public\Home\Shops\Images\adv\20141128170150567_1.jpg" />
+    <Content Include="Public\Home\Shops\Images\adv\20141212165140959_1.jpg" />
+    <Content Include="Public\Home\Shops\Images\adv\20141212165238196_1.jpg" />
+    <Content Include="Public\Home\Shops\Images\adv\20141212165423184_1.jpg" />
+    <Content Include="Public\Home\Shops\Images\adv\20150111160413237_1.jpg" />
+    <Content Include="Public\Home\Shops\Images\alipay.jpg" />
+    <Content Include="Public\Home\Shops\Images\bg-biyibi-vs.jpg" />
+    <Content Include="Public\Home\Shops\Images\bg-footer.png" />
+    <Content Include="Public\Home\Shops\Images\bg-interview.jpg" />
+    <Content Include="Public\Home\Shops\Images\bg-interview.png" />
+    <Content Include="Public\Home\Shops\Images\bg-jiang.png" />
+    <Content Include="Public\Home\Shops\Images\bg-price-box.png" />
+    <Content Include="Public\Home\Shops\Images\bg-users.png" />
+    <Content Include="Public\Home\Shops\Images\biyibi-footer-title.png" />
+    <Content Include="Public\Home\Shops\Images\biyibi-go.png" />
+    <Content Include="Public\Home\Shops\Images\biyibi-search.png" />
+    <Content Include="Public\Home\Shops\Images\biyibi-serach.png" />
+    <Content Include="Public\Home\Shops\Images\biyibi-title.png" />
+    <Content Include="Public\Home\Shops\Images\btn-jrdb.png" />
+    <Content Include="Public\Home\Shops\Images\btn-kandianka.png" />
+    <Content Include="Public\Home\Shops\Images\btn-like.png" />
+    <Content Include="Public\Home\Shops\Images\btn-ljgm.png" />
+    <Content Include="Public\Home\Shops\Images\btn-ljyd.png" />
+    <Content Include="Public\Home\Shops\Images\btn-main-kefu-body.png" />
+    <Content Include="Public\Home\Shops\Images\btn-vs-buynow.png" />
+    <Content Include="Public\Home\Shops\Images\buyer-setup.jpg" />
+    <Content Include="Public\Home\Shops\Images\b_cap_1.gif" />
+    <Content Include="Public\Home\Shops\Images\b_cap_2.gif" />
+    <Content Include="Public\Home\Shops\Images\b_cap_3.gif" />
+    <Content Include="Public\Home\Shops\Images\b_cap_4.gif" />
+    <Content Include="Public\Home\Shops\Images\b_cap_5.gif" />
+    <Content Include="Public\Home\Shops\Images\category\big-cat-10.png" />
+    <Content Include="Public\Home\Shops\Images\category\big-cat-11.png" />
+    <Content Include="Public\Home\Shops\Images\category\big-cat-12.png" />
+    <Content Include="Public\Home\Shops\Images\category\big-cat-13.png" />
+    <Content Include="Public\Home\Shops\Images\category\big-cat-14.png" />
+    <Content Include="Public\Home\Shops\Images\category\big-cat-15.png" />
+    <Content Include="Public\Home\Shops\Images\category\big-cat-16.png" />
+    <Content Include="Public\Home\Shops\Images\category\big-cat-2.png" />
+    <Content Include="Public\Home\Shops\Images\category\big-cat-22.png" />
+    <Content Include="Public\Home\Shops\Images\category\big-cat-3.png" />
+    <Content Include="Public\Home\Shops\Images\category\big-cat-4.png" />
+    <Content Include="Public\Home\Shops\Images\category\big-cat-5.png" />
+    <Content Include="Public\Home\Shops\Images\category\big-cat-6.png" />
+    <Content Include="Public\Home\Shops\Images\category\big-cat-7.png" />
+    <Content Include="Public\Home\Shops\Images\category\big-cat-8.png" />
+    <Content Include="Public\Home\Shops\Images\category\icon-cat-10.png" />
+    <Content Include="Public\Home\Shops\Images\category\icon-cat-11.png" />
+    <Content Include="Public\Home\Shops\Images\category\icon-cat-12.png" />
+    <Content Include="Public\Home\Shops\Images\category\icon-cat-13.png" />
+    <Content Include="Public\Home\Shops\Images\category\icon-cat-134.png" />
+    <Content Include="Public\Home\Shops\Images\category\icon-cat-14.png" />
+    <Content Include="Public\Home\Shops\Images\category\icon-cat-141.png" />
+    <Content Include="Public\Home\Shops\Images\category\icon-cat-15.jpg" />
+    <Content Include="Public\Home\Shops\Images\category\icon-cat-15.png" />
+    <Content Include="Public\Home\Shops\Images\category\icon-cat-151.png" />
+    <Content Include="Public\Home\Shops\Images\category\icon-cat-16.png" />
+    <Content Include="Public\Home\Shops\Images\category\icon-cat-2.png" />
+    <Content Include="Public\Home\Shops\Images\category\icon-cat-22.png" />
+    <Content Include="Public\Home\Shops\Images\category\icon-cat-220.png" />
+    <Content Include="Public\Home\Shops\Images\category\icon-cat-23.png" />
+    <Content Include="Public\Home\Shops\Images\category\icon-cat-3.png" />
+    <Content Include="Public\Home\Shops\Images\category\icon-cat-4.png" />
+    <Content Include="Public\Home\Shops\Images\category\icon-cat-5.png" />
+    <Content Include="Public\Home\Shops\Images\category\icon-cat-6.png" />
+    <Content Include="Public\Home\Shops\Images\category\icon-cat-7.png" />
+    <Content Include="Public\Home\Shops\Images\category\icon-cat-8.png" />
+    <Content Include="Public\Home\Shops\Images\caticon1.png" />
+    <Content Include="Public\Home\Shops\Images\ChaXunBtn.png" />
+    <Content Include="Public\Home\Shops\Images\choose-step1-title.png" />
+    <Content Include="Public\Home\Shops\Images\chushoudianpu-rightImg.png" />
+    <Content Include="Public\Home\Shops\Images\date_bg.png" />
+    <Content Include="Public\Home\Shops\Images\dbjy.gif" />
+    <Content Include="Public\Home\Shops\Images\dotted-bg.png" />
+    <Content Include="Public\Home\Shops\Images\email-label.jpg" />
+    <Content Include="Public\Home\Shops\Images\ensure-banner.png" />
+    <Content Include="Public\Home\Shops\Images\fabuxuqiu-rightImg.png" />
+    <Content Include="Public\Home\Shops\Images\flow_1.jpg" />
+    <Content Include="Public\Home\Shops\Images\flow_2.jpg" />
+    <Content Include="Public\Home\Shops\Images\flow_3.jpg" />
+    <Content Include="Public\Home\Shops\Images\flow_4.jpg" />
+    <Content Include="Public\Home\Shops\Images\flow_5.jpg" />
+    <Content Include="Public\Home\Shops\Images\flow_6.jpg" />
+    <Content Include="Public\Home\Shops\Images\flzr.gif" />
+    <Content Include="Public\Home\Shops\Images\footer-banner.png" />
+    <Content Include="Public\Home\Shops\Images\footer-qrcode.jpg" />
+    <Content Include="Public\Home\Shops\Images\goods-home.png" />
+    <Content Include="Public\Home\Shops\Images\goods-line.png" />
+    <Content Include="Public\Home\Shops\Images\goumai.jpg" />
+    <Content Include="Public\Home\Shops\Images\guan.jpg" />
+    <Content Include="Public\Home\Shops\Images\help\dot.png" />
+    <Content Include="Public\Home\Shops\Images\help\help_-19.png" />
+    <Content Include="Public\Home\Shops\Images\help\help_06.png" />
+    <Content Include="Public\Home\Shops\Images\help\help_09.png" />
+    <Content Include="Public\Home\Shops\Images\help\help_28.png" />
+    <Content Include="Public\Home\Shops\Images\help\help__06.png" />
+    <Content Include="Public\Home\Shops\Images\help\help__11.png" />
+    <Content Include="Public\Home\Shops\Images\help\help__22.png" />
+    <Content Include="Public\Home\Shops\Images\help\hlp_003.png" />
+    <Content Include="Public\Home\Shops\Images\help\hpxx_10.png" />
+    <Content Include="Public\Home\Shops\Images\help\hpxx_14.png" />
+    <Content Include="Public\Home\Shops\Images\help\hpxx_17.png" />
+    <Content Include="Public\Home\Shops\Images\help\wjj_03.png" />
+    <Content Include="Public\Home\Shops\Images\help\wodebg.png" />
+    <Content Include="Public\Home\Shops\Images\help\wodebgh.png" />
+    <Content Include="Public\Home\Shops\Images\icon-home.png" />
+    <Content Include="Public\Home\Shops\Images\icon-lock.png" />
+    <Content Include="Public\Home\Shops\Images\icon-mobile.png" />
+    <Content Include="Public\Home\Shops\Images\icon-money-yue.png" />
+    <Content Include="Public\Home\Shops\Images\icon-person.png" />
+    <Content Include="Public\Home\Shops\Images\icon-red-back.png" />
+    <Content Include="Public\Home\Shops\Images\icon-refresh.gif" />
+    <Content Include="Public\Home\Shops\Images\interview-footer-left.png" />
+    <Content Include="Public\Home\Shops\Images\interview-footer-right.png" />
+    <Content Include="Public\Home\Shops\Images\interview-title-right.png" />
+    <Content Include="Public\Home\Shops\Images\interview-title.png" />
+    <Content Include="Public\Home\Shops\Images\jp_tuijian.png" />
+    <Content Include="Public\Home\Shops\Images\kefu-main.png" />
+    <Content Include="Public\Home\Shops\Images\label-seurity.gif" />
+    <Content Include="Public\Home\Shops\Images\label-userlevel.gif" />
+    <Content Include="Public\Home\Shops\Images\label-username.gif" />
+    <Content Include="Public\Home\Shops\Images\land-code.jpg" />
+    <Content Include="Public\Home\Shops\Images\land-name.jpg" />
+    <Content Include="Public\Home\Shops\Images\land-small.png" />
+    <Content Include="Public\Home\Shops\Images\land-small1.png" />
+    <Content Include="Public\Home\Shops\Images\land-small2.png" />
+    <Content Include="Public\Home\Shops\Images\land-yhdl.jpg" />
+    <Content Include="Public\Home\Shops\Images\lang-button.jpg" />
+    <Content Include="Public\Home\Shops\Images\likeit.png" />
+    <Content Include="Public\Home\Shops\Images\list-style-triple.gif" />
+    <Content Include="Public\Home\Shops\Images\ljzxfwgw.gif" />
+    <Content Include="Public\Home\Shops\Images\login-footer.png" />
+    <Content Include="Public\Home\Shops\Images\login-title.png" />
+    <Content Include="Public\Home\Shops\Images\logo.jpg" />
+    <Content Include="Public\Home\Shops\Images\logo.png" />
+    <Content Include="Public\Home\Shops\Images\logo240.png" />
+    <Content Include="Public\Home\Shops\Images\main-kefu-body-bg.png" />
+    <Content Include="Public\Home\Shops\Images\main-kefu-body-image.png" />
+    <Content Include="Public\Home\Shops\Images\main-kefu-foot-title.png" />
+    <Content Include="Public\Home\Shops\Images\main-kefu-head-bg.png" />
+    <Content Include="Public\Home\Shops\Images\main-kefu-image.png" />
+    <Content Include="Public\Home\Shops\Images\main-kefu-qrcode.png" />
+    <Content Include="Public\Home\Shops\Images\mall\13974422652941salesImg.jpg" />
+    <Content Include="Public\Home\Shops\Images\mall\beijing.png" />
+    <Content Include="Public\Home\Shops\Images\mall\bluetoumingxiaojiantou.png" />
+    <Content Include="Public\Home\Shops\Images\mall\button_51.gif" />
+    <Content Include="Public\Home\Shops\Images\mall\ChuJiaPlusMinus.png" />
+    <Content Include="Public\Home\Shops\Images\mall\click-paidui-btn.png" />
+    <Content Include="Public\Home\Shops\Images\mall\clo.png" />
+    <Content Include="Public\Home\Shops\Images\mall\dibutiao.png" />
+    <Content Include="Public\Home\Shops\Images\mall\dongtaipingfen.png" />
+    <Content Include="Public\Home\Shops\Images\mall\dotted-c5c5c5.gif" />
+    <Content Include="Public\Home\Shops\Images\mall\duoxuanshanchu1.png" />
+    <Content Include="Public\Home\Shops\Images\mall\duoxuanshanchu2.png" />
+    <Content Include="Public\Home\Shops\Images\mall\faq-icon.png" />
+    <Content Include="Public\Home\Shops\Images\mall\fenleitubiao.png" />
+    <Content Include="Public\Home\Shops\Images\mall\fenqi-Btn.png" />
+    <Content Include="Public\Home\Shops\Images\mall\fltfoldicon.png" />
+    <Content Include="Public\Home\Shops\Images\mall\fltfoldicon1.png" />
+    <Content Include="Public\Home\Shops\Images\mall\flyz-img.png" />
+    <Content Include="Public\Home\Shops\Images\mall\fuwupingjia.png" />
+    <Content Include="Public\Home\Shops\Images\mall\gmlc-img-1190.png" />
+    <Content Include="Public\Home\Shops\Images\mall\goumai.jpg" />
+    <Content Include="Public\Home\Shops\Images\mall\hangjiantou.jpg" />
+    <Content Include="Public\Home\Shops\Images\mall\huanyipi.png" />
+    <Content Include="Public\Home\Shops\Images\mall\huanyipi0.png" />
+    <Content Include="Public\Home\Shops\Images\mall\icon-faq-answer.png" />
+    <Content Include="Public\Home\Shops\Images\mall\icon-faq-question.png" />
+    <Content Include="Public\Home\Shops\Images\mall\icon-favorite.gif" />
+    <Content Include="Public\Home\Shops\Images\mall\icon.png" />
+    <Content Include="Public\Home\Shops\Images\mall\jiaruduibi.png" />
+    <Content Include="Public\Home\Shops\Images\mall\jingxuanIcon-tmall.png" />
+    <Content Include="Public\Home\Shops\Images\mall\jingxuanIcon.png" />
+    <Content Include="Public\Home\Shops\Images\mall\jinrituijiannewbiaozhi-tmall.png" />
+    <Content Include="Public\Home\Shops\Images\mall\jinrituijiannewbiaozhi.png" />
+    <Content Include="Public\Home\Shops\Images\mall\jylc-step-bg.png" />
+    <Content Include="Public\Home\Shops\Images\mall\kandiandan.png" />
+    <Content Include="Public\Home\Shops\Images\mall\land-small2.png" />
+    <Content Include="Public\Home\Shops\Images\mall\land-small3.png" />
+    <Content Include="Public\Home\Shops\Images\mall\lijichushou.jpg" />
+    <Content Include="Public\Home\Shops\Images\mall\lijigoumai.jpg" />
+    <Content Include="Public\Home\Shops\Images\mall\line-bg-jb.png" />
+    <Content Include="Public\Home\Shops\Images\mall\listIcon20w.png" />
+    <Content Include="Public\Home\Shops\Images\mall\listItem-mjmsLink.png" />
+    <Content Include="Public\Home\Shops\Images\mall\liucheng.png" />
+    <Content Include="Public\Home\Shops\Images\mall\maijiaanquan.jpg" />
+    <Content Include="Public\Home\Shops\Images\mall\PaimaiChuJiaBtn.png" />
+    <Content Include="Public\Home\Shops\Images\mall\pingjia.jpg" />
+    <Content Include="Public\Home\Shops\Images\mall\PMWDlistjiantou2.png" />
+    <Content Include="Public\Home\Shops\Images\mall\priceBg-hover-qita.png" />
+    <Content Include="Public\Home\Shops\Images\mall\priceBg-hover-tmall.png" />
+    <Content Include="Public\Home\Shops\Images\mall\priceBg-hover.png" />
+    <Content Include="Public\Home\Shops\Images\mall\priceBg-qita.png" />
+    <Content Include="Public\Home\Shops\Images\mall\priceBg-tmall.png" />
+    <Content Include="Public\Home\Shops\Images\mall\priceBg.png" />
+    <Content Include="Public\Home\Shops\Images\mall\QiuGou.jpg" />
+    <Content Include="Public\Home\Shops\Images\mall\quanbugoumai.jpg" />
+    <Content Include="Public\Home\Shops\Images\mall\renshu.jpg" />
+    <Content Include="Public\Home\Shops\Images\mall\sale-bg.png" />
+    <Content Include="Public\Home\Shops\Images\mall\salesman_lx_qq.png" />
+    <Content Include="Public\Home\Shops\Images\mall\salesman_pj.png" />
+    <Content Include="Public\Home\Shops\Images\mall\salesman_ywypj_close.png" />
+    <Content Include="Public\Home\Shops\Images\mall\salesman_ywypj_close2.png" />
+    <Content Include="Public\Home\Shops\Images\mall\salesman_zixun_btn.png" />
+    <Content Include="Public\Home\Shops\Images\mall\searchBtnBg.png" />
+    <Content Include="Public\Home\Shops\Images\mall\seller-more-answer.png" />
+    <Content Include="Public\Home\Shops\Images\mall\seller-more-shop.png" />
+    <Content Include="Public\Home\Shops\Images\mall\sell_level.png" />
+    <Content Include="Public\Home\Shops\Images\mall\shexiangji.png" />
+    <Content Include="Public\Home\Shops\Images\mall\shexiangji2.png" />
+    <Content Include="Public\Home\Shops\Images\mall\shijian.jpg" />
+    <Content Include="Public\Home\Shops\Images\mall\shoucang.png" />
+    <Content Include="Public\Home\Shops\Images\mall\shougouliucheng.png" />
+    <Content Include="Public\Home\Shops\Images\mall\shouji.jpg" />
+    <Content Include="Public\Home\Shops\Images\mall\sortIcon.png" />
+    <Content Include="Public\Home\Shops\Images\mall\sprite-skin-flat.png" />
+    <Content Include="Public\Home\Shops\Images\mall\sprite-skin-nice.png" />
+    <Content Include="Public\Home\Shops\Images\mall\star.png" />
+    <Content Include="Public\Home\Shops\Images\mall\tab-box-bg.png" />
+    <Content Include="Public\Home\Shops\Images\mall\tianjiadao.png" />
+    <Content Include="Public\Home\Shops\Images\mall\tigongzhengjian.png" />
+    <Content Include="Public\Home\Shops\Images\mall\tigongzhengjian01.png" />
+    <Content Include="Public\Home\Shops\Images\mall\TimeBg.png" />
+    <Content Include="Public\Home\Shops\Images\mall\tmall-gmlc-img-1000.png" />
+    <Content Include="Public\Home\Shops\Images\mall\tousu.jpg" />
+    <Content Include="Public\Home\Shops\Images\mall\tuijianIcon-tmall.png" />
+    <Content Include="Public\Home\Shops\Images\mall\tuijianIcon.png" />
+    <Content Include="Public\Home\Shops\Images\mall\tzj1.png" />
+    <Content Include="Public\Home\Shops\Images\mall\tzj2.png" />
+    <Content Include="Public\Home\Shops\Images\mall\wupaoanquan.jpg" />
+    <Content Include="Public\Home\Shops\Images\mall\xiangqingmiaoshuName.png" />
+    <Content Include="Public\Home\Shops\Images\mall\yiding.jpg" />
+    <Content Include="Public\Home\Shops\Images\mall\yishou.jpg" />
+    <Content Include="Public\Home\Shops\Images\mall\youhuiquanbg.png" />
+    <Content Include="Public\Home\Shops\Images\mall\youhuiquanbg_bak.png" />
+    <Content Include="Public\Home\Shops\Images\mall\youhuiquantoumingbg.png" />
+    <Content Include="Public\Home\Shops\Images\mall\ywypjstar.png" />
+    <Content Include="Public\Home\Shops\Images\mall\z7.gif" />
+    <Content Include="Public\Home\Shops\Images\mall\zhijiao-btn.png" />
+    <Content Include="Public\Home\Shops\Images\mall\zixun.gif" />
+    <Content Include="Public\Home\Shops\Images\mall\zx_qq.gif" />
+    <Content Include="Public\Home\Shops\Images\menu_bg_r.png" />
+    <Content Include="Public\Home\Shops\Images\menu_line.png" />
+    <Content Include="Public\Home\Shops\Images\menu_r_111.png" />
+    <Content Include="Public\Home\Shops\Images\mobile-label.jpg" />
+    <Content Include="Public\Home\Shops\Images\money-hongbao.png" />
+    <Content Include="Public\Home\Shops\Images\money-item-bg.png" />
+    <Content Include="Public\Home\Shops\Images\money-keyong.png" />
+    <Content Include="Public\Home\Shops\Images\more-red.png" />
+    <Content Include="Public\Home\Shops\Images\more-shop.png" />
+    <Content Include="Public\Home\Shops\Images\more-yellow.png" />
+    <Content Include="Public\Home\Shops\Images\msg_bg.png" />
+    <Content Include="Public\Home\Shops\Images\mzgk.gif" />
+    <Content Include="Public\Home\Shops\Images\new.gif" />
+    <Content Include="Public\Home\Shops\Images\news\gonggao-dian.jpg" />
+    <Content Include="Public\Home\Shops\Images\news\hongg.png" />
+    <Content Include="Public\Home\Shops\Images\news\jinrituijiannewbiaozhi-tmall.png" />
+    <Content Include="Public\Home\Shops\Images\news\jinrituijiannewbiaozhi.png" />
+    <Content Include="Public\Home\Shops\Images\news\jp_showtitbg.png" />
+    <Content Include="Public\Home\Shops\Images\news\keywordBg.png" />
+    <Content Include="Public\Home\Shops\Images\news\lanlan.png" />
+    <Content Include="Public\Home\Shops\Images\news\line.gif" />
+    <Content Include="Public\Home\Shops\Images\news\notelist_15.png" />
+    <Content Include="Public\Home\Shops\Images\news\numbg.png" />
+    <Content Include="Public\Home\Shops\Images\news\numbg1.png" />
+    <Content Include="Public\Home\Shops\Images\news\queding.jpg" />
+    <Content Include="Public\Home\Shops\Images\news\xiangqing-down.jpg" />
+    <Content Include="Public\Home\Shops\Images\news\xiangqing-head.jpg" />
+    <Content Include="Public\Home\Shops\Images\news\xiayiye.jpg" />
+    <Content Include="Public\Home\Shops\Images\news\xtwb.png" />
+    <Content Include="Public\Home\Shops\Images\nf-bg.png" />
+    <Content Include="Public\Home\Shops\Images\nf-btn-fbxq.png" />
+    <Content Include="Public\Home\Shops\Images\nf-btn-submit.png" />
+    <Content Include="Public\Home\Shops\Images\nf-btn-zxzxkf.png" />
+    <Content Include="Public\Home\Shops\Images\nofindwant.png" />
+    <Content Include="Public\Home\Shops\Images\number-block.gif" />
+    <Content Include="Public\Home\Shops\Images\ok-btn.png" />
+    <Content Include="Public\Home\Shops\Images\On-arrows.jpg" />
+    <Content Include="Public\Home\Shops\Images\On-hot.png" />
+    <Content Include="Public\Home\Shops\Images\On-hunt.png" />
+    <Content Include="Public\Home\Shops\Images\pageBorderBg.png" />
+    <Content Include="Public\Home\Shops\Images\password-label.jpg" />
+    <Content Include="Public\Home\Shops\Images\picShow-btn.png" />
+    <Content Include="Public\Home\Shops\Images\price-box-bg.png" />
+    <Content Include="Public\Home\Shops\Images\price-djgs.png" />
+    <Content Include="Public\Home\Shops\Images\public-qq.jpg" />
+    <Content Include="Public\Home\Shops\Images\pub\fhdb_03.png" />
+    <Content Include="Public\Home\Shops\Images\pub\fhdb_06.png" />
+    <Content Include="Public\Home\Shops\Images\QiYeQQ.png" />
+    <Content Include="Public\Home\Shops\Images\qq-valid-title.png" />
+    <Content Include="Public\Home\Shops\Images\question\head.jpg" />
+    <Content Include="Public\Home\Shops\Images\question\ManageCenterRightTitle.png" />
+    <Content Include="Public\Home\Shops\Images\question\On-wyjy.jpg" />
+    <Content Include="Public\Home\Shops\Images\question\On-wytw.jpg" />
+    <Content Include="Public\Home\Shops\Images\question\zxnr.png" />
+    <Content Include="Public\Home\Shops\Images\question\zxnr_003.png" />
+    <Content Include="Public\Home\Shops\Images\question\zxnr_03.png" />
+    <Content Include="Public\Home\Shops\Images\quick-pc.png" />
+    <Content Include="Public\Home\Shops\Images\quick-shop-new.jpg" />
+    <Content Include="Public\Home\Shops\Images\quick-shop-title-new.png" />
+    <Content Include="Public\Home\Shops\Images\quick-shop-title-used.png" />
+    <Content Include="Public\Home\Shops\Images\quick-shop-used.jpg" />
+    <Content Include="Public\Home\Shops\Images\quick-title.png" />
+    <Content Include="Public\Home\Shops\Images\reg\AnQuan-BJ.jpg" />
+    <Content Include="Public\Home\Shops\Images\reg\AnQuan-Xuan.jpg" />
+    <Content Include="Public\Home\Shops\Images\reg\i.jpg" />
+    <Content Include="Public\Home\Shops\Images\reg\SheZhi-BJ.png" />
+    <Content Include="Public\Home\Shops\Images\reg\Yanzheng.jpg" />
+    <Content Include="Public\Home\Shops\Images\reg\ZC-anquanshezhi.jpg" />
+    <Content Include="Public\Home\Shops\Images\reg\ZC-BJ.jpg" />
+    <Content Include="Public\Home\Shops\Images\reg\ZC-chenggong.jpg" />
+    <Content Include="Public\Home\Shops\Images\reg\ZC-guanli.jpg" />
+    <Content Include="Public\Home\Shops\Images\reg\ZC-jinshouye.jpg" />
+    <Content Include="Public\Home\Shops\Images\reg\ZC-shezhi.jpg" />
+    <Content Include="Public\Home\Shops\Images\reg\ZhuCe-BJ.jpg" />
+    <Content Include="Public\Home\Shops\Images\reg\ZhuCe-Cha.jpg" />
+    <Content Include="Public\Home\Shops\Images\reg\ZhuCe-Dui.jpg" />
+    <Content Include="Public\Home\Shops\Images\reg\ZhuCe-Liang.jpg" />
+    <Content Include="Public\Home\Shops\Images\reg\ZhuCe-Zhu.jpg" />
+    <Content Include="Public\Home\Shops\Images\reg\zhuce_bg.jpg" />
+    <Content Include="Public\Home\Shops\Images\renshu.jpg" />
+    <Content Include="Public\Home\Shops\Images\return5pao.png" />
+    <Content Include="Public\Home\Shops\Images\salesman_zixun_btn.png" />
+    <Content Include="Public\Home\Shops\Images\school\ali-1.png" />
+    <Content Include="Public\Home\Shops\Images\school\ali-2.png" />
+    <Content Include="Public\Home\Shops\Images\school\ali-3.png" />
+    <Content Include="Public\Home\Shops\Images\school\ali-4.png" />
+    <Content Include="Public\Home\Shops\Images\school\banner-img.png" />
+    <Content Include="Public\Home\Shops\Images\school\banner-ljtjbm.png" />
+    <Content Include="Public\Home\Shops\Images\school\banner-red-bg-large.jpg" />
+    <Content Include="Public\Home\Shops\Images\school\close-icon.png" />
+    <Content Include="Public\Home\Shops\Images\school\close_ecs.png" />
+    <Content Include="Public\Home\Shops\Images\school\ecschoolintro.png" />
+    <Content Include="Public\Home\Shops\Images\school\enterVideo-btn-bg.png" />
+    <Content Include="Public\Home\Shops\Images\school\enterVideo-btn-bg1.png" />
+    <Content Include="Public\Home\Shops\Images\school\guimo.png" />
+    <Content Include="Public\Home\Shops\Images\school\intro-bg.jpg" />
+    <Content Include="Public\Home\Shops\Images\school\jfheader-bg.png" />
+    <Content Include="Public\Home\Shops\Images\school\jingyingkunhuo.png" />
+    <Content Include="Public\Home\Shops\Images\school\letter.jpg" />
+    <Content Include="Public\Home\Shops\Images\school\loginbg.png" />
+    <Content Include="Public\Home\Shops\Images\school\logo-right.png" />
+    <Content Include="Public\Home\Shops\Images\school\textbg.png" />
+    <Content Include="Public\Home\Shops\Images\school\tianfen.png" />
+    <Content Include="Public\Home\Shops\Images\seller-image-wrap.png" />
+    <Content Include="Public\Home\Shops\Images\seller-setup.jpg" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_03.png" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_1.png" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_11.png" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_13.png" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_16.png" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_18.png" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_2.png" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_24.png" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_25.png" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_26.png" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_27.png" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_32.png" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_33.png" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_34.png" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_35.png" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_36.png" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_37.png" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_38.png" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_39.png" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_40.png" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_41.png" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_56.png" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_57.png" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_58.png" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_59.png" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_60.png" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_61.png" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_62.png" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_63.png" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_64.png" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_65.png" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_66.png" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_67.png" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_68.png" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_69.png" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_70.png" />
+    <Content Include="Public\Home\Shops\Images\seller_1\selection_71.png" />
+    <Content Include="Public\Home\Shops\Images\shadow-left.png" />
+    <Content Include="Public\Home\Shops\Images\shadow-top.png" />
+    <Content Include="Public\Home\Shops\Images\share-icon.png" />
+    <Content Include="Public\Home\Shops\Images\shfw.gif" />
+    <Content Include="Public\Home\Shops\Images\shijian.jpg" />
+    <Content Include="Public\Home\Shops\Images\shop-info-1.png" />
+    <Content Include="Public\Home\Shops\Images\shop-info-2.png" />
+    <Content Include="Public\Home\Shops\Images\shop-score-arrow.gif" />
+    <Content Include="Public\Home\Shops\Images\shoucang.png" />
+    <Content Include="Public\Home\Shops\Images\shouji.jpg" />
+    <Content Include="Public\Home\Shops\Images\sidebar-help-item1.png" />
+    <Content Include="Public\Home\Shops\Images\sidebar-helper-foot.png" />
+    <Content Include="Public\Home\Shops\Images\sidebar-helper-head.png" />
+    <Content Include="Public\Home\Shops\Images\sidebar-helper-item1.png" />
+    <Content Include="Public\Home\Shops\Images\sidebar-helper-item2.png" />
+    <Content Include="Public\Home\Shops\Images\sidebar-helper-item3.png" />
+    <Content Include="Public\Home\Shops\Images\sidebar-helper-item4.png" />
+    <Content Include="Public\Home\Shops\Images\sidebar-helper-item5.png" />
+    <Content Include="Public\Home\Shops\Images\sidebar-helper-title.png" />
+    <Content Include="Public\Home\Shops\Images\slogo\0830\slogo_0.jpg" />
+    <Content Include="Public\Home\Shops\Images\slogo\0830\slogo_1.jpg" />
+    <Content Include="Public\Home\Shops\Images\slogo\0830\slogo_2.jpg" />
+    <Content Include="Public\Home\Shops\Images\slogo\qitalist-slogo-10.png" />
+    <Content Include="Public\Home\Shops\Images\slogo\qitalist-slogo-11.png" />
+    <Content Include="Public\Home\Shops\Images\slogo\qitalist-slogo-12.png" />
+    <Content Include="Public\Home\Shops\Images\slogo\qitalist-slogo-13.png" />
+    <Content Include="Public\Home\Shops\Images\slogo\qitalist-slogo-14.png" />
+    <Content Include="Public\Home\Shops\Images\slogo\qitalist-slogo-15.png" />
+    <Content Include="Public\Home\Shops\Images\slogo\qitalist-slogo-16.png" />
+    <Content Include="Public\Home\Shops\Images\slogo\qitalist-slogo-17.png" />
+    <Content Include="Public\Home\Shops\Images\slogo\qitalist-slogo-18.png" />
+    <Content Include="Public\Home\Shops\Images\slogo\qitalist-slogo-2.png" />
+    <Content Include="Public\Home\Shops\Images\slogo\qitalist-slogo-4.png" />
+    <Content Include="Public\Home\Shops\Images\slogo\qitalist-slogo-5.png" />
+    <Content Include="Public\Home\Shops\Images\slogo\qitalist-slogo-6.png" />
+    <Content Include="Public\Home\Shops\Images\slogo\qitalist-slogo-7.png" />
+    <Content Include="Public\Home\Shops\Images\slogo\qitalist-slogo-8.png" />
+    <Content Include="Public\Home\Shops\Images\slogo\qitalist-slogo-9.png" />
+    <Content Include="Public\Home\Shops\Images\slogo\slogo_2.jpg" />
+    <Content Include="Public\Home\Shops\Images\sub-title.png" />
+    <Content Include="Public\Home\Shops\Images\suggest-banner.jpg" />
+    <Content Include="Public\Home\Shops\Images\suggest-footer.jpg" />
+    <Content Include="Public\Home\Shops\Images\s_blue_1.gif" />
+    <Content Include="Public\Home\Shops\Images\s_blue_2.gif" />
+    <Content Include="Public\Home\Shops\Images\s_blue_3.gif" />
+    <Content Include="Public\Home\Shops\Images\s_blue_4.gif" />
+    <Content Include="Public\Home\Shops\Images\s_blue_5.gif" />
+    <Content Include="Public\Home\Shops\Images\s_cap_1.gif" />
+    <Content Include="Public\Home\Shops\Images\s_cap_2.gif" />
+    <Content Include="Public\Home\Shops\Images\s_cap_3.gif" />
+    <Content Include="Public\Home\Shops\Images\s_cap_4.gif" />
+    <Content Include="Public\Home\Shops\Images\s_cap_5.gif" />
+    <Content Include="Public\Home\Shops\Images\tab-box-bg.png" />
+    <Content Include="Public\Home\Shops\Images\tel-400.png" />
+    <Content Include="Public\Home\Shops\Images\tel_ico.png" />
+    <Content Include="Public\Home\Shops\Images\tips0.png" />
+    <Content Include="Public\Home\Shops\Images\tipsExit.png" />
+    <Content Include="Public\Home\Shops\Images\tmall-icon.gif" />
+    <Content Include="Public\Home\Shops\Images\tmall-wdxxxx-hd-img.png" />
+    <Content Include="Public\Home\Shops\Images\tmlogo.jpeg" />
+    <Content Include="Public\Home\Shops\Images\tousudonghua.gif" />
+    <Content Include="Public\Home\Shops\Images\tzj1.png" />
+    <Content Include="Public\Home\Shops\Images\tzj2.png" />
+    <Content Include="Public\Home\Shops\Images\tzj25.png" />
+    <Content Include="Public\Home\Shops\Images\tzj3.png" />
+    <Content Include="Public\Home\Shops\Images\tzj4.png" />
+    <Content Include="Public\Home\Shops\Images\uploadevidenceicon.png" />
+    <Content Include="Public\Home\Shops\Images\user-default-img.jpg" />
+    <Content Include="Public\Home\Shops\Images\users-introduce.png" />
+    <Content Include="Public\Home\Shops\Images\user\ali-2.png" />
+    <Content Include="Public\Home\Shops\Images\user\BaoCunZhangHu-btn.png" />
+    <Content Include="Public\Home\Shops\Images\user\ChaKan.png" />
+    <Content Include="Public\Home\Shops\Images\user\chaxun.jpg" />
+    <Content Include="Public\Home\Shops\Images\user\chushoutmall.jpg" />
+    <Content Include="Public\Home\Shops\Images\user\chushouwangdian.png" />
+    <Content Include="Public\Home\Shops\Images\user\czfs-wscz.png" />
+    <Content Include="Public\Home\Shops\Images\user\czfs-xxyh.png" />
+    <Content Include="Public\Home\Shops\Images\user\czfs-zfb.png" />
+    <Content Include="Public\Home\Shops\Images\user\dotted-bg.png" />
+    <Content Include="Public\Home\Shops\Images\user\EmailRZstep1.png" />
+    <Content Include="Public\Home\Shops\Images\user\EmailRZstep2.png" />
+    <Content Include="Public\Home\Shops\Images\user\EmailRZstep3.png" />
+    <Content Include="Public\Home\Shops\Images\user\fbtw.png" />
+    <Content Include="Public\Home\Shops\Images\user\greenOK3-btn.png" />
+    <Content Include="Public\Home\Shops\Images\user\hkyh.png" />
+    <Content Include="Public\Home\Shops\Images\user\jb-djsc.png" />
+    <Content Include="Public\Home\Shops\Images\user\jb-gx.jpg" />
+    <Content Include="Public\Home\Shops\Images\user\jb-qrtj.png" />
+    <Content Include="Public\Home\Shops\Images\user\jinduGreen-Bar.png" />
+    <Content Include="Public\Home\Shops\Images\user\jinduOrg-Bar.png" />
+    <Content Include="Public\Home\Shops\Images\user\jinduRed-Bar.png" />
+    <Content Include="Public\Home\Shops\Images\user\MC_nav_minus.png" />
+    <Content Include="Public\Home\Shops\Images\user\MC_nav_plus.png" />
+    <Content Include="Public\Home\Shops\Images\user\nav-l-dd-jiantou.png" />
+    <Content Include="Public\Home\Shops\Images\user\noyoulogin-bg.png" />
+    <Content Include="Public\Home\Shops\Images\user\ok-btn.png" />
+    <Content Include="Public\Home\Shops\Images\user\ok_icon.png" />
+    <Content Include="Public\Home\Shops\Images\user\orgBack-btn.png" />
+    <Content Include="Public\Home\Shops\Images\user\public-phone.jpg" />
+    <Content Include="Public\Home\Shops\Images\user\public-wp.jpg" />
+    <Content Include="Public\Home\Shops\Images\user\renzhengchenggong.png" />
+    <Content Include="Public\Home\Shops\Images\user\reset.png" />
+    <Content Include="Public\Home\Shops\Images\user\return5pao.png" />
+    <Content Include="Public\Home\Shops\Images\user\shoujirenzhengStep.png" />
+    <Content Include="Public\Home\Shops\Images\user\shoujirenzhengStep1tipbg.png" />
+    <Content Include="Public\Home\Shops\Images\user\sort.jpg" />
+    <Content Include="Public\Home\Shops\Images\user\step2iphone.png" />
+    <Content Include="Public\Home\Shops\Images\user\step3successpri.png" />
+    <Content Include="Public\Home\Shops\Images\user\title-icon.png" />
+    <Content Include="Public\Home\Shops\Images\user\user-index-icon-s.png" />
+    <Content Include="Public\Home\Shops\Images\user\user-index-ts-1.png" />
+    <Content Include="Public\Home\Shops\Images\user\weixin.jpg" />
+    <Content Include="Public\Home\Shops\Images\user\xgzl-qrxg.jpg" />
+    <Content Include="Public\Home\Shops\Images\user\xgzl-txt.png" />
+    <Content Include="Public\Home\Shops\Images\user\xgzl-xjt.jpg" />
+    <Content Include="Public\Home\Shops\Images\user\xxhklc.png" />
+    <Content Include="Public\Home\Shops\Images\user\yebzljcz.png" />
+    <Content Include="Public\Home\Shops\Images\user\ZC-chenggong.jpg" />
+    <Content Include="Public\Home\Shops\Images\user\ZC-guanli.jpg" />
+    <Content Include="Public\Home\Shops\Images\user\ZC-jinshouye.jpg" />
+    <Content Include="Public\Home\Shops\Images\user\zijin-icon.png" />
+    <Content Include="Public\Home\Shops\Images\wdxxxx-hd-img.png" />
+    <Content Include="Public\Home\Shops\Images\weiyiwei-lady.png" />
+    <Content Include="Public\Home\Shops\Images\wenyiwei-laws.gif" />
+    <Content Include="Public\Home\Shops\Images\wenyiwen-arrow.gif" />
+    <Content Include="Public\Home\Shops\Images\wenyiwen-banner-title.png" />
+    <Content Include="Public\Home\Shops\Images\wenyiwen-bg-left.jpg" />
+    <Content Include="Public\Home\Shops\Images\wenyiwen-bg-right.jpg" />
+    <Content Include="Public\Home\Shops\Images\wenyiwen-logo.png" />
+    <Content Include="Public\Home\Shops\Images\wenyiwen-qrcode.png" />
+    <Content Include="Public\Home\Shops\Images\wenyiwen-search-input-bg.png" />
+    <Content Include="Public\Home\Shops\Images\while-logo.png" />
+    <Content Include="Public\Home\Shops\Images\while-logo2.png" />
+    <Content Include="Public\Home\Shops\Images\wjmima.jpg" />
+    <Content Include="Public\Home\Shops\Images\wjmima1.jpg" />
+    <Content Include="Public\Home\Shops\Images\wpczywhzhb.png" />
+    <Content Include="Public\Home\Shops\Images\xgzl-qrxg.jpg" />
+    <Content Include="Public\Home\Shops\Images\xiaohuangtou.png" />
+    <Content Include="Public\Home\Shops\Images\yanzhengma-login.jpg" />
+    <Content Include="Public\Home\Shops\Images\YpuQing-LJ.jpg" />
+    <Content Include="Public\Home\Shops\Images\yuanjia-btn.png" />
+    <Content Include="Public\Home\Shops\Images\z7.gif" />
+    <Content Include="Public\Home\Shops\Images\zc-tjzcxx.jpg" />
+    <Content Include="Public\Home\Shops\Images\zhijiao-btn.png" />
+    <Content Include="Public\Home\Shops\Images\zxnr_04.png" />
+    <Content Include="Public\Home\Shops\Images\广告.png" />
+    <Content Include="Public\Home\Shops\Images\猫咪说.png" />
+    <Content Include="Public\Home\Shops\Images\看一看.png" />
+    <Content Include="Public\Home\Shops\Img\1c00_03_2.png" />
+    <Content Include="Public\Home\Shops\Img\1c_03.jpg" />
+    <Content Include="Public\Home\Shops\Img\1c_03.png" />
+    <Content Include="Public\Home\Shops\Img\1c_04.png" />
+    <Content Include="Public\Home\Shops\Img\1c_05.png" />
+    <Content Include="Public\Home\Shops\Img\1c_14.jpg" />
+    <Content Include="Public\Home\Shops\Img\1c_honour_01.png" />
+    <Content Include="Public\Home\Shops\Img\1c_honour_02.png" />
+    <Content Include="Public\Home\Shops\Img\1c_honour_03.png" />
+    <Content Include="Public\Home\Shops\Img\1c_honour_04.png" />
+    <Content Include="Public\Home\Shops\Img\1c_honour_05.png" />
+    <Content Include="Public\Home\Shops\Img\5paocompany.png" />
+    <Content Include="Public\Home\Shops\Img\5paozclyl.png" />
+    <Content Include="Public\Home\Shops\Img\adv\adv-shop-similar.jpg" />
+    <Content Include="Public\Home\Shops\Img\adv\banner2.jpg" />
+    <Content Include="Public\Home\Shops\Img\adv\banner3.jpg" />
+    <Content Include="Public\Home\Shops\Img\adv\cat-image.png" />
+    <Content Include="Public\Home\Shops\Img\adv\tmp_1402027508507Img.jpg" />
+    <Content Include="Public\Home\Shops\Img\adv\tmp_1402027534902Img.jpg" />
+    <Content Include="Public\Home\Shops\Img\adv\tmp_1427002568903Img.jpg" />
+    <Content Include="Public\Home\Shops\Img\adv\tmp_1431244099337Img.jpg" />
+    <Content Include="Public\Home\Shops\Img\adv\tmp_1432869858136Img.jpg" />
+    <Content Include="Public\Home\Shops\Img\adv\tmp_1433036708526Img.jpg" />
+    <Content Include="Public\Home\Shops\Img\b_cap_4.gif" />
+    <Content Include="Public\Home\Shops\Img\b_cap_5.gif" />
+    <Content Include="Public\Home\Shops\Img\b_red_5.gif" />
+    <Content Include="Public\Home\Shops\Img\cxwz.jpg" />
+    <Content Include="Public\Home\Shops\Img\error-bg.png" />
+    <Content Include="Public\Home\Shops\Img\error-btn.png" />
+    <Content Include="Public\Home\Shops\Img\ErWeiMa.jpg" />
+    <Content Include="Public\Home\Shops\Img\fabuqiugou.gif" />
+    <Content Include="Public\Home\Shops\Img\head.jpg" />
+    <Content Include="Public\Home\Shops\Img\HongQiao.jpg" />
+    <Content Include="Public\Home\Shops\Img\HuoCheNanZhan.jpg" />
+    <Content Include="Public\Home\Shops\Img\HuoCheZhan.jpg" />
+    <Content Include="Public\Home\Shops\Img\icon-cat-sm.png" />
+    <Content Include="Public\Home\Shops\Img\index_list_01.jpg" />
+    <Content Include="Public\Home\Shops\Img\index_list_02.jpg" />
+    <Content Include="Public\Home\Shops\Img\index_list_03.jpg" />
+    <Content Include="Public\Home\Shops\Img\index_qtpt.jpg" />
+    <Content Include="Public\Home\Shops\Img\index_taobao.jpg" />
+    <Content Include="Public\Home\Shops\Img\index_tmall.jpg" />
+    <Content Include="Public\Home\Shops\Img\interview-image.jpg" />
+    <Content Include="Public\Home\Shops\Img\land-gwyz.jpg" />
+    <Content Include="Public\Home\Shops\Img\land-hydw.png" />
+    <Content Include="Public\Home\Shops\Img\land-kxwz.jpg" />
+    <Content Include="Public\Home\Shops\Img\land-yyzz.jpg" />
+    <Content Include="Public\Home\Shops\Img\land-zhdx.jpg" />
+    <Content Include="Public\Home\Shops\Img\left.png" />
+    <Content Include="Public\Home\Shops\Img\like.png" />
+    <Content Include="Public\Home\Shops\Img\logo.gif" />
+    <Content Include="Public\Home\Shops\Img\Map-1.jpg" />
+    <Content Include="Public\Home\Shops\Img\new.gif" />
+    <Content Include="Public\Home\Shops\Img\ok_icon.png" />
+    <Content Include="Public\Home\Shops\Img\QiYeQQ.jpg" />
+    <Content Include="Public\Home\Shops\Img\qq.jpg" />
+    <Content Include="Public\Home\Shops\Img\right.png" />
+    <Content Include="Public\Home\Shops\Img\shangwuhezuo-img.png" />
+    <Content Include="Public\Home\Shops\Img\Shen.jpg" />
+    <Content Include="Public\Home\Shops\Img\smallShop_10.png" />
+    <Content Include="Public\Home\Shops\Img\smallShop_2.png" />
+    <Content Include="Public\Home\Shops\Img\s_blue_1.gif" />
+    <Content Include="Public\Home\Shops\Img\s_blue_2.gif" />
+    <Content Include="Public\Home\Shops\Img\s_blue_3.gif" />
+    <Content Include="Public\Home\Shops\Img\s_blue_4.gif" />
+    <Content Include="Public\Home\Shops\Img\s_blue_5.gif" />
+    <Content Include="Public\Home\Shops\Img\s_cap_1.gif" />
+    <Content Include="Public\Home\Shops\Img\s_cap_2.gif" />
+    <Content Include="Public\Home\Shops\Img\s_cap_3.gif" />
+    <Content Include="Public\Home\Shops\Img\s_cap_4.gif" />
+    <Content Include="Public\Home\Shops\Img\s_cap_5.gif" />
+    <Content Include="Public\Home\Shops\Img\test\20101126221830578_0.png" />
+    <Content Include="Public\Home\Shops\Img\test\20140813100537114_0.jpg" />
+    <Content Include="Public\Home\Shops\Img\test\20140813100754566_0.jpg" />
+    <Content Include="Public\Home\Shops\Img\test\20140813101043982_0.png" />
+    <Content Include="Public\Home\Shops\Img\test\20140813101247503_0.jpg" />
+    <Content Include="Public\Home\Shops\Img\test\20140813101418045_0.jpg" />
+    <Content Include="Public\Home\Shops\Img\test\20140813101536810_0 %281%29.png" />
+    <Content Include="Public\Home\Shops\Img\test\20140813101536810_0.png" />
+    <Content Include="Public\Home\Shops\Img\test\20140813101747429_0.png" />
+    <Content Include="Public\Home\Shops\Img\test\20140813102025130_0.jpg" />
+    <Content Include="Public\Home\Shops\Img\test\20140813102231022_0.jpg" />
+    <Content Include="Public\Home\Shops\Img\test\20140813102457974_0.jpg" />
+    <Content Include="Public\Home\Shops\Img\test\20140813103236677_0.png" />
+    <Content Include="Public\Home\Shops\Img\test\20140813103456235_0.jpg" />
+    <Content Include="Public\Home\Shops\Img\test\20140813103647245_0.png" />
+    <Content Include="Public\Home\Shops\Img\test\20140813103914182_0.jpg" />
+    <Content Include="Public\Home\Shops\Img\test\20140813104331785_0.jpg" />
+    <Content Include="Public\Home\Shops\Img\test\20140813104855314_0.jpg" />
+    <Content Include="Public\Home\Shops\Img\test\20140813105140128_0.gif" />
+    <Content Include="Public\Home\Shops\Img\test\20140813105236163_0.jpg" />
+    <Content Include="Public\Home\Shops\Img\test\20140813173001684_0.jpg" />
+    <Content Include="Public\Home\Shops\Img\tmlogo.jpeg" />
+    <Content Include="Public\Home\Shops\Img\weixin.jpg" />
+    <Content Include="Public\Home\Shops\Img\xinxitijiaochenggong.png" />
+    <Content Include="Public\Home\Shops\Img\zhongtu_03.jpg" />
+    <Content Include="Public\Home\Shops\Img\zhongtu_07.jpg" />
+    <Content Include="Public\Home\Shops\Img\zhongtu_11.jpg" />
+    <Content Include="Public\Home\Shops\Img\zhongtu_14.jpg" />
+    <Content Include="Public\Home\Shops\Img\index_shcf.jpg" />
+    <Content Include="Public\Home\Shops\Img\index_dszx.jpg" />
+    <Content Include="Public\Home\Shops\Img\index_wzgg.jpg" />
+    <Content Include="Public\Home\Shops\Img\index_interview.jpg" />
+    <Content Include="Public\Home\Shops\Js\bankset.js" />
+    <Content Include="Public\Home\Shops\Js\calendar.js" />
+    <Content Include="Public\Home\Shops\Js\calendar.min.js" />
+    <Content Include="Public\Home\Shops\Js\common.js" />
+    <Content Include="Public\Home\Shops\Js\dafen.js" />
+    <Content Include="Public\Home\Shops\Js\engine---.js" />
+    <Content Include="Public\Home\Shops\Js\getQiugou.js" />
+    <Content Include="Public\Home\Shops\Js\getShop----.js" />
+    <Content Include="Public\Home\Shops\Js\index.js" />
+    <Content Include="Public\Home\Shops\Js\jQuery-jcDate.js" />
+    <Content Include="Public\Home\Shops\Js\jquery.cookie------.js" />
+    <Content Include="Public\Home\Shops\Js\jquery.cookie.js" />
+    <Content Include="Public\Home\Shops\Js\jquery.min.js" />
+    <Content Include="Public\Home\Shops\Js\jquery.timeago.js" />
+    <Content Include="Public\Home\Shops\Js\jquery_netpet----.js" />
+    <Content Include="Public\Home\Shops\Js\llpaychongzhi.js" />
+    <Content Include="Public\Home\Shops\Js\Netpet---.js" />
+    <Content Include="Public\Home\Shops\Js\news_othershow.js" />
+    <Content Include="Public\Home\Shops\Js\news_slide.js" />
+    <Content Include="Public\Home\Shops\Js\news_spIndexDwr----.js" />
+    <Content Include="Public\Home\Shops\Js\prototype.js" />
+    <Content Include="Public\Home\Shops\Js\qiugou.js" />
+    <Content Include="Public\Home\Shops\Js\recharge.js" />
+    <Content Include="Public\Home\Shops\Js\register.js" />
+    <Content Include="Public\Home\Shops\Js\forget_pwd.js" />
+    <Content Include="Public\Home\Shops\Js\reg_check.js" />
+    <Content Include="Public\Home\Shops\Js\school.js" />
+    <Content Include="Public\Home\Shops\Js\scroll.js" />
+    <Content Include="Public\Home\Shops\Js\scroll_show.js" />
+    <Content Include="Public\Home\Shops\Js\scroll_sset.js" />
+    <Content Include="Public\Home\Shops\Js\shops.js" />
+    <Content Include="Public\Home\Shops\Js\shopsGet.js" />
+    <Content Include="Public\Home\Shops\Js\spIndexDw-------r.js" />
+    <Content Include="Public\Home\Shops\Js\spmm------------.js" />
+    <Content Include="Public\Home\Shops\Js\tmall-----.js" />
+    <Content Include="Public\Home\Shops\Js\tmall.js" />
+    <Content Include="Public\Home\Shops\Js\txcheck.js" />
+    <Content Include="Public\Home\Shops\layer\extend\layer.ext.js" />
+    <Content Include="Public\Home\Shops\layer\layer.css" />
+    <Content Include="Public\Home\Shops\layer\layer.js" />
+    <Content Include="Public\Home\Shops\layer\skin\default\icon-ext.png" />
+    <Content Include="Public\Home\Shops\layer\skin\default\icon.png" />
+    <Content Include="Public\Home\Shops\layer\skin\default\loading-0.gif" />
+    <Content Include="Public\Home\Shops\layer\skin\default\loading-1.gif" />
+    <Content Include="Public\Home\Shops\layer\skin\default\loading-2.gif" />
+    <Content Include="Public\Home\Shops\layer\skin\layer.css" />
+    <Content Include="Public\Home\Shops\layer\skin\layer.ext.css" />
+    <Content Include="Public\Home\showlogin.html" />
+    <Content Include="Question\Answer.aspx" />
+    <Content Include="Question\Default.aspx" />
+    <Content Include="Question\MyList.aspx" />
+    <Content Include="See.aspx" />
+    <Content Include="ShopView.aspx" />
+    <Content Include="Special\20170117\Default.aspx" />
+    <Content Include="Special\20170117\images\01.jpg" />
+    <Content Include="Special\20170117\images\02.jpg" />
+    <Content Include="Special\20170117\images\03.jpg" />
+    <Content Include="Special\20170117\images\04.jpg" />
+    <Content Include="Special\20170117\images\05.jpg" />
+    <Content Include="Taobao.aspx" />
+    <Content Include="Title\Message.aspx" />
+    <Content Include="Tmall.aspx" />
+    <Content Include="Site.Master" />
+    <Content Include="UserControls\WebMenu.ascx" />
+    <Content Include="users\AddSuggest.aspx" />
+    <Content Include="users\AuthEmail.aspx" />
+    <Content Include="users\AuthMobile.aspx" />
+    <Content Include="users\AuthMobileHandle.aspx" />
+    <Content Include="users\BankCardAdd.aspx" />
+    <Content Include="users\BoughtList.aspx" />
+    <Content Include="users\ChangePassword.aspx" />
+    <Content Include="users\CheckMobile.aspx" />
+    <Content Include="users\CheckName.aspx" />
+    <Content Include="users\EditInfo.aspx" />
+    <Content Include="users\Favorites.aspx" />
+    <Content Include="users\ForgetPayPwd.aspx" />
+    <Content Include="users\ForgetPwd.aspx" />
+    <Content Include="users\FreezeDetails.aspx" />
+    <Content Include="users\FundsDetails.aspx" />
+    <Content Include="users\GetRegion.aspx" />
+    <Content Include="users\GetRegSms.aspx" />
+    <Content Include="users\Logout.aspx" />
+    <Content Include="users\MakeOrder.aspx" />
+    <Content Include="users\OrderView.aspx" />
+    <Content Include="users\PayHandle.aspx" />
+    <Content Include="users\PaymentPassword.aspx" />
+    <Content Include="users\ProtectPassword.aspx" />
+    <Content Include="users\QiugouSubmit.aspx" />
+    <Content Include="users\QuestionSubmit.aspx" />
+    <Content Include="users\Recharge.aspx" />
+    <Content Include="users\RechargeRecords.aspx" />
+    <Content Include="users\RegisterHandle.aspx" />
+    <Content Include="users\SellList.aspx" />
+    <Content Include="users\SendSms.aspx" />
+    <Content Include="users\ShopsTransferSubmit.aspx" />
+    <Content Include="users\ShopsTransferType.aspx" />
+    <Content Include="users\SuggestSubmit.aspx" />
+    <Content Include="users\Takecash.aspx" />
+    <Content Include="users\TakecashRecords.aspx" />
+    <Content Include="users\UserCenter.Master" />
+    <Content Include="Public\Home\Shops\Css\base.css.bak" />
+    <Content Include="Public\Home\Shops\Css\liststyle.css.bak" />
+    <Content Include="Public\Home\Shops\Css\shopsGet.css.bak" />
+    <Content Include="Public\Home\Shops\Css\title.css.bak" />
+    <Content Include="Public\Home\Shops\Css\tmall.css.bak" />
+    <Content Include="Public\Home\Shops\Css\user.css.bak" />
+    <Content Include="Public\Home\Shops\Css\user2.css.bak" />
+    <Content Include="Public\Home\Shops\Images\1506\1c00_03_2.psd" />
+    <Content Include="Public\Home\Shops\Images\1506\1c_honour_05.psd" />
+    <Content Include="Public\Home\Shops\Images\mall\fenleitubiao.psd" />
+    <Content Include="Public\Home\Shops\Images\mall\gmlc-img-1190.psd" />
+    <Content Include="Public\Home\Shops\Images\mall\liucheng.psd" />
+    <Content Include="Public\Home\Shops\Images\mall\wupaoanquan.psd" />
+    <Content Include="Public\Home\Shops\Images\QiYeQQ.psd" />
+    <Content Include="Public\Home\Shops\Images\school\banner-img.psd" />
+    <Content Include="Public\Home\Shops\Images\school\tianfen.psd" />
+    <Content Include="Public\Home\Shops\Images\user\user-index-ts-1.psd" />
+    <Content Include="Public\Home\Shops\Js\common.js.bak" />
+    <Content Include="Public\Home\Shops\Js\shopsGet.js.bak" />
+    <Content Include="Public\Home\Shops\Js\tmall-----.js.bak" />
+    <Content Include="Public\Control\Img\banner.psd" />
+    <Content Include="Public\Control\Img\file_txt.psd" />
+    <Content Include="Public\Control\Img\logo.psd" />
+    <Content Include="Public\Control\Img\logo2.psd" />
+    <Content Include="Public\Control\Js\jquery-1.10.1.min.map" />
+    <Content Include="Public\Control\Js\jquery-1.10.2.min.map" />
+    <None Include="Properties\PublishProfiles\public.pubxml" />
+    <None Include="Properties\PublishProfiles\release.pubxml" />
+    <Content Include="Public\Home\Shops\Css\iconfont.eot" />
+    <Content Include="Public\Home\Shops\Css\iconfont.ttf" />
+    <Content Include="Public\Home\Shops\Css\iconfont.woff" />
+    <Content Include="Public\Home\Shops\Css\if-others.eot" />
+    <Content Include="Public\Home\Shops\Css\if-others.ttf" />
+    <Content Include="Public\Home\Shops\Css\if-others.woff" />
+    <None Include="Properties\PublishProfiles\tmallzr.com.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="scripts\ai.0.15.0-build58334.js" />
+    <Content Include="scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="UserControls\WebArticles.ascx" />
+    <Content Include="users\Default.aspx" />
+    <Content Include="users\Login.aspx" />
+    <Content Include="users\Register.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Article\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Article\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Article\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Article\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ask.aspx.cs">
+      <DependentUpon>Ask.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ask.aspx.designer.cs">
+      <DependentUpon>Ask.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compared.aspx.cs">
+      <DependentUpon>Compared.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compared.aspx.designer.cs">
+      <DependentUpon>Compared.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Detail.aspx.cs">
+      <DependentUpon>Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Detail.aspx.designer.cs">
+      <DependentUpon>Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Interview.aspx.cs">
+      <DependentUpon>Interview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interview.aspx.designer.cs">
+      <DependentUpon>Interview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mall.aspx.cs">
+      <DependentUpon>Mall.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mall.aspx.designer.cs">
+      <DependentUpon>Mall.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Malls\AddFavorite.aspx.cs">
+      <DependentUpon>AddFavorite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Malls\AddFavorite.aspx.designer.cs">
+      <DependentUpon>AddFavorite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Malls\AddLikeShop.aspx.cs">
+      <DependentUpon>AddLikeShop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Malls\AddLikeShop.aspx.designer.cs">
+      <DependentUpon>AddLikeShop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Malls\AddSesList.aspx.cs">
+      <DependentUpon>AddSesList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Malls\AddSesList.aspx.designer.cs">
+      <DependentUpon>AddSesList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Malls\AjaxCart.aspx.cs">
+      <DependentUpon>AjaxCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Malls\AjaxCart.aspx.designer.cs">
+      <DependentUpon>AjaxCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Malls\KanDian.aspx.cs">
+      <DependentUpon>KanDian.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Malls\KanDian.aspx.designer.cs">
+      <DependentUpon>KanDian.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Malls\ValidQQ.aspx.cs">
+      <DependentUpon>ValidQQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Malls\ValidQQ.aspx.designer.cs">
+      <DependentUpon>ValidQQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NotFound.aspx.cs">
+      <DependentUpon>NotFound.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NotFound.aspx.designer.cs">
+      <DependentUpon>NotFound.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Question\Answer.aspx.cs">
+      <DependentUpon>Answer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Question\Answer.aspx.designer.cs">
+      <DependentUpon>Answer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Question\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Question\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Question\MyList.aspx.cs">
+      <DependentUpon>MyList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Question\MyList.aspx.designer.cs">
+      <DependentUpon>MyList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="See.aspx.cs">
+      <DependentUpon>See.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="See.aspx.designer.cs">
+      <DependentUpon>See.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShopView.aspx.cs">
+      <DependentUpon>ShopView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShopView.aspx.designer.cs">
+      <DependentUpon>ShopView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Special\20170117\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Special\20170117\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Taobao.aspx.cs">
+      <DependentUpon>Taobao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Taobao.aspx.designer.cs">
+      <DependentUpon>Taobao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Title\Message.aspx.cs">
+      <DependentUpon>Message.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Title\Message.aspx.designer.cs">
+      <DependentUpon>Message.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tmall.aspx.cs">
+      <DependentUpon>Tmall.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tmall.aspx.designer.cs">
+      <DependentUpon>Tmall.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UnityHandlerFactory.cs" />
+    <Compile Include="UserControls\WebArticles.ascx.cs">
+      <DependentUpon>WebArticles.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WebArticles.ascx.designer.cs">
+      <DependentUpon>WebArticles.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WebMenu.ascx.cs">
+      <DependentUpon>WebMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\WebMenu.ascx.designer.cs">
+      <DependentUpon>WebMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="users\AddSuggest.aspx.cs">
+      <DependentUpon>AddSuggest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\AddSuggest.aspx.designer.cs">
+      <DependentUpon>AddSuggest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\AuthEmail.aspx.cs">
+      <DependentUpon>AuthEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\AuthEmail.aspx.designer.cs">
+      <DependentUpon>AuthEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\AuthMobile.aspx.cs">
+      <DependentUpon>AuthMobile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\AuthMobile.aspx.designer.cs">
+      <DependentUpon>AuthMobile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\AuthMobileHandle.aspx.cs">
+      <DependentUpon>AuthMobileHandle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\AuthMobileHandle.aspx.designer.cs">
+      <DependentUpon>AuthMobileHandle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\BankCardAdd.aspx.cs">
+      <DependentUpon>BankCardAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\BankCardAdd.aspx.designer.cs">
+      <DependentUpon>BankCardAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\BoughtList.aspx.cs">
+      <DependentUpon>BoughtList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\BoughtList.aspx.designer.cs">
+      <DependentUpon>BoughtList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\CheckMobile.aspx.cs">
+      <DependentUpon>CheckMobile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\CheckMobile.aspx.designer.cs">
+      <DependentUpon>CheckMobile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\CheckName.aspx.cs">
+      <DependentUpon>CheckName.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\CheckName.aspx.designer.cs">
+      <DependentUpon>CheckName.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\EditInfo.aspx.cs">
+      <DependentUpon>EditInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\EditInfo.aspx.designer.cs">
+      <DependentUpon>EditInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\Favorites.aspx.cs">
+      <DependentUpon>Favorites.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\Favorites.aspx.designer.cs">
+      <DependentUpon>Favorites.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\ForgetPayPwd.aspx.cs">
+      <DependentUpon>ForgetPayPwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\ForgetPayPwd.aspx.designer.cs">
+      <DependentUpon>ForgetPayPwd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\ForgetPwd.aspx.cs">
+      <DependentUpon>ForgetPwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\ForgetPwd.aspx.designer.cs">
+      <DependentUpon>ForgetPwd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\FreezeDetails.aspx.cs">
+      <DependentUpon>FreezeDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\FreezeDetails.aspx.designer.cs">
+      <DependentUpon>FreezeDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\FundsDetails.aspx.cs">
+      <DependentUpon>FundsDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\FundsDetails.aspx.designer.cs">
+      <DependentUpon>FundsDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\GetRegion.aspx.cs">
+      <DependentUpon>GetRegion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\GetRegion.aspx.designer.cs">
+      <DependentUpon>GetRegion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\GetRegSms.aspx.cs">
+      <DependentUpon>GetRegSms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\GetRegSms.aspx.designer.cs">
+      <DependentUpon>GetRegSms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\MakeOrder.aspx.cs">
+      <DependentUpon>MakeOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\MakeOrder.aspx.designer.cs">
+      <DependentUpon>MakeOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\OrderView.aspx.cs">
+      <DependentUpon>OrderView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\OrderView.aspx.designer.cs">
+      <DependentUpon>OrderView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\PayHandle.aspx.cs">
+      <DependentUpon>PayHandle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\PayHandle.aspx.designer.cs">
+      <DependentUpon>PayHandle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\PaymentPassword.aspx.cs">
+      <DependentUpon>PaymentPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\PaymentPassword.aspx.designer.cs">
+      <DependentUpon>PaymentPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\ProtectPassword.aspx.cs">
+      <DependentUpon>ProtectPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\ProtectPassword.aspx.designer.cs">
+      <DependentUpon>ProtectPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\QiugouSubmit.aspx.cs">
+      <DependentUpon>QiugouSubmit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\QiugouSubmit.aspx.designer.cs">
+      <DependentUpon>QiugouSubmit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\QuestionSubmit.aspx.cs">
+      <DependentUpon>QuestionSubmit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\QuestionSubmit.aspx.designer.cs">
+      <DependentUpon>QuestionSubmit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\Recharge.aspx.cs">
+      <DependentUpon>Recharge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\Recharge.aspx.designer.cs">
+      <DependentUpon>Recharge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\RechargeRecords.aspx.cs">
+      <DependentUpon>RechargeRecords.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\RechargeRecords.aspx.designer.cs">
+      <DependentUpon>RechargeRecords.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\RegisterHandle.aspx.cs">
+      <DependentUpon>RegisterHandle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\RegisterHandle.aspx.designer.cs">
+      <DependentUpon>RegisterHandle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\SellList.aspx.cs">
+      <DependentUpon>SellList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\SellList.aspx.designer.cs">
+      <DependentUpon>SellList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\SendSms.aspx.cs">
+      <DependentUpon>SendSms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\SendSms.aspx.designer.cs">
+      <DependentUpon>SendSms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\ShopsTransferSubmit.aspx.cs">
+      <DependentUpon>ShopsTransferSubmit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\ShopsTransferSubmit.aspx.designer.cs">
+      <DependentUpon>ShopsTransferSubmit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\ShopsTransferType.aspx.cs">
+      <DependentUpon>ShopsTransferType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\ShopsTransferType.aspx.designer.cs">
+      <DependentUpon>ShopsTransferType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\SuggestSubmit.aspx.cs">
+      <DependentUpon>SuggestSubmit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\SuggestSubmit.aspx.designer.cs">
+      <DependentUpon>SuggestSubmit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\Takecash.aspx.cs">
+      <DependentUpon>Takecash.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\Takecash.aspx.designer.cs">
+      <DependentUpon>Takecash.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\TakecashRecords.aspx.cs">
+      <DependentUpon>TakecashRecords.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\TakecashRecords.aspx.designer.cs">
+      <DependentUpon>TakecashRecords.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\UserCenter.Master.cs">
+      <DependentUpon>UserCenter.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\UserCenter.Master.designer.cs">
+      <DependentUpon>UserCenter.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+    <Folder Include="Public\kindeditor\" />
+    <Folder Include="Public\Uploads\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Wuyiju.Web.Utils\Wuyiju.Web.Utils.csproj">
+      <Project>{81b16a31-a3ad-46f8-931e-d43b6d81ab13}</Project>
+      <Name>Wuyiju.Web.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51338</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51338/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

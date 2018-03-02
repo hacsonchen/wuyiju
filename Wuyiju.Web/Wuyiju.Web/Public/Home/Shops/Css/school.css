@@ -1,0 +1,161 @@
+@charset "utf-8";
+.banner_ecs{width:100%; background:#AF0619 url(../Images/school/banner-red-bg-large.jpg) 0 0;}
+.banner_ecs .wrapecs{position:relative;}
+
+.banner_ecs .ljbm-ban{position:absolute; right:203px; bottom:147px; text-align:center;}
+.banner_ecs .ljbm-ban a{display:block; width:385px; height:61px; background:url(../Images/school/banner-ljtjbm.png) 0 0; margin:0 auto;}
+.banner_ecs .ljbm-ban a:hover{background-position:0 -61px;}
+.banner_ecs .ljbm-ban p{font:bold 19.77px/45px 'Microsoft Yahei'; color:#fff;}
+
+/*电商学院导航栏*/
+.ecsnav_w{width:100%; min-width:1000px;height:94px; background:#fff url(../Images/school/jfheader-bg.png );}
+.ecsnav{width:1190px;height:90px;margin:0 auto;}
+.ecsnav .logo a{ float: left; height: 72px; margin-top: 15px; width: 136px; background:url(../Images/logo.jpg) no-repeat; }
+.ecsnav .logo img{float: left; height: 31px; margin-top: 30px; margin-left:14px;}
+.ecsnav ul{float:right;}
+.ecsnav ul li{float:left;display:inline;margin-left:65px;line-height:90px;font-size:16px;}
+.ecsnav ul li a{color:#515151; text-decoration:none; font-family:'Microsoft Yahei'}
+.ecsnav ul li a:hover{color:#2f669c;}
+.ecsnav ul li a.homeA{color:#347dad;}
+.ecsnav ul li a.homeA:hover{color:#f60;}
+
+.jingyingkunhuo{background:url(../Images/school/jingyingkunhuo.png) center 0 no-repeat; height:672px;}
+.guimo{background:url(../Images/school/guimo.png) center 0 no-repeat; height:620px;}
+.tianfen{background:url(../Images/school/tianfen.png) center 0 no-repeat; height:730px;}.intro_ecs{width:100%; background:#c92044 url(../Images/school/ecschoolintro.png) repeat-x; padding:62px 0 45px;}
+.m_intro_ecs{background:#f9e7ea; border-radius:25px; height:712px;}
+.letter{float:right; background:url(../Images/school/letter.jpg) center center no-repeat; width:360px; height:624px; margin-right:60px; margin-top:33px; position:relative; padding:30px 76px 0;}
+.letter h2{font:normal 28px/52px 'Microsoft Yahei'; text-align:center; height:52px;}
+.letter p{font-size:16px; line-height:30px;}
+/*a链接样式*/
+.letter .wlearn{width:215px; height:20px; position:absolute; bottom:85px; right:114px; font-weight:bold;}
+.bd_intro{float:left; background:url(../Images/school/intro-bg.jpg) center bottom no-repeat; width:435px; margin-top:40px; margin-left:80px; padding-bottom:280px;}
+.bd_intro h2{font-size:45.32px; color:#c92044; text-align:center; padding:35px 0 25px;}
+.bd_intro .m_bd_intro{line-height:30px; color:#050505;}
+.bd_intro .m_bd_intro strong{color:#ac092c;}
+.grayBg{background:#f6f6f6;}
+.dullredBg{background:#bc1438;}
+.dullredBg2{background:#c92044;}
+.loginBox{background:url(../Images/school/loginbg.png) no-repeat; width:1013px; height:615px; margin:0 auto;}
+.loginBox a{color:#0376f7; text-decoration:none;}
+.loginBox a:hover{color:#f60;}
+.ljbm{background:url(../Images/school/ali-1.png) 125px 60px no-repeat; height:425px; padding-left:420px; font-size:25px;}
+.ljbm h2{font-size:39.4px; text-indent:100px; padding-top:85px; padding-bottom:20px;}
+.ljbm p{margin-top:25px;}
+.ljbm a{text-decoration:underline;}
+.tjbmxx{background:url(../Images/school/ali-3.png) 45px 65px no-repeat; height:425px; padding-left:380px; width:525px;}
+.tjbmxx h2{font-size:30.49px; text-align:center; padding:40px 0 25px;}
+.tjbmxx p{font-size:19px; line-height:38px; text-indent:2em;}
+.tjbmxx p.dltips{font-size:16px; color:#646464;}
+.tjbmxx p.dltips a{text-decoration:none; margin:0 6px;}
+.tjbmxx .sub_btn{display:block; width:203px; height:42px; font:18px 'Microsoft Yahei'; background:#c92044; color:#fff; margin:20px auto;}
+.tjbmxx .sub_btn:hover{background:#ad0a2c;}
+.bfyq{background:url(../Images/school/ali-2.png) 145px 55px no-repeat; padding-left:435px; width:435px; height:425px; text-align:center;}
+.bfyq h2{padding:55px 0 30px; font-size:30.49px;}
+.bfyq p{line-height:45px; font-size:21px;}
+.bfyq .kycz{font-size:18px; margin-top:25px;}
+.bfyq .kycz a{display:inline-block; width:140px; height:33px; line-height:33px; color:#fff; text-decoration:none; margin:0 6px;}
+.bfyq .kycz a.qhdl{background:#c92044;}
+.bfyq .kycz a.qhdl:hover{background:#ad072b;}
+.bfyq .kycz a.fhsy{background:#347dad;}
+.bfyq .kycz a.fhsy:hover{background:#105684;}
+.ybd{background:url(../Images/school/ali-4.png) 110px 50px no-repeat; height:425px; padding-left:385px; width:490px; text-align:center;}
+.ybd h2{line-height:48px; padding:65px 0 25px;}
+.ybd h2 p{font-size:27px;}
+.ybd p{line-height:40px; font-size:19px;}
+.ybd .kycz{margin-top:35px;}
+.ybd .kycz a{text-align:center; height:40px; line-height:40px; display:inline-block; color:#fff; font-size:18px; text-decoration:none; margin:0 6px;}
+.ybd .kycz a.toTop{background:#c92044; width:102px;}
+.ybd .kycz a.backHome{background:#347dad; width:140px;}
+.ybd .kycz a.intoCenter{background:#fa8a37; width:140px;}
+.ybd .kycz a.toTop:hover{background:#a80528;}
+.ybd .kycz a.backHome:hover{background:#0f5c8f;}
+.ybd .kycz a.intoCenter:hover{background:#d3620e;}
+
+/*弹出层
+-----------------------------------------*/
+.showLayer_ecs{background:#fff; width:632px; font-family:'Microsoft Yahei';}
+.showLayer_ecs .hd{padding:30px 0; position:relative;}
+.showLayer_ecs .hd .close{width:26px; height:26px; background:url(../Images/school/close_ecs.png) no-repeat; position:absolute; right:8px; top:6px;}
+.showLayer_ecs .hd .close:hover{background-position:0 -26px;}
+.showLayer_ecs h2{font-size:30.49px; text-align:center; font-weight:500;}
+.showLayer_ecs .bd{width:385px; margin:0 auto; text-align:center;}
+.showLayer_ecs .item{margin-bottom:32px;}
+.showLayer_ecs .ecstxtStyle{background:url(../Images/school/textbg.png) repeat-x; width:363px; height:47px; border:1px solid #a3a3a3; padding:0 10px; font-size:16px; line-height:47px\9; font-family:'Microsoft Yahei';}
+.showLayer_ecs .yzm{width:176px; vertical-align:middle; margin-right:15px;}
+.showLayer_ecs .getCode{width:172px; height:49px; background:#06B5E9; color:#fff; font:18px 'Microsoft Yahei'; vertical-align:middle;}
+.showLayer_ecs .getCode:hover{background:#08A0CB;}
+.showLayer_ecs .getCode-dis, .showLayer_ecs .getCode-dis:hover{background:#a3a3a3;}
+.showLayer_ecs .sub_layer_btn{width:150px; height:42px; background:#c92044; color:#fff; font:20px 'Microsoft Yahei';}
+.showLayer_ecs .sub_layer_btn:hover{background:#a70c2d;}
+.registerLayer{height:438px;}
+.loginLayer{height:360px;}
+.loginLayer .lostPassword{font-size:16px; text-decoration:none; margin-left:13px;}
+
+/*0521
+---------------------------------*/
+.courseBox{position:relative;}
+.tabTitle{position:absolute; top:-30px; width:100%;}
+.tabTitle ul{height:51px; background:#ad0024; width:578px; margin:0 auto; padding-left:1px;}
+.tabTitle li{float:left; text-align:center; width:190px; height:49px; line-height:49px; font-size:22px; color:#c92044; background:#fff; border:1px solid #ad0024; border-left:0; cursor:pointer; padding:0 1px;}
+.tabTitle li.cur{background:#c92044; color:#fff; border-color:#c92044; position:relative; padding-left:0px;}
+.tabTitle li.firstLi{left:-1px;}
+.tabTitle li.middleLi{border-right-color:#ad0024;}
+.nextCourse{padding-top:45px; text-align:center; padding-bottom:20px;}
+.nextCourse h2{color:#fff; font-size:40.93px; height:102px; line-height:102px;}
+.nextCourse p{font-size:30px; color:#fff; line-height:55px;}
+.nextC-btn{background:#f0983a; color:#fff; font:24px 'SimHei'; width:260px; height:52px; box-shadow:0px 0px 8px #ad0024; margin:25px auto;}
+.nextC-btn:hover{background:#e27e14;}
+.backCourse{padding-top:45px; padding-bottom:40px;}
+.backCourse h2{font:45px/125px '方正粗倩简体'; color:#fff; text-align:center; letter-spacing:-0.5px;}
+.backCourse dl, .nextCourse dl{width:942px; margin:0 auto; margin-bottom:25px;}
+.backCourse dt, .nextCourse dt{float:left; width:108px; height:30px; line-height:30px; background:#fff; color:#393939; border-radius:3px; font-size:20px; text-indent:10px;}
+.backCourse dd, .nextCourse dd{float:left; width:825px; font-size:20px; color:#fff; line-height:30px; padding-left:8px; text-align:left;}
+.backCourse dd strong{color:#ffdf5d;}
+.backCourse dl.liucheng, .nextCourse dl.liucheng{margin-bottom:0px;}
+.backCourse dl.Jiabin dd, .nextCourse dl.Jiabin dd{color:#f3faaa;}
+.enterVideo-btn{background:#fa8a37 url(../Images/school/enterVideo-btn-bg.png) 16px center no-repeat; color:#fff !important; font:24px 'SimHei'; width:255px; height:52px; line-height:52px; padding-left:63px; box-shadow:0px 0px 8px #ad0024; margin:40px auto 0; display:block;}
+.enterVideo-btn:hover{color:#fff; background-color:#e9731b;}
+.passedCourse{padding-top:110px; padding-bottom:90px;}
+.passedCourse .tbl-pc{border-spacing:0px; /*background:#d34866;*/ border-collapse:separate; width:998px; margin:0 auto;}
+.passedCourse .tbl-pc th{background:#b61a3b; color:#fbad06; border-left:1px solid #d34866; height:38px; line-height:38px;}
+.passedCourse .tbl-pc td{background:#c92044; border-top:1px solid #d34866; border-left:1px solid #d34866; min-height:66px;}
+.passedCourse .tbl-pc .time, .passedCourse .tbl-pc .subject, .passedCourse .tbl-pc .teacher{font-size:18px; color:#fff; padding:14px 20px; text-align:center;}
+.passedCourse .tbl-pc .subject{font-size:18px; color:#fbed06; text-align:left;}
+.passedCourse .tbl-pc .subject a{color:#fbed06; background:url(../Images/school/enterVideo-btn-bg1.png) 0 4px no-repeat; padding-left:37px; display:block;}
+.passedCourse .tbl-pc .subject a:hover{color:#fffaaa;}
+.passedCourse .tbl-pc .teacher{font-size:14px; color:#fff; line-height:20px; text-align:left;}
+.passedCourse .scroll-tbl-box{height:287px; overflow-y:auto; width:1015px; margin:0 auto; border:1px solid #edb9c4;}
+.bmbt{font-size:32.05px; text-align:center; padding-top:90px; margin-bottom:42px;}
+.bmbt .darkRed{color:#c92044;}
+
+/*想要学习的内容提交层
+------------------------------------------*/
+.courseContent{background:#fff8f3; width:290px; min-height:322px; font-family:'Microsoft Yahei';}
+.courseContent .hd{height:54px; line-height:54px; color:#747474; text-align:center; position:relative;}
+.courseContent .hd h2{font-size:23.2px;}
+.courseContent .hd .close{background:url(../Images/school/close-icon.png); width:18px; height:18px; position:absolute; right:8px; top:6px;}
+.courseContent .hd .close:hover{background-position:0 -18px;}
+.courseContent .bd{text-align:center;}
+.courseContent .bd textarea{border:1px solid #d8d8d7; width:225px; height:170px; resize:none; padding:10px; font:16px/1.2 'Microsoft Yahei';}
+.courseContent .btnBox{background:#feecd4; height:50px; padding-top:13px; margin-top:13px;}
+.courseContent .btnBox .subOk-btn{background:#6aa6ce; width:145px; height:37px; color:#fff; font:bold 20px/37px 'Microsoft Yahei';}
+.courseContent .btnBox .subOk-btn:hover{background:#2c7cb2;}
+
+/*视频弹窗
+------------------------------------------*/
+.embedVideo{position:absolute; width:990px; height:490px; border-radius:6px; background:#00457a;}
+.embedVideo .hd-v{width:100%; height:49px; position:relative; background:url(../Images/school/embed-video.png) 0 -104px repeat-x; border-radius:6px;}
+.embedVideo .hd-v h2{font:bold 24.08px/45px 'Microsoft Yahei'; color:#f5f5f5; text-indent:20px;}
+.embedVideo .hd-v .close{width:18px; height:18px; background:url(../Images/school/embed-video.png) 0 -50px no-repeat; position:absolute; right:12px; top:11px;}
+.embedVideo .hd-v .close:hover{background-position:0 -68px;}
+.embedVideo .videoBox{float:left; width:546px; height:371px; padding:12px; margin-left:18px; margin-top:22px; background:#003156; border:1px solid #002c4e; border-radius:5px;}
+.embedVideo .courseList{float:left; width:385px; height:397px; margin-top:22px; margin-left:12px; overflow-y:auto;}
+.embedVideo .nextCourse-v{width:313px; min-height:214px; padding:0 12px; background:#064c82; border:1px solid #013056; box-shadow:0 0 2px #0c304c;}
+.embedVideo .nextCourse-v .title{font:bold 19.52px/1.2 'Microsoft Yahei'; color:#fff; padding:15px 0; margin-top:10px; text-align:center;}
+.embedVideo .nextCourse-v .detail-nc{font:14px/24px 'Microsoft Yahei'; color:#fff; margin-bottom:10px;}
+.embedVideo .nextCourse-v .detail-nc strong{color:#ffb400; font-size:16px;}
+.embedVideo .passedList{padding-top:4px; overflow:hidden;}
+.embedVideo .passedList li{background:#003965 url(../Images/school/embed-video.png) 7px 0 no-repeat; width:283px; padding-left:54px; margin-top:10px; height:49px;font:16px/49px 'Microsoft Yahei';}
+.embedVideo .passedList li a{width:100%; text-decoration:none; color:#bde1ff; display:block;}
+.embedVideo .passedList li a:hover{color:#ffb400;}
+.embedVideo .triangle{position:absolute; bottom:-13px; left:0; background:url(../Images/school/embed-video.png) center -89px no-repeat; height:13px; width:990px;}

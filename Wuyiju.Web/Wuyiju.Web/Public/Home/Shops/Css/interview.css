@@ -1,0 +1,318 @@
+html,body,h3{ 
+	margin:0; 
+	padding: 0 
+}
+
+body {
+    background-color:#fff2e5;
+    font-size: 14px;
+    font-family: 'Microsoft Yahei';
+}
+
+.clear {
+	clear: both;
+}
+
+div.header-bar {
+	width: 100%;
+	height: 45px;
+	background-color: #df0c25; 
+}
+
+div.header-bar h1,h2 {
+	margin:0;
+	padding: 0; 
+}
+
+div.header-bar div.bar-logo {
+	padding-top: 2px;
+	display: inline-block;
+}
+div.bar-logo h1 {
+	background: url(../Images/while-logo.png) no-repeat left center;
+	width: 190px;
+	height: 39px;
+	text-indent: 190px;
+	white-space: nowrap;
+	overflow: hidden;
+
+}
+
+
+div.bar-menu {
+	display: inline-block;
+	float: right;
+}
+
+div.bar-menu ul {
+	list-style: none;
+	
+}
+
+div.bar-menu ul li {
+	float: left;
+	padding-right: 10px;
+	padding-left: 5px;
+}
+
+div.bar-menu ul a {
+	color: #fff;
+	text-decoration: none;
+
+}
+
+div.interview-bg {
+	background: url(../Images/bg-interview.png) no-repeat center top;
+	width: 100%;
+	padding-top: 229px;
+	position: relative;
+}
+
+div.interview-wrap {
+	width: 1010px;
+	height: 500px;
+	margin:0 auto;
+}
+div.catgory-box {
+	position: absolute;
+	height: 33px;
+	top: 133px;
+	left: 665px;
+	width: 506px;
+	text-align: right;
+	line-height: 33px;
+}
+
+div.catgory-box select {
+	width: 180px;
+}
+div.catgory-box .iv-his{
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+ div.catgory-box .share-box{
+	position: relative;
+	top: 3px;
+	padding-left: 10px;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+div.interview-box {
+	background-color: #fff;
+	border: 1px solid #f6e9dd;
+	min-height: 200px;
+	margin-bottom: 10px;
+}
+
+div.interview-desc {
+	width: 483px;
+	height: 293px;
+	margin-top: 15px;
+	margin-left: 11px;
+	margin-bottom: 15px;
+	border:1px solid #d4b076;
+	position: relative;	
+	padding: 1px;
+	float: left;
+}
+
+
+div.interview-desc h3 {
+	position: absolute;
+	top:8px;
+	left: -4px;
+	font-size: 12px;
+	font-family: '宋体';
+	font-weight: bold;
+	color: #fff;
+	line-height: 20px;
+	text-align: center;
+	width: 139px;
+	height: 23px;
+	background: url(../Images/interview-title.png) no-repeat left top;
+}
+
+div.interview-desc .desc-content {
+	width: 100%;
+	height: 100%;
+	background-color: #fff0df;
+}
+
+
+div.interview-content {
+	padding: 6px;
+}
+
+div.interview-content h3 {
+	color: #c20b0c;
+	height: 40px;	
+	line-height: 40px;
+	padding-left: 25px;
+	font-size: 16px;
+	font-family: '宋体';
+	font-weight: 700;
+}
+
+div.interview-content div.interview-body {
+
+	border-top: 1px solid #d4b076;
+	padding-top: 24px;
+	padding-left: 15px;
+
+}
+
+
+
+div.fee-records-wrap {
+	padding-top: 4px;
+	overflow: hidden;
+	height: 74px;
+}
+
+#interview-main div.interview-content {
+	float: left;
+	width: 645px;
+}
+#interview-main div.interview-sidebar {
+	width: 322px;
+	float: right;
+	background-color: #fffbf6;
+	margin-right: 25px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+div.sidebar-desc {
+	width: 100%;
+	min-height: 293px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	position: relative;	
+}
+
+
+div.sidebar-desc h3 {
+	position: absolute;
+	top:8px;
+	right: -4px;
+	font-size: 12px;
+	font-family: '宋体';
+	font-weight: bold;
+	color: #fff;
+	line-height: 20px;
+	text-align: center;
+	width: 139px;
+	height: 23px;
+	background: url(../Images/interview-title-right.png) no-repeat right top;
+}
+
+div.sidebar-desc .desc-content {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+div.interview-desc div.remarks {
+	margin-top: 40px;
+	padding-left: 20px;
+	padding-right: 40px;
+	height: 230px;
+	overflow-y: auto;
+	font-family: '宋体';
+	font-size: 14px;
+	color: #575757;
+	line-height: 22px;
+	float: left;
+}
+div.interviewee {
+	padding-top: 40px;
+	padding-left: 20px;
+}
+div.interviewee p {
+	font-family: '宋体';
+	font-size: 12px;
+	line-height: 25px;
+	padding: 0;
+	margin:0;
+	color: #575757;
+}
+
+div.interviewee-info {
+	float: left;
+	width: 236px;
+	border-right: 1px solid #fff;
+	height: 230px;
+	overflow: hidden;
+}
+
+div.interviewee-score {
+	float: left;
+	border-left: 1px solid #e9d5bc;
+	padding-left: 8px;
+	height: 230px;
+	overflow: hidden;
+}
+
+#interview-history div.desc-content {
+	padding-top: 50px;
+
+}
+
+#interview-history div.desc-content ul {
+	background-color: transparent;
+	list-style: none;
+	padding-left: 23px;
+	margin: 0;
+	max-height: 430px;
+	overflow-y: auto; 
+}
+
+#interview-history div.desc-content ul>li {
+	padding:8px 0;
+}
+
+#interview-history div.desc-content ul>li>a {
+	text-decoration: none;
+	color: #454545;
+
+}
+
+#interview-history div.desc-content ul>li>a:hover {
+	color: #c20b0c
+}
+
+#interview-image div.desc-content {
+	padding-top: 45px;
+}
+
+#interview-image div.image-box {
+	margin:0 7px;
+	border: 1px solid #ddd;
+	background-color: #f3f3f6;
+	padding: 4px;
+	overflow: hidden;
+}
+
+#interview-footer-bg {
+	position: relative;
+}
+
+#interview-footer-bg .footer-bg-left {
+	background: url(../Images/interview-footer-left.png) left center;
+	position: absolute;
+	width: 103px;
+	height: 166px;
+	left: -103px;
+	top:6px;
+}
+
+#interview-footer-bg .footer-bg-right {
+	background: url(../Images/interview-footer-right.png) right center;
+	position: absolute;
+	width: 103px;
+	height: 166px;
+	right: -103px;
+	top:6px;
+}

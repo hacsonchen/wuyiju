@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddLikeShop.aspx.cs" Inherits="Wuyiju.Web.Malls.AddLikeShop" %>

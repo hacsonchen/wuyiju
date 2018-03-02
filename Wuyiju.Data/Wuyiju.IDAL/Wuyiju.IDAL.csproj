@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0CE39F2B-03B5-46BE-80BF-2884788EC446}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Wuyiju.IDAL</RootNamespace>
+    <AssemblyName>Wuyiju.IDAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IAccessCopyDAL.cs" />
+    <Compile Include="IAccessDAL.cs" />
+    <Compile Include="IAdCopyDAL.cs" />
+    <Compile Include="IAdDAL.cs" />
+    <Compile Include="IAdminCopyDAL.cs" />
+    <Compile Include="IAdminDAL.cs" />
+    <Compile Include="IAdminScoresCopyDAL.cs" />
+    <Compile Include="IAdminScoresDAL.cs" />
+    <Compile Include="IAdPositionCopyDAL.cs" />
+    <Compile Include="IAdPositionDAL.cs" />
+    <Compile Include="IArticleCommentsCopyDAL.cs" />
+    <Compile Include="IArticleCommentsDAL.cs" />
+    <Compile Include="IArticleCopyDAL.cs" />
+    <Compile Include="IArticleDAL.cs" />
+    <Compile Include="IAskDAL.cs" />
+    <Compile Include="IAskReplyDAL.cs" />
+    <Compile Include="IAttributeDAL.cs" />
+    <Compile Include="IAuthItemDAL.cs" />
+    <Compile Include="IBuyActionDAL.cs" />
+    <Compile Include="IBuyDAL.cs" />
+    <Compile Include="ICategoryDAL.cs" />
+    <Compile Include="IComplaintDAL.cs" />
+    <Compile Include="IConditionDAL.cs" />
+    <Compile Include="IConfigDAL.cs" />
+    <Compile Include="ICouponsDAL.cs" />
+    <Compile Include="ICouponsTypeDAL.cs" />
+    <Compile Include="ICourseDAL.cs" />
+    <Compile Include="IDepositBankCardDAL.cs" />
+    <Compile Include="IDepositRechargeDAL.cs" />
+    <Compile Include="IDepositTakecashDAL.cs" />
+    <Compile Include="IEmailDAL.cs" />
+    <Compile Include="IEnrollDAL.cs" />
+    <Compile Include="IFavoritesDAL.cs" />
+    <Compile Include="IFinanceAccountDAL.cs" />
+    <Compile Include="IFinanceCashDAL.cs" />
+    <Compile Include="ILinksDAL.cs" />
+    <Compile Include="IMessageDAL.cs" />
+    <Compile Include="INodeDAL.cs" />
+    <Compile Include="IOrderDAL.cs" />
+    <Compile Include="IOrderUserDAL.cs" />
+    <Compile Include="IPaylogDAL.cs" />
+    <Compile Include="IPaymentDAL.cs" />
+    <Compile Include="IProductAttrDAL.cs" />
+    <Compile Include="IProductCommentsDAL.cs" />
+    <Compile Include="IProductDAL.cs" />
+    <Compile Include="IProductImgDAL.cs" />
+    <Compile Include="IQuestionDAL.cs" />
+    <Compile Include="IQuestionTypeDAL.cs" />
+    <Compile Include="IRegionDAL.cs" />
+    <Compile Include="IRoleDAL.cs" />
+    <Compile Include="IRoleUserDAL.cs" />
+    <Compile Include="ISmsDAL.cs" />
+    <Compile Include="ISuggestDAL.cs" />
+    <Compile Include="ITitleDAL.cs" />
+    <Compile Include="IUserAccountRecordsDAL.cs" />
+    <Compile Include="IUserConsigneeDAL.cs" />
+    <Compile Include="IUserDAL.cs" />
+    <Compile Include="IUserInfoDAL.cs" />
+    <Compile Include="IUserRankDAL.cs" />
+    <Compile Include="IUserScoreSettingDAL.cs" />
+    <Compile Include="IVisitorDAL.cs" />
+    <Compile Include="IWantlearnDAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Wuyiju.Core\Wuyiju.Core.csproj">
+      <Project>{4138e653-9657-4150-a455-1ec9eb434741}</Project>
+      <Name>Wuyiju.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wuyiju.Domain\Wuyiju.Domain.csproj">
+      <Project>{ffac35fc-2523-428f-970b-966214849401}</Project>
+      <Name>Wuyiju.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>IF $(ConfigurationName)==Release xcopy "$(TargetDir)Wuyiju.IDAL.dll" "$(SolutionDir)\libs\" /s/e/y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

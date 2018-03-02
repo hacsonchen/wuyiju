@@ -1,0 +1,386 @@
+html,body,h3{ 
+	margin:0; 
+	padding: 0 
+}
+
+body {
+    background-color:#fff;
+    font-size: 14px;
+    font-family: 'Microsoft Yahei';
+}
+
+.clear {
+	clear: both;
+}
+
+
+#wenyiwen-header {
+	width: 100%;
+	height: 225px;
+	background-color: #f9f9f9;
+}
+
+div.wyw-header {
+	margin:0 auto;
+}
+
+div.wyw-header div.wyw-title {
+	height: 40px;
+	padding-top: 35px;
+	padding-bottom: 20px;
+	width: 712px;
+	margin:0 auto;
+	text-align: center;
+
+}
+
+div.wyw-header div.wyw-title h3 {
+	background: url(../Images/wenyiwen-logo.png) center center no-repeat;
+	
+	width: 94px;
+	height: 29px;
+	text-indent: 94px;
+	overflow: hidden;
+	white-space: nowrap;
+
+
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+div.wyw-header div.wyw-title p {
+
+	color: #717171;
+	position: relative;
+	top:-15px;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+div.wyw-search {
+	width: 712px;
+	margin:0 auto;
+}
+
+div.wyw-search input.keyword {
+	width: 526px;
+	border: 1px solid #666;
+	height: 45px;
+	background:#fff url(../Images/wenyiwen-search-input-bg.png) repeat-x top left;
+	outline: none;
+	padding-left: 18px;
+	border-right: none;
+	display: block;
+	float: left;
+	color: #999;
+	font-size: 14px;
+	font-family: 'Microsoft Yahei';
+}
+
+div.wyw-search button {
+	height: 47px;
+	width: 100px;
+	background-color: #da0207;
+	display: block;
+	float: left;
+	font-size: 14px;
+	font-weight: bold;
+	font-family: '宋体';
+	color: #f4cbcc;
+}
+
+div.wyw-search .wenyiwen-icon {
+
+}
+
+div.wyw-questions {
+	padding: 30px 0 40px 0 ;
+}
+div.wyw-questions ul {
+	width: 100%;
+}
+div.wyw-questions ul > li {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+
+	color: #b0afaf;
+
+	text-align: left;
+	width: 33%
+}
+
+div.wyw-questions ul > li > a {
+	color: #767676;
+}
+
+#wenyiwen-notice {
+	background-color: #e6f2f8;
+	height: 47px;
+	width: 100%;
+}
+
+#wenyiwen-notice h4 {
+	color: #666666;
+	font-size: 16px;
+	font-family: 'Microsoft Yahei';
+	font-style: italic;
+	font-weight: 500;
+	line-height: 47px;
+	width: 40px;
+
+	display: block;
+	float: left;
+}
+
+#wenyiwen-notice ul {
+
+	width: 1140px;
+	height: 47px;
+	display: block;
+	float: left;
+	overflow: hidden;
+}
+
+#wenyiwen-notice ul li {
+	float: left;
+	width: 380px;
+
+	line-height: 47px;
+}
+
+#wenyiwen-notice ul li a {
+	font-family: '宋体';
+	font-size: 12px;
+	color: #b0afaf;
+}
+
+#wenyiwen-banner {
+	height: 667px;
+	overflow: hidden;
+}
+
+
+#wenyiwen-banner div.wenyiwen-banner-body {
+	background: url(../Images/weiyiwei-lady.png) no-repeat 95px 100px;
+	min-height: 654px;
+	position: relative;
+}
+
+div.banner-bg-left {
+	width: 377px;
+	height: 376px;
+	background: url(../Images/wenyiwen-bg-left.jpg) no-repeat 0 0;
+	position: absolute;
+	left: -358px;
+	bottom: 0;
+}
+
+div.banner-bg-right {
+	width: 388px;
+	height: 326px;
+	background: url(../Images/wenyiwen-bg-right.jpg) no-repeat 0 0;
+	position: absolute;
+	right: -315px;
+	bottom: 0;
+
+}
+
+#wenyiwen-banner div.about-us {
+	padding-top: 140px;
+	padding-left: 350px;
+	background: url(../Images/wenyiwen-qrcode.png) no-repeat 916px 20px;
+
+}
+
+#wenyiwen-banner div.about-us h4 {
+	width: 196px;
+	height: 21px;
+	text-indent: 196px;
+	padding-bottom: 25px;
+	white-space: nowrap;
+	overflow: hidden;
+	background: url(../Images/wenyiwen-banner-title.png) no-repeat 0 0;
+}
+
+#wenyiwen-banner div.about-us p {
+	color: #585858;
+	line-height: 23px;
+	font-family: '宋体';
+}
+
+#wenyiwen-banner div.about-us p strong {
+	color: #585858;
+}
+
+#wenyiwen-banner div.wyw-protect {
+	margin-top: 194px;
+	margin-left: 380px;
+}
+
+#wenyiwen-banner div.wyw-protect ul li {
+	height: 88px;
+	width: 116px;
+	border: 1px solid #e5e5e5;
+	margin-right: 30px;
+	float: left;
+}
+
+#wenyiwen-banner div.wyw-protect ul li a {
+	margin-top: 68px;
+	width: 100%;
+	display: block;
+	font-size: 12px;
+	font-family: '宋体';
+	text-align: center;
+}
+
+#wenyiwen-banner div.wyw-protect ul li {
+	
+}
+
+#wenyiwen-banner div.wyw-protect ul li.dbjy {
+	background: url(../Images/dbjy.gif) no-repeat center 12px;
+}
+
+#wenyiwen-banner div.wyw-protect ul li.flbz {
+	background: url(../Images/flzr.gif) no-repeat center 12px;
+}
+
+#wenyiwen-banner div.wyw-protect ul li.shfw {
+	background: url(../Images/shfw.gif) no-repeat center 12px;
+}
+
+#wenyiwen-banner div.wyw-protect ul li.mzgk {
+	background: url(../Images/mzgk.gif) no-repeat center 12px;
+}
+
+
+#wenyiwen-question {
+	
+}
+
+#wenyiwen-question .question-raw {
+	border-top: 1px solid #dfdfdf;
+	padding-top: 35px;
+	padding-bottom: 50px;
+
+}
+
+#wenyiwen-question .question-raw h3 {
+	line-height: 23px;
+	font-size: 18px;
+	font-weight: 500;
+}
+
+div.question-area {
+	float: left;
+	width: 100%;
+}
+
+div.question-area div.question-title {
+	height: 20px;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+
+div.question-area div.question-title a {
+	position: absolute;
+	right: 40px;
+	font-size: 12px;
+	font-family: '宋体';
+}
+div.question-area div.question-title h4 {
+	border-left:5px solid #ccc;
+	padding-left: 8px;
+	font-weight: normal;
+	font-size: 14px;
+	font-family: '宋体';
+	float: left;
+	height: 20px;
+	line-height: 20px;
+}
+
+#wenyiwen-question {
+	padding-bottom: 55px;
+}
+
+#wenyiwen-question .question-raw div.question-title {
+	padding-bottom: 25px;
+}
+div.question-area div.question-title h3 {
+	float: left;
+}
+
+div.question-area.cjwt div.question-title h4 {
+	border-color: #da0207;
+	color: #da0207;
+}
+
+div.question-area.flwt div.question-title h4 {
+	border-color: #ff9c00;
+	color: #ff9c00;
+}
+
+div.question-area.zrwt div.question-title h4 {
+	border-color: #b2963b;
+	color: #b2963b;
+}
+
+div.question-area.lcwt div.question-title h4 {
+	border-color: #e698ff;
+	color: #e698ff;
+}
+
+div.question-area.shwt div.question-title h4 {
+	border-color: #00a2ff;
+	color: #00a2ff;
+}
+
+div.question-area.cjwt div.question-title,
+div.question-area.flwt div.question-title,
+div.question-area.zrwt div.question-title,
+div.question-area.lcwt div.question-title,
+div.question-area.shwt div.question-title {
+	padding-bottom: 0 !important;
+}
+
+
+div.question-area.flwt div.question-list,
+div.question-area.zrwt div.question-list,
+div.question-area.lcwt div.question-list,
+div.question-area.shwt div.question-list {
+	height: 100px;
+	overflow: hidden;
+}
+
+
+
+div.question-area.flwt div.question-list ul > li > a {
+	font-size: 12px;
+}
+div.question-area.zrwt div.question-list ul > li > a {
+	font-size: 12px;
+}
+div.question-area.lcwt div.question-list ul > li > a {
+	font-size: 12px;
+}
+div.question-area.shwt div.question-list ul > li > a {
+	font-size: 12px;
+}
+
+
+div.question-list ul li a {
+	line-height: 27px;
+	font-size: 14px;
+	font-family: '宋体';
+
+}
+
+div.col-50 {
+	width: 50%;
+	float: left;
+}

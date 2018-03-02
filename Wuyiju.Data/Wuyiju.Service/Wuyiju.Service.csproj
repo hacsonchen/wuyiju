@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{67AAAF34-D73A-43FF-8175-75C4C1614311}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Wuyiju.Service</RootNamespace>
+    <AssemblyName>Wuyiju.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotExtensions">
+      <HintPath>..\..\..\libs\DotExtensions\DotExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\src\Wuyiju.Web\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessService.cs" />
+    <Compile Include="AdCopyService.cs" />
+    <Compile Include="AdminCopyService.cs" />
+    <Compile Include="AdminScoresCopyService.cs" />
+    <Compile Include="AdminScoresService.cs" />
+    <Compile Include="AdminService.cs" />
+    <Compile Include="AdPositionCopyService.cs" />
+    <Compile Include="AdPositionService.cs" />
+    <Compile Include="AdService.cs" />
+    <Compile Include="ArticleCommentsCopyService.cs" />
+    <Compile Include="ArticleCommentsService.cs" />
+    <Compile Include="ArticleCopyService.cs" />
+    <Compile Include="ArticleService.cs" />
+    <Compile Include="AskService.cs" />
+    <Compile Include="AttributeService.cs" />
+    <Compile Include="BaseService.cs" />
+    <Compile Include="BuyActionService.cs" />
+    <Compile Include="BuyService.cs" />
+    <Compile Include="CategoryService.cs" />
+    <Compile Include="ComplaintService.cs" />
+    <Compile Include="ConditionService.cs" />
+    <Compile Include="ConfigService.cs" />
+    <Compile Include="CouponsService.cs" />
+    <Compile Include="CouponsTypeService.cs" />
+    <Compile Include="CourseService.cs" />
+    <Compile Include="DepositBankCardService.cs" />
+    <Compile Include="DepositRechargeService.cs" />
+    <Compile Include="DepositTakecashService.cs" />
+    <Compile Include="EmailService.cs" />
+    <Compile Include="EnrollService.cs" />
+    <Compile Include="FavoritesService.cs" />
+    <Compile Include="FinanceAccountService.cs" />
+    <Compile Include="FinanceCashService.cs" />
+    <Compile Include="LinksService.cs" />
+    <Compile Include="MessageService.cs" />
+    <Compile Include="NodeService.cs" />
+    <Compile Include="OrderService.User.cs" />
+    <Compile Include="OrderService.cs" />
+    <Compile Include="OrderUserService.cs" />
+    <Compile Include="PaylogService.cs" />
+    <Compile Include="PaymentService.cs" />
+    <Compile Include="ProductAttrService.cs" />
+    <Compile Include="ProductCommentsService.cs" />
+    <Compile Include="ProductImgService.cs" />
+    <Compile Include="ProductService.cs" />
+    <Compile Include="ProductService.Extension.cs" />
+    <Compile Include="QuestionService.cs" />
+    <Compile Include="QuestionTypeService.cs" />
+    <Compile Include="RegionService.cs" />
+    <Compile Include="RoleService.cs" />
+    <Compile Include="SmsService.cs" />
+    <Compile Include="SuggestService.cs" />
+    <Compile Include="TitleService.cs" />
+    <Compile Include="UserAccountRecordsService.cs" />
+    <Compile Include="UserConsigneeService.cs" />
+    <Compile Include="UserInfoService.cs" />
+    <Compile Include="UserRankService.cs" />
+    <Compile Include="UserScoreSettingService.cs" />
+    <Compile Include="UserService.Auths.cs" />
+    <Compile Include="UserService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VisitorService.cs" />
+    <Compile Include="WantlearnService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Wuyiju.Core\Wuyiju.Core.csproj">
+      <Project>{4138e653-9657-4150-a455-1ec9eb434741}</Project>
+      <Name>Wuyiju.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wuyiju.DAL\Wuyiju.DAL.csproj">
+      <Project>{5d6beda3-fed2-4eef-bb84-c0ef91a3695d}</Project>
+      <Name>Wuyiju.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wuyiju.Domain\Wuyiju.Domain.csproj">
+      <Project>{FFAC35FC-2523-428F-970B-966214849401}</Project>
+      <Name>Wuyiju.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wuyiju.IDAL\Wuyiju.IDAL.csproj">
+      <Project>{0ce39f2b-03b5-46be-80bf-2884788ec446}</Project>
+      <Name>Wuyiju.IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wuyiju.IService\Wuyiju.IService.csproj">
+      <Project>{a13e95f2-e8b7-4538-9ad5-92904bcde287}</Project>
+      <Name>Wuyiju.IService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>IF $(ConfigurationName)==Release xcopy "$(TargetDir)Wuyiju.Service.dll" "$(SolutionDir)\libs\" /s/e/y</PostBuildEvent>
+  </PropertyGroup>
+</Project>

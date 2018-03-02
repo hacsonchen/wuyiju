@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5D6BEDA3-FED2-4EEF-BB84-C0EF91A3695D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Wuyiju.DAL</RootNamespace>
+    <AssemblyName>Wuyiju.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.40.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.40\lib\net45\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessCopyDAL.cs" />
+    <Compile Include="AccessDAL.cs" />
+    <Compile Include="AdCopyDAL.cs" />
+    <Compile Include="AdDAL.cs" />
+    <Compile Include="AdminCopyDAL.cs" />
+    <Compile Include="AdminDAL.cs" />
+    <Compile Include="AdminScoresCopyDAL.cs" />
+    <Compile Include="AdminScoresDAL.cs" />
+    <Compile Include="AdPositionCopyDAL.cs" />
+    <Compile Include="AdPositionDAL.cs" />
+    <Compile Include="ArticleCommentsCopyDAL.cs" />
+    <Compile Include="ArticleCommentsDAL.cs" />
+    <Compile Include="ArticleCopyDAL.cs" />
+    <Compile Include="ArticleDAL.cs" />
+    <Compile Include="AskDAL.cs" />
+    <Compile Include="AskReplyDAL.cs" />
+    <Compile Include="AttributeDAL.cs" />
+    <Compile Include="AuthItemDAL.cs" />
+    <Compile Include="BaseDAL.cs" />
+    <Compile Include="BuyActionDAL.cs" />
+    <Compile Include="BuyDAL.cs" />
+    <Compile Include="CategoryDAL.cs" />
+    <Compile Include="ComplaintDAL.cs" />
+    <Compile Include="ConditionDAL.cs" />
+    <Compile Include="ConfigDAL.cs" />
+    <Compile Include="CouponsDAL.cs" />
+    <Compile Include="CouponsTypeDAL.cs" />
+    <Compile Include="CourseDAL.cs" />
+    <Compile Include="DepositBankCardDAL.cs" />
+    <Compile Include="DepositRechargeDAL.cs" />
+    <Compile Include="DepositTakecashDAL.cs" />
+    <Compile Include="EmailDAL.cs" />
+    <Compile Include="EnrollDAL.cs" />
+    <Compile Include="FavoritesDAL.cs" />
+    <Compile Include="FinanceAccountDAL.cs" />
+    <Compile Include="FinanceCashDAL.cs" />
+    <Compile Include="LinksDAL.cs" />
+    <Compile Include="MessageDAL.cs" />
+    <Compile Include="NodeDAL.cs" />
+    <Compile Include="OrderDAL.cs" />
+    <Compile Include="OrderUserDAL.cs" />
+    <Compile Include="PaylogDAL.cs" />
+    <Compile Include="PaymentDAL.cs" />
+    <Compile Include="ProductAttrDAL.cs" />
+    <Compile Include="ProductCommentsDAL.cs" />
+    <Compile Include="ProductDAL.cs" />
+    <Compile Include="ProductImgDAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyType.cs" />
+    <Compile Include="QuestionDAL.cs" />
+    <Compile Include="QuestionTypeDAL.cs" />
+    <Compile Include="RegionDAL.cs" />
+    <Compile Include="RoleDAL.cs" />
+    <Compile Include="RoleUserDAL.cs" />
+    <Compile Include="SmsDAL.cs" />
+    <Compile Include="SuggestDAL.cs" />
+    <Compile Include="TitleDAL.cs" />
+    <Compile Include="UserAccountRecordsDAL.cs" />
+    <Compile Include="UserConsigneeDAL.cs" />
+    <Compile Include="UserDAL.cs" />
+    <Compile Include="UserInfoDAL.cs" />
+    <Compile Include="UserRankDAL.cs" />
+    <Compile Include="UserScoreSettingDAL.cs" />
+    <Compile Include="VisitorDAL.cs" />
+    <Compile Include="WantlearnDAL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Wuyiju.Core\Wuyiju.Core.csproj">
+      <Project>{4138e653-9657-4150-a455-1ec9eb434741}</Project>
+      <Name>Wuyiju.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wuyiju.Domain\Wuyiju.Domain.csproj">
+      <Project>{ffac35fc-2523-428f-970b-966214849401}</Project>
+      <Name>Wuyiju.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wuyiju.IDAL\Wuyiju.IDAL.csproj">
+      <Project>{0ce39f2b-03b5-46be-80bf-2884788ec446}</Project>
+      <Name>Wuyiju.IDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>IF $(ConfigurationName)==Release xcopy "$(TargetDir)Wuyiju.DAL.dll" "$(SolutionDir)\libs\" /s/e/y</PostBuildEvent>
+  </PropertyGroup>
+</Project>

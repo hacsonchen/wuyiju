@@ -1,0 +1,2 @@
+$(function(){var o='.nav li a',c='current';$(o+':eq(0)').attr('id', c).addClass(c);$(o).hover(function(){$(o+'.'+c).removeClass(c);$(this).addClass(c);},function(){$(o+'.'+c).removeClass(c);$(o+'#'+c).addClass(c);}).click(function(){$(o+'#'+c).attr('id','');$(this).attr('id',c);})});
+function menu(Lurl,Rurl){self.parent.frames['FrameLeft'].location.href='left.html?mid='+Lurl;self.parent.frames['FrameMain'].location.href=Rurl;}

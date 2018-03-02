@@ -1,0 +1,195 @@
+html,body{ 
+	margin:0; 
+	padding: 0 
+}
+
+body {
+    background-color:#fff;
+    font-size: 14px;
+    font-family: 'Microsoft Yahei';
+}
+
+.clear {
+	clear: both;
+}
+
+div.header-bar {
+	width: 100%;
+	height: 65px;
+	background-color: #df0c25; 
+}
+
+div.header-bar h1,h2 {
+	margin:0;
+	padding: 0; 
+}
+
+div.suggest-banner {
+	height: 415px;
+	background: url(../Images/suggest-banner.jpg) no-repeat center center;
+	width: 100%;
+}
+
+div.suggest-wrap {
+	width: 960px;
+	margin:0 auto;
+}
+div.header-bar div.bar-logo {
+	padding-top: 5px;
+	display: inline-block;
+
+}
+div.bar-logo h1 {
+	background: url(../Images/while-logo2.png) no-repeat center center;
+	width: 107px;
+	height: 55px;
+	text-indent: 190px;
+	white-space: nowrap;
+	overflow: hidden;
+
+}
+
+div.bar-title {
+	display: inline-block;
+}
+
+div.bar-title h2 {
+	color: #fff;
+	font-size: 18px;
+	font-weight: 500 !important;
+}
+
+div.back-home {
+	display: inline-block;
+	float: right;
+	padding-top: 20px;
+
+}
+
+div.back-home a {
+	color: #fff;
+	font-size: 18px;
+	font-weight: 500 !important;
+	text-decoration: none;
+	height: 29px;
+	display: inline-block;
+	line-height: 29px;
+	padding-left: 29px;
+	background: url(../Images/icon-red-back.png) no-repeat center left;
+}
+div.fee-records {
+	
+	height: 78px;
+	width: 100%;
+	margin-top: 10px;
+	background: url(../Images/bg-jiang.png) no-repeat 10px 8px;
+}
+
+div.fee-records-wrap {
+	padding-top: 4px;
+	overflow: hidden;
+	height: 74px;
+}
+
+div.fee-records ul {
+	list-style: none;
+	margin:0;
+	padding:0;
+	
+	text-align: center;
+}
+
+div.suggest-text{
+	height: 208px;
+}
+
+div.suggest-text textarea {
+	border: none;
+	width: 936px;
+	padding:10px; 
+	height: 184px;
+	font-size: 16px;
+	color: #a3a3a3;
+	outline: none;
+
+}
+p.fee-desc {
+	text-align: center;
+	font-size: 18px;
+	font-weight: 500;
+}
+
+div.suggest-info {
+	height: 90px;
+}
+
+div.suggest-name,div.suggest-contact {
+	float: left;
+	width: 315px;
+	padding-right: 35px;
+	height: 38px;
+}
+
+div.suggest-name input,div.suggest-contact input {
+	border: none;
+	height: 30px;
+	width: 290px;
+	font-size: 14px;
+	color: #a3a3a3;
+	padding-left: 15px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	outline: none;
+}
+
+div.with-shadow {
+	position: relative;
+	border: 1px solid #cfcfcf;
+}
+
+div.shadow-top {
+	background: url(../Images/shadow-top.png) repeat-x top left ;
+	height: 4px;
+	width: 100%;
+	position: absolute;
+	top:0;
+}
+
+
+div.shadow-left {
+	background: url(../Images/shadow-left.png) repeat-y top left ;
+	height: 100%;
+	width: 4px;
+	position: absolute;
+	left:0;
+}
+
+
+div.suggest-wrap .btn-submit {
+	background-color: #6abc20;
+	height: 40px;	
+	width: 140px;
+	border: none;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 500;
+	font-family: 'Microsoft Yahei';
+	cursor: pointer;
+
+}
+
+div.suggest-action {
+	padding-top: 30px;
+	padding-bottom: 70px;
+	position: relative;
+
+}
+
+div.suggest-footer-bg{
+	position: absolute;
+	bottom: 24px;
+	right: 0;
+	width: 249px;
+	height: 184px;
+	background: url(../Images/suggest-footer.jpg) right bottom no-repeat;
+}

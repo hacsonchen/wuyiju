@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FFAC35FC-2523-428F-970B-966214849401}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Wuyiju.Domain</RootNamespace>
+    <AssemblyName>Wuyiju.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotExtensions">
+      <HintPath>..\..\..\libs\DotExtensions\DotExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\Access.cs" />
+    <Compile Include="Model\AccessCopy.cs" />
+    <Compile Include="Model\Ad.cs" />
+    <Compile Include="Model\AdCopy.cs" />
+    <Compile Include="Model\Admin.cs" />
+    <Compile Include="Model\AdminCopy.cs" />
+    <Compile Include="Model\AdminScores.cs" />
+    <Compile Include="Model\AdminScoresCopy.cs" />
+    <Compile Include="Model\AdPosition.cs" />
+    <Compile Include="Model\AdPositionCopy.cs" />
+    <Compile Include="Model\ApplicationConfig.cs" />
+    <Compile Include="Model\Article.cs" />
+    <Compile Include="Model\ArticleComments.cs" />
+    <Compile Include="Model\ArticleCommentsCopy.cs" />
+    <Compile Include="Model\ArticleCopy.cs" />
+    <Compile Include="Model\Ask.cs" />
+    <Compile Include="Model\AskReply.cs" />
+    <Compile Include="Model\Attribute.cs" />
+    <Compile Include="Model\AuthItem.cs" />
+    <Compile Include="Model\Buy.cs" />
+    <Compile Include="Model\BuyAction.cs" />
+    <Compile Include="Model\Category.cs" />
+    <Compile Include="Model\Complaint.cs" />
+    <Compile Include="Model\Condition.cs" />
+    <Compile Include="Model\Config.cs" />
+    <Compile Include="Model\Coupons.cs" />
+    <Compile Include="Model\CouponsType.cs" />
+    <Compile Include="Model\Course.cs" />
+    <Compile Include="Model\DepositBankCard.cs" />
+    <Compile Include="Model\DepositRecharge.cs" />
+    <Compile Include="Model\DepositTakecash.cs" />
+    <Compile Include="Model\DepositTakecashWithBank.cs" />
+    <Compile Include="Model\Email.cs" />
+    <Compile Include="Model\Enroll.cs" />
+    <Compile Include="Model\Favorites.cs" />
+    <Compile Include="Model\FinanceAccount.cs" />
+    <Compile Include="Model\FinanceCash.cs" />
+    <Compile Include="Model\JsonParse.cs" />
+    <Compile Include="Model\Links.cs" />
+    <Compile Include="Model\Message.cs" />
+    <Compile Include="Model\Node.cs" />
+    <Compile Include="Model\Order.cs" />
+    <Compile Include="Model\OrderUser.cs" />
+    <Compile Include="Model\Paylog.cs" />
+    <Compile Include="Model\Payment.cs" />
+    <Compile Include="Model\Product.cs" />
+    <Compile Include="Model\ProductAttr.cs" />
+    <Compile Include="Model\ProductBought.cs" />
+    <Compile Include="Model\ProductComments.cs" />
+    <Compile Include="Model\ProductFavorited.cs" />
+    <Compile Include="Model\ProductFrontend.cs" />
+    <Compile Include="Model\ProductImg.cs" />
+    <Compile Include="Model\PropertyType.cs" />
+    <Compile Include="Model\Question.cs" />
+    <Compile Include="Model\QuestionType.cs" />
+    <Compile Include="Model\Region.cs" />
+    <Compile Include="Model\Role.cs" />
+    <Compile Include="Model\RoleUser.cs" />
+    <Compile Include="Model\Sms.cs" />
+    <Compile Include="Model\Suggest.cs" />
+    <Compile Include="Model\Title.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Model\UserAccountRecords.cs" />
+    <Compile Include="Model\UserConsignee.cs" />
+    <Compile Include="Model\UserInfo.cs" />
+    <Compile Include="Model\UserRank.cs" />
+    <Compile Include="Model\UserScoreSetting.cs" />
+    <Compile Include="Model\Visitor.cs" />
+    <Compile Include="Model\Wantlearn.cs" />
+    <Compile Include="Model\YejiModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\AdView.cs" />
+    <Compile Include="View\Time.cs" />
+    <Compile Include="View\UserChartJS.cs" />
+    <Compile Include="View\_Article.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Wuyiju.Core\Wuyiju.Core.csproj">
+      <Project>{4138e653-9657-4150-a455-1ec9eb434741}</Project>
+      <Name>Wuyiju.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>IF $(ConfigurationName)==Release xcopy "$(TargetDir)Wuyiju.Domain.dll" "$(SolutionDir)\libs\" /s/e/y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

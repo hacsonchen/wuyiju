@@ -1,0 +1,715 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DotExtensions</name>
+    </assembly>
+    <members>
+        <member name="M:System.Collections.Generic.IDictionaryExt.Merge``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IDictionary{``0,``1})">
+            <summary>
+            合并两个 IDictionary 并覆盖相同键的值
+            </summary>
+            <typeparam name="TKey"></typeparam>
+            <typeparam name="TValue"></typeparam>
+            <param name="dict"></param>
+            <param name="other"></param>
+        </member>
+        <member name="M:System.Collections.Generic.IDictionaryExt.Merge``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IDictionary{``0,``1},System.Boolean)">
+            <summary>
+            合并两个 IDictionary
+            </summary>
+            <typeparam name="TKey"></typeparam>
+            <typeparam name="TValue"></typeparam>
+            <param name="dict"></param>
+            <param name="other"></param>
+            <param name="overwrite">是否合并相同键的值</param>
+        </member>
+        <member name="M:System.Collections.Generic.IDictionaryExt.AddOrUpdate``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.KeyValuePair{``0,``1})">
+            <summary>
+            添加或更新到字典
+            </summary>
+            <typeparam name="TKey"></typeparam>
+            <typeparam name="TValue"></typeparam>
+            <param name="dict"></param>
+            <param name="obj"></param>
+        </member>
+        <member name="M:System.Collections.Generic.IDictionaryExt.AddOrUpdate``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1)">
+            <summary>
+            添加或更新到字典
+            </summary>
+            <typeparam name="TKey"></typeparam>
+            <typeparam name="TValue"></typeparam>
+            <param name="dict"></param>
+            <param name="key"></param>
+            <param name="val"></param>
+        </member>
+        <member name="M:System.Collections.Generic.IDictionaryExt.AddRange``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}})">
+            <summary>
+            将元素集添加到字典
+            </summary>
+            <typeparam name="TKey"></typeparam>
+            <typeparam name="TValue"></typeparam>
+            <param name="dict"></param>
+            <param name="objs"></param>
+        </member>
+        <member name="M:System.Collections.Generic.IDictionaryExt.AddOrUpdateRange``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}})">
+            <summary>
+            将元素集添加或更新到字典
+            </summary>
+            <typeparam name="TKey"></typeparam>
+            <typeparam name="TValue"></typeparam>
+            <param name="dict"></param>
+            <param name="objs"></param>
+        </member>
+        <member name="M:System.ComponentModel.IComponentExt.IsInDesignMode(System.ComponentModel.IComponent)">
+            <summary>
+            	Returns <c>true</c> if target component is in design mode.
+            	Othervise returns <c>false</c>.
+            </summary>
+            <param name = "target">Target component. Can not be null.</param>
+            <remarks>
+            	Contributed by tencokacistromy, http://www.codeplex.com/site/users/view/tencokacistromy
+            </remarks>
+        </member>
+        <member name="M:System.ComponentModel.IComponentExt.IsInRuntimeMode(System.ComponentModel.IComponent)">
+            <summary>
+            	Returns <c>true</c> if target component is NOT in design mode.
+            	Othervise returns <c>false</c>.
+            </summary>
+            <param name = "target">Target component.</param>
+            <remarks>
+            	Contributed by tencokacistromy, http://www.codeplex.com/site/users/view/tencokacistromy
+            </remarks>
+        </member>
+        <member name="M:System.DateTimeExt.ToMsSQLSmallDateTime(System.DateTime)">
+            <summary>
+            
+            </summary>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Int64Ext.ToDateTime(System.Int64)">
+            <summary>
+            把当前值以 DateTime.Ticks 转换为 DateTime 对象
+            </summary>
+            <param name="val"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Int64Ext.ToDateTime(System.Nullable{System.Int64})">
+            <summary>
+            把当前值以 DateTime.Ticks 转换为 DateTime 对象
+            </summary>
+            <param name="val"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.IO.StringExt.RemoveInvalidPathChars(System.String,System.Char)">
+            <summary>
+            移除不允许在路径名中使用的字符
+            </summary>
+        </member>
+        <member name="M:System.IO.StringExt.RemoveInvalidFileNameChars(System.String,System.Char)">
+            <summary>
+            移除不允许在文件名中使用的字符
+            </summary>
+        </member>
+        <member name="M:System.RandomExt.NextString(System.Random,System.Int32)">
+            <summary>
+            返回指定长度的随机字符串
+            </summary>
+            <param name="r"></param>
+            <param name="length">字符串长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.RandomExt.NextString(System.Random,System.String)">
+            <summary>
+            返回格式化的随机字符串
+            </summary>
+            <param name="r"></param>
+            <param name="format">格式化字符。‘*’代表任何字母；‘#’代表任何数字；‘$’代码任何字母</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.RandomExt.NextVisibleString(System.Random,System.String)">
+            <summary>
+            返回格式化的随机字符串
+            </summary>
+            <param name="r"></param>
+            <param name="format">格式化字符。‘*’代表任何字母；‘#’代表任何数字；‘$’代码任何字母</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Threading.ReaderWriterLockSlimExt.GetReadLock(System.Threading.ReaderWriterLockSlim)">
+            <summary>
+            进入读取模式锁定状态
+            </summary>
+        </member>
+        <member name="M:System.Threading.ReaderWriterLockSlimExt.DoReadLock(System.Threading.ReaderWriterLockSlim,System.Action)">
+            <summary>
+            进入读取模式锁定状态
+            </summary>
+        </member>
+        <member name="M:System.Threading.ReaderWriterLockSlimExt.DoReadLock``1(System.Threading.ReaderWriterLockSlim,System.Func{``0})">
+            <summary>
+            进入读取模式锁定状态
+            </summary>
+        </member>
+        <member name="M:System.Threading.ReaderWriterLockSlimExt.GetWriteLock(System.Threading.ReaderWriterLockSlim)">
+            <summary>
+            进入写入模式锁定状态
+            </summary>
+        </member>
+        <member name="M:System.Threading.ReaderWriterLockSlimExt.DoWriteLock(System.Threading.ReaderWriterLockSlim,System.Action)">
+            <summary>
+            进入读取模式锁定状态
+            </summary>
+        </member>
+        <member name="M:System.Threading.ReaderWriterLockSlimExt.DoWriteLock``1(System.Threading.ReaderWriterLockSlim,System.Func{``0})">
+            <summary>
+            进入读取模式锁定状态
+            </summary>
+        </member>
+        <member name="M:System.Threading.ReaderWriterLockSlimExt.GetUpgradeableReadLock(System.Threading.ReaderWriterLockSlim)">
+            <summary>
+            进入可升级模式锁定状态
+            </summary>
+        </member>
+        <member name="M:System.Threading.ReaderWriterLockSlimExt.DoUpgradeableReadLock(System.Threading.ReaderWriterLockSlim,System.Action)">
+            <summary>
+            进入读取模式锁定状态
+            </summary>
+        </member>
+        <member name="M:System.Threading.ReaderWriterLockSlimExt.DoUpgradeableReadLock``1(System.Threading.ReaderWriterLockSlim,System.Func{``0})">
+            <summary>
+            进入读取模式锁定状态
+            </summary>
+        </member>
+        <member name="M:System.ObjectMiscExt.IsDBNull(System.Object)">
+            <summary>
+            当前对象是否为不存在的值
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.ObjectMiscExt.IsInstanceOf(System.Object,System.Type)">
+            <summary>
+            当前对象是否是某个 Type 的初始化
+            </summary>
+            <param name="obj"></param>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.ObjectMiscExt.InvokeAsParallel``1(``0,System.Action{``0})">
+            <summary>
+            Run as Parallel.Invoke
+            </summary>
+        </member>
+        <member name="M:System.BooleanConvertExt.TryConvertToInt32(System.Boolean)">
+            <summary>
+            尝试转换为 Int32 类型 （0 为假；1 为真）
+            </summary>
+        </member>
+        <member name="M:System.BooleanConvertExt.TryConvertToInt32(System.Nullable{System.Boolean})">
+            <summary>
+            尝试转换为 Int32 类型 （0 为假；1 为真）
+            </summary>
+        </member>
+        <member name="T:System.Collections.Generic.PaginatedList`1">
+            <summary>
+            分页支持的强类型列表
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:System.Collections.Generic.PaginatedList`1.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:System.Collections.Generic.PaginatedList`1.#ctor(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+        </member>
+        <member name="M:System.Collections.Generic.PaginatedList`1.#ctor(System.Collections.Generic.IEnumerable{`0},System.Int32,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:System.Collections.Generic.PaginatedList`1.#ctor(System.Collections.Generic.ICollection{`0},System.Int32,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:System.Collections.Generic.PaginatedList`1.#ctor(`0[],System.Int32,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:System.Drawing.ImageExt.ToBytes(System.Drawing.Image)">
+            <summary>
+            
+            </summary>
+            <param name="img"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Drawing.ImageExt.ToBytes(System.Drawing.Image,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            
+            </summary>
+            <param name="img"></param>
+            <param name="format"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Drawing.ImageExt.ToBase64String(System.Drawing.Image)">
+            <summary>
+            
+            </summary>
+            <param name="img"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Drawing.ImageExt.Scale(System.Drawing.Image,System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="img"></param>
+            <param name="scaleFactor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Drawing.ImageExt.Scale(System.Drawing.Image,System.Double,System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="img"></param>
+            <param name="xScaleFactor"></param>
+            <param name="yScaleFactor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Drawing.ImageExt.Resize(System.Drawing.Image,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="img"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Drawing.ImageExt.Thumbnail(System.Drawing.Image,System.Int32,System.Int32)">
+            <summary>
+            生成缩略图
+            </summary>
+            <param name="img"></param>
+            <param name="maxWidth"></param>
+            <param name="maxHeight"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Drawing.ImageExt.ConvertBitmapToJpeg(System.Drawing.Image,System.Int32)">
+            <summary>根据设置的参数，把图像转换为JPEG</summary>
+            <param name="inputBmp">Bitmap to convert</param>
+            <param name="quality">Specifies a quality from 0 (lowest) to 100 (highest), or -1 to leave unspecified</param>
+        </member>
+        <member name="M:System.Int16ConvertExt.TryConvertToBoolean(System.Int16)">
+            <summary>
+            尝试转换为 Boolean 类型 （非 0 为真）
+            </summary>
+        </member>
+        <member name="M:System.Int16ConvertExt.TryConvertToBoolean(System.Nullable{System.Int16})">
+            <summary>
+            尝试转换为 Boolean 类型 （非 0 为真）
+            </summary>
+        </member>
+        <member name="M:System.Int16ConvertExt.TryConvertToBoolean(System.Nullable{System.Int16},System.Boolean)">
+            <summary>
+            尝试转换为 Boolean 类型 （非 0 为真）
+            </summary>
+        </member>
+        <member name="M:System.Int32ConvertExt.TryConvertToBoolean(System.Int32)">
+            <summary>
+            尝试转换为 Boolean 类型 （非 0 为真）
+            </summary>
+        </member>
+        <member name="M:System.Int32ConvertExt.TryConvertToBoolean(System.Nullable{System.Int32})">
+            <summary>
+            尝试转换为 Boolean 类型 （非 0 为真）
+            </summary>
+        </member>
+        <member name="M:System.Int32ConvertExt.TryConvertToBoolean(System.Nullable{System.Int32},System.Boolean)">
+            <summary>
+            尝试转换为 Boolean 类型 （非 0 为真）
+            </summary>
+        </member>
+        <member name="M:System.Linq.IQueryableExt.ToList``1(System.Linq.IQueryable{``0},System.Int32)">
+            <summary>
+            创建一个指定数量的列表
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="expr"></param>
+            <param name="takeSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Linq.IQueryableExt.ToList``1(System.Linq.IQueryable{``0},System.Int32,System.Int32)">
+            <summary>
+            创建一个指定数量的列表
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="expr"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.ObjectParseExt.TryParseToString(System.Object)">
+            <summary>
+            尝试转换为 String 类型（为 NULL 则返回 String.Empty）
+            </summary>
+        </member>
+        <member name="M:System.ObjectParseExt.TryParseToString(System.Object,System.String)">
+            <summary>
+            尝试转换为 String 类型
+            </summary>
+        </member>
+        <member name="M:System.ObjectParseExt.TryParseToChar(System.Object,System.Char)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <param name="defalutValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.ObjectParseExt.TryParseToBoolean(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <exception cref="T:System.FormatException">当未能正常转换时</exception>
+            <returns></returns>
+        </member>
+        <member name="M:System.ObjectParseExt.TryParseToBoolean(System.Object,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.ObjectParseExt.TryParseToByte(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <exception cref="T:System.FormatException">当未能正常转换时</exception>
+            <returns></returns>
+        </member>
+        <member name="M:System.ObjectParseExt.TryParseToByte(System.Object,System.Byte)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.ObjectParseExt.TryParseToInt16(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <exception cref="T:System.FormatException">当未能正常转换时</exception>
+            <returns></returns>
+        </member>
+        <member name="M:System.ObjectParseExt.TryParseToInt16(System.Object,System.Int16)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.ObjectParseExt.TryParseToInt32(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <exception cref="T:System.FormatException">当未能正常转换时</exception>
+            <returns></returns>
+        </member>
+        <member name="M:System.ObjectParseExt.TryParseToInt32(System.Object,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.ObjectParseExt.TryParseToInt64(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <exception cref="T:System.FormatException">当未能正常转换时</exception>
+            <returns></returns>
+        </member>
+        <member name="M:System.ObjectParseExt.TryParseToInt64(System.Object,System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.ObjectParseExt.TryParseToUInt16(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <exception cref="T:System.FormatException">当未能正常转换时</exception>
+            <returns></returns>
+        </member>
+        <member name="M:System.ObjectParseExt.TryParseToUInt16(System.Object,System.UInt16)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.ObjectParseExt.TryParseToUInt32(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <exception cref="T:System.FormatException">当未能正常转换时</exception>
+            <returns></returns>
+        </member>
+        <member name="M:System.ObjectParseExt.TryParseToUInt32(System.Object,System.UInt32)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.ObjectParseExt.TryParseToUInt64(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <exception cref="T:System.FormatException">当未能正常转换时</exception>
+            <returns></returns>
+        </member>
+        <member name="M:System.ObjectParseExt.TryParseToUInt64(System.Object,System.UInt64)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.ObjectParseExt.TryParseToDecimal(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <exception cref="T:System.FormatException">当未能正常转换时</exception>
+            <returns></returns>
+        </member>
+        <member name="M:System.ObjectParseExt.TryParseToDecimal(System.Object,System.Decimal)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.ObjectParseExt.TryParseToSingle(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <exception cref="T:System.FormatException">当未能正常转换时</exception>
+            <returns></returns>
+        </member>
+        <member name="M:System.ObjectParseExt.TryParseToSingle(System.Object,System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.ObjectParseExt.TryParseToDouble(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <exception cref="T:System.FormatException">当未能正常转换时</exception>
+            <returns></returns>
+        </member>
+        <member name="M:System.ObjectParseExt.TryParseToDouble(System.Object,System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="T:System.CryptoExt.Decryptor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:System.StringConvertExt.ToSBC(System.String)">
+            <summary>
+            转全角(SBC case)
+            </summary>
+            <param name="input">任意字符串</param>
+            <returns>全角字符串</returns>
+        </member>
+        <member name="M:System.StringConvertExt.ToDBC(System.String)">
+            <summary>
+            转半角(DBC case)
+            </summary>
+            <param name="input">任意字符串</param>
+            <returns>半角字符串</returns>
+        </member>
+        <member name="M:System.StringMiscExt.Left(System.String,System.Int32)">
+            <summary>
+            从此实例左边位置 0 检索子字符串
+            </summary>
+            <param name="s"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.StringMiscExt.Right(System.String,System.Int32)">
+            <summary>
+            从此实例右边检索子字符串
+            </summary>
+            <param name="s"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.StringMiscExt.Truncate(System.String,System.Int32)">
+            <summary>
+            截断字符串
+            </summary>
+            <param name="s"></param>
+            <param name="maxLength"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.StringMiscExt.Truncate(System.String,System.Int32,System.String)">
+            <summary>
+            截断字符串，并在末尾追加字符
+            </summary>
+            <param name="s"></param>
+            <param name="maxLength"></param>
+            <param name="suffix"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.StringMiscExt.RegexReplace(System.String,System.Collections.Generic.IEnumerable{System.String},System.String)">
+            <summary>
+            使用正则表达式进行替换字符串，如果对象为 null 则返回空字符串 (String.Empty)
+            </summary>
+        </member>
+        <member name="M:System.StringMiscExt.RegexReplace(System.String,System.String,System.String)">
+            <summary>
+            使用正则表达式进行替换字符串，如果对象为 null 则返回空字符串 (String.Empty)
+            </summary>
+        </member>
+        <member name="M:System.StringMiscExt.RegexReplace(System.String,System.String,System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            使用正则表达式进行替换字符串，如果对象为 null 则返回空字符串 (String.Empty)
+            </summary>
+        </member>
+        <member name="M:System.StringMiscExt.RegexReplace(System.String,System.String,System.Text.RegularExpressions.MatchEvaluator)">
+            <summary>
+            使用正则表达式进行替换字符串，如果对象为 null 则返回空字符串 (String.Empty)
+            </summary>
+        </member>
+        <member name="M:System.StringMiscExt.RegexReplace(System.String,System.String,System.Text.RegularExpressions.MatchEvaluator,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            使用正则表达式进行替换字符串，如果对象为 null 则返回空字符串 (String.Empty)
+            </summary>
+        </member>
+        <member name="M:System.TimeZoneInfoExt.GetCurrentDateTime(System.TimeZoneInfo)">
+            <summary>
+            获取当前所在时区的时间
+            </summary>
+        </member>
+        <member name="M:System.TypeExt.CreateInstance(System.Type,System.Object[])">
+            <summary>
+            调用 Activator.CreateInstance 创建该 Type
+            </summary>
+        </member>
+        <member name="M:System.TypeExt.CreateInstance``1(System.Type,System.Object[])">
+            <summary>
+            调用 Activator.CreateInstance 创建该 Type
+            </summary>
+        </member>
+        <member name="M:System.TypeExt.IsNullableType(System.Type)">
+            <summary>
+            判断该类型是否为 Nullable 类型
+            </summary>
+        </member>
+        <member name="M:System.Web.HttpPostedFileExt.SaveAsImage(System.Web.HttpPostedFileBase)">
+            <summary>
+            保存为图片对象
+            </summary>
+        </member>
+        <member name="M:System.Web.HttpPostedFileExt.SaveAsImageBytes(System.Web.HttpPostedFileBase)">
+            <summary>
+            保存为图片字节
+            </summary>
+        </member>
+        <member name="M:System.Web.HttpPostedFileExt.SaveAsThumbnailImageBytes(System.Web.HttpPostedFileBase,System.Int32,System.Int32,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            保存为缩略图图片字节
+            </summary>
+        </member>
+        <member name="M:System.Web.HttpPostedFileExt.SaveAsImage(System.Web.HttpPostedFileBase,System.String,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            保存为图片格式文件
+            </summary>
+        </member>
+        <member name="M:System.Web.HttpPostedFileExt.SaveAsThumbnailImage(System.Web.HttpPostedFileBase,System.String,System.Int32,System.Int32,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            保存为缩略图图片文件
+            </summary>
+        </member>
+        <member name="M:System.Web.HttpResponseExt.Reload(System.Web.HttpResponse)">
+            <summary>
+            
+            </summary>
+            <param name="response"></param>
+        </member>
+        <member name="M:System.Web.HttpResponseExt.SetStatus(System.Web.HttpResponse,System.Int32,System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="response"></param>
+            <param name="httpStatusCode"></param>
+            <param name="description"></param>
+            <param name="endResponse"></param>
+        </member>
+        <member name="M:System.Web.HttpResponseExt.SetEncoding(System.Web.HttpResponse,System.Text.Encoding)">
+            <summary>
+            
+            </summary>
+            <param name="response"></param>
+            <param name="encoding"></param>
+        </member>
+        <member name="M:System.Web.HttpResponseExt.SetEncoding(System.Web.HttpResponse,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="response"></param>
+            <param name="encoding"></param>
+        </member>
+        <member name="M:System.Web.HttpResponseExt.SetGzipCompressStream(System.Web.HttpResponse)">
+            <summary>
+            
+            </summary>
+            <param name="response"></param>
+        </member>
+        <member name="M:System.Web.HttpResponseExt.SetDeflateCompressStream(System.Web.HttpResponse)">
+            <summary>
+            
+            </summary>
+            <param name="response"></param>
+        </member>
+    </members>
+</doc>

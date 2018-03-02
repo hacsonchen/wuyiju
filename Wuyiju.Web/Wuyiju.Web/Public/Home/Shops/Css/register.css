@@ -1,0 +1,260 @@
+html,body{ 
+	margin:0; 
+	padding: 0 
+}
+
+body {
+    background-color:#f6f6f6;
+    font-size: 14px;
+    font-family: 'Microsoft Yahei';
+}
+
+div.register-wrap {
+	width: 1200px;
+	margin:0 auto;
+	padding-bottom: 45px;
+}
+
+div.navigate {
+	height: 55px;
+	line-height: 55px;
+}
+
+div.navigate a {
+	text-decoration: none;
+	color: #6f6f6f;
+}
+
+div.navigate a.home {
+	background: url(../Images/icon-home.png) no-repeat center left;
+	padding-left: 22px;
+	color: #a3a3a3;
+}
+
+div.register-logo h1 {
+    width:500px;
+    margin:75px auto 0 auto;
+    height: 50px;
+    text-indent: 500px;
+    white-space: nowrap;
+    overflow: hidden;
+    background: url(../Images/logo240.png) no-repeat center center;
+}
+
+div.register-title h2{
+  	width:500px;
+    margin:0 auto;
+    height: 50px;
+    text-indent: 500px;
+    white-space: nowrap;
+    overflow: hidden;
+    background: url(../Images/login-title.png) no-repeat center center;
+}
+
+div.register-wrap div.register-form {
+	border: 1px solid #dcdcdc;
+	background-color: #fff;
+
+}
+
+div.register-form div.control {
+	width:440px;
+    margin:0 auto;
+    text-align: left;
+    padding-top: 15px;
+    overflow: hidden;
+}
+
+div.register-form div.control label{
+	width: 75px;
+	display: inline-block;
+	text-align: left;
+}
+
+div.register-form div.control div.input-wrap {
+	width: 353px;
+	border: 1px solid #e5e5e5;
+	color: #a3a3a3;
+	height: 38px;
+	line-height: 38px;
+	display: inline-block;
+	position: relative;
+}
+
+.valid-msg {
+	position: relative;
+	width:360px;
+    margin:0 auto;
+    height: 25px;
+    padding-left: 80px
+}
+
+.valid-msg p {
+    margin: 0;
+    padding: 2px 5px;
+    border: 1px solid rgb(216, 153, 153);
+    color: #666;
+    background-color: #FFFBE6;
+    width: 342px;
+    display: none;
+}
+
+div.register-form div.control .tips {
+	display: inline-block;
+	color: #a3a3a3;
+	padding-left: 10px;
+	position: absolute;
+	height: 38px;
+	width: 270px;
+	vertical-align: text-bottom;
+}
+
+div.register-form div.control div.input-wrap i {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	left: 10px;
+	top:12px;
+}
+
+div.register-form div.control div.input-wrap i.icon-person {
+	background: url(../Images/icon-person.png) no-repeat center center;
+}
+
+div.register-form div.control div.input-wrap i.icon-mobile,div.register-form div.control div.input-wrap i.icon-mobile {
+	background: url(../Images/icon-mobile.png) no-repeat center center;
+}
+
+div.register-form div.control div.input-wrap i.icon-lock {
+	background: url(../Images/icon-lock.png) no-repeat center center;
+}
+
+div.register-form div.control div.input-wrap input{
+	border: none;
+	padding: 0;
+	height: 100%;
+	margin-left: 35px;
+	width: 290px;
+	display: block;
+	outline: none;
+	color: #a3a3a3;
+}
+
+div.register-form div.control.Dui div.input-wrap  {
+	background: url(../Images/reg/ZhuCe-Dui.jpg) no-repeat 326px 8px;
+}
+
+div.register-form div.control.Cha div.input-wrap {
+	background: url(../Images/reg/ZhuCe-Cha.jpg) no-repeat 326px 8px;
+}
+
+div.register-form div.control.introduce div.input-wrap ,
+div.register-form div.control.validcode div.input-wrap {
+	width: 108px;
+}
+
+div.register-form div.control.pwd-level div.input-wrap {
+	text-align: right;
+	height: 25px;
+	line-height: 25px;
+}
+div.register-form div.control.pwd-level {
+	display: none;
+}
+div.register-form div.control.pwd-level ul { margin:0; padding: 0;  float: right; }
+div.register-form div.control.pwd-level ul li{ list-style: none; float:left; background-color:#A0A0A0;  padding:3px 10px; margin-left:1px; color:#A0A0A0;}
+div.register-form div.control.pwd-level ul li.AQ{background-color:#fff; padding:0; color:#a1a1a1;}
+div.register-form div.control.pwd-level ul li.cur1{background-color:#FF0000;color:#fff;}
+div.register-form div.control.pwd-level ul li.cur2{background-color:#F48009;color:#fff;}
+div.register-form div.control.pwd-level ul li.cur20{background-color:#F48009;color:#F48009}
+div.register-form div.control.pwd-level ul li.cur3{background-color:#4DB849;color:#fff;}
+div.register-form div.control.pwd-level ul li.cur30{background-color:#4DB849;color:#4CB548}
+
+
+div.register-form div.control.introduce div.input-wrap input,
+div.register-form div.control.validcode div.input-wrap input  {
+	margin-left: 15px;
+	width: 93px;
+}
+
+div.register-form div.control.validcode div.tips a {
+	height: 40px;
+	color: #fff;
+	display: block;
+	line-height: 40px;
+	padding: 0 5px;
+	text-decoration: none;
+	text-align: center;
+	width: 150px;
+	background-color: #ccc;
+
+}
+
+div.register-form div.control.placeholder div.input-wrap  {
+	border: none;
+	text-align: left;
+}
+
+div.register-form div.control.placeholder div.input-wrap input {
+	margin-left:0;
+	width: auto; 
+	display: inline-block;
+}
+
+div.input-wrap .btn-submit {
+	width: 260px;
+    background-color: #e22322;
+    color: #fff;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Microsoft Yahei';
+    font-weight: 500;
+}
+
+div.login-header {
+    width:500px;
+    margin:70px auto 0 auto;
+    padding-bottom: 30px;
+}
+
+div.login-header p {
+  	font-size: 14px;
+  	text-align: center;
+  	color: #545454;
+}
+
+div.login-logo h1 {
+    width:500px;
+    margin:0 auto;
+    height: 50px;
+    text-indent: 500px;
+    white-space: nowrap;
+    overflow: hidden;
+    background: url(../Images/logo240.png) no-repeat center center;
+}
+
+div.login-title h2{
+  	width:500px;
+    margin:0 auto;
+    height: 50px;
+    text-indent: 500px;
+    white-space: nowrap;
+    overflow: hidden;
+    background: url(../Images/login-title.png) no-repeat center center;
+
+}
+
+div.register-wrap div.footer {
+  	background: url(../Images/bg-footer.png) no-repeat center bottom;
+  	width: 1024px;
+  	height: 200px;
+  	margin:0 auto;
+  	padding-top: 20px;
+
+}
+
+.clear { 
+  clear: both; 
+}

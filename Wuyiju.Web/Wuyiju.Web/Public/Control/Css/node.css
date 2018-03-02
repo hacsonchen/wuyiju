@@ -1,0 +1,137 @@
+body
+{
+    background-color: #F4F4F4;
+    color: #777;
+}
+.add-app
+{
+    display: block;
+    height: 30px;
+    width: 100px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #670768;
+    color: #fff;
+    border-radius: 4px;
+    margin: 20px;
+}
+.app
+{
+    padding: 0 10px;
+    margin-left: 20px;
+    margin-top: 50px;
+    border: 1px #c6c6c6 solid;
+    border-radius: 4px;
+}
+.app p
+{
+    margin: 10px 0 10px;
+}
+.app dt a,.app p a,.app dl dd.node a
+{
+    color: #666;
+}
+.app dt a:hover,.app p a:hover,.app dl dd.node a:hover
+{
+    color: #f00;
+}
+.app p strong
+{
+    font-size: 20px;
+    color: #439CD8;;
+}
+.app dl
+{
+    margin: 10px 0;
+    border: 1px #dcdcdc solid;
+    height: auto;
+    overflow: hidden;
+    border-radius: 4px;
+    background-color: #fff;
+}
+.app dl dt
+{
+    display: block;
+    height: 36px;
+    line-height: 36px;
+    background-color: #e6e6fa;
+    text-indent: 10px;
+}
+.app dl dt strong
+{
+    font-size: 16px;
+    color: #439CD8;
+}
+.app dl dd.node
+{
+    padding: 10px;
+    float: left;
+    margin-left: 0px;
+    width: 250px;
+    display: inline-block;
+    color: #666;
+}
+.app dl dd.access
+{
+    padding: 5px 10px;
+    float: left;
+    margin-left: 0px;
+    width: 160px;
+    display: inline-block;
+}
+#sub,#ret
+{
+    margin: 0px 20px 20px;
+    height: 30px !important;
+}
+.table-list,.table-list td,.table-list tr,.table-list th
+{
+    text-align: center;
+    border: #aaa 1px solid;
+    border-collapse: collapse;
+    padding: 5px 15px;
+}
+.table-list a,.app a
+{
+    text-decoration: none;
+    color: #3361AD;
+}
+.table-list a:hover,.app a:hover
+{
+    color: #f00;
+    text-decoration: none !important;
+}
+.add
+{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+a.btn01,a.btn02
+{
+    font-size: 14px;
+    float:left;
+    height:26px;
+    line-height:26px;
+    padding:0 12px;
+    border-radius:3px;
+    margin:0 7px 0 0;
+    text-decoration:none;
+    background-repeat:repeat-x;
+}
+a.btn01,a.btn01:hover
+{
+    border:1px solid #999;
+    background-position:0 0;
+    color:#666;
+}
+a.btn02,a.btn02:hover
+{
+    border:1px solid #FFF;
+    background-position:0 -26px;
+    color:#FFF;
+}
+.skin
+{
+    background:url(../Img/skin.png) no-repeat;
+}
